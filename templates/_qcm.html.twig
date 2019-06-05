@@ -4,17 +4,38 @@
             <h2 class="qcm-title">Découvrez notre quiz du mois de </h2>
             <p class="qcm-text">Chaque mois, découvrez une nouvelle question portant sur les normes QSE.</p>
             <div class="row justify-content-center">
-            {% for question in questions %}
+                {% for question in questions %}
                     <div class="card bg-secondary mb-3 card-qcm">
-                        <div class="card-header">Header</div>
+                        <div class="card-header card-question">{{ question.name }}</div>
                         <div class="card-body">
-                            <h4 class="card-title">{{ question.name}}</h4>
-                            {% for answer in answers %}
-                                <button type="button" class="btn btn-outline-primary">{{ answer.name }}</button>
-                            {% endfor %}
+                            <div class="row justify-content-center">
+                                {% for answer in answers %}
+                                    <button type="button"
+                                            class="btn btn-outline-primary answer col-9" data-toggle="modal"
+                                            data-target="#qcm">{{ answer.name }}</button>
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
-            {% endfor %}
+                {% endfor %}
+            </div>
+            <div class="modal" id="qcm" tabindex="-1" role="dialog" aria-labelledby="qcm" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary close-button" data-dismiss="modal">Fermer</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
