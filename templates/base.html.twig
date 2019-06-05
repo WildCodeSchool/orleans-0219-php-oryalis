@@ -1,19 +1,22 @@
-<!DOCTYPE html>
-<html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Orialys{% endblock %}</title>
+    <title>{% block title %}Welcome!{% endblock %}</title>
     {% block stylesheets %}
+        <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="build/css/app.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Quicksand&display=swap" rel="stylesheet">
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
+<header>
+
+</header>
 <body>
 {% block body %}{% endblock %}
-
 {% include '_Footer.html.twig' %}
-
 {% block javascripts %}
-        {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_script_tags('app') }}
+    <script src="build/js/app.js"></script>
 {% endblock %}
 </body>
-</html>

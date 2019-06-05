@@ -14,14 +14,11 @@ footer {
 
 .logo_footer {
     max-width: 100%;
-    margin-left: 140px;
 }
-.list {
-    list-style-type: none;
-}
+
 .footer_link {
-    font-size: 1.3em;
-    color: $black;
+    font-size: 1.4em;
+    color: $dark;
     transition: 0.5s;
     font-family: Quicksand, sans-serif;
     &:hover {
@@ -31,7 +28,7 @@ footer {
 }
 
 .address {
-    color: $black;
+    color: $dark;
     font-size: 1.3em;
 }
 
