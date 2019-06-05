@@ -7,6 +7,8 @@ body {
     background-color: $bg-color;
 }
 
+/* NAVBAR */
+
 .navbar {
     .logo-navbar {
         max-width: 250px;
@@ -38,4 +40,29 @@ body {
             font-size: 1.5em;
         }
     }
+}
+
+/* QCM */
+
+.qcm{
+    background-color: lighten($section-color, 50%);
+    padding-top: 4vw;
+    padding-bottom: 5vw;
+}
+
+.qcm-title{
+    font-family: Quicksand, sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    padding-bottom: 3vw;
+}
+
+.card-qcm{
+    max-width: 40rem;
+}
+
+.qcm-text{
+    font-family: Lato, sans-serif;
+    text-align: center;
+    padding-bottom: 3vw;
 }

@@ -1,12 +1,21 @@
-{% extends 'base.html.twig' %}
 {% block body %}
-
-    <div class="card bg-secondary mb-3">
-        <div class="card-header">Header</div>
-        <div class="card-body">
-            <h4 class="card-title"></h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <section class="container-fluid qcm">
+        <div class="container">
+            <h2 class="qcm-title">Découvrez notre quiz du mois de </h2>
+            <p class="qcm-text">Chaque mois, découvrez une nouvelle question portant sur les normes QSE.</p>
+            <div class="row justify-content-center">
+            {% for question in questions %}
+                    <div class="card bg-secondary mb-3 card-qcm">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h4 class="card-title">{{ question.name}}</h4>
+                            {% for answer in answers %}
+                                <button type="button" class="btn btn-outline-primary">{{ answer.name }}</button>
+                            {% endfor %}
+                        </div>
+                    </div>
+            {% endfor %}
+            </div>
         </div>
-    </div>
-
+    </section>
 {% endblock %}
