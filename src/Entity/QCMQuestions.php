@@ -21,6 +21,21 @@ class QCMQuestions
      */
     private $name;
 
+    /**
+     * @ORM\Column(type="text")
+     */
+    private $explication;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $month;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $year;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -34,6 +49,42 @@ class QCMQuestions
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getExplication(): ?string
+    {
+        return $this->explication;
+    }
+
+    public function setExplication(string $explication): self
+    {
+        $this->explication = $explication;
+
+        return $this;
+    }
+
+    public function getMonth(): ?int
+    {
+        return $this->month;
+    }
+
+    public function setMonth(int $month): self
+    {
+        $this->month = $month;
+
+        return $this;
+    }
+
+    public function getYear(): ?int
+    {
+        return $this->year;
+    }
+
+    public function setYear(int $year): self
+    {
+        $this->year = $year;
 
         return $this;
     }

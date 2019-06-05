@@ -1,17 +1,17 @@
 {% block body %}
     <section class="container-fluid qcm">
         <div class="container">
-            <h2 class="qcm-title">Découvrez notre quiz du mois de </h2>
-            <p class="qcm-text">Chaque mois, découvrez une nouvelle question portant sur les normes QSE.</p>
+            <h2>Découvrez notre quiz du mois de </h2>
+            <p>Chaque mois, découvrez une nouvelle question portant sur les normes QSE.</p>
             <div class="row justify-content-center">
                 {% for question in questions %}
-                    <div class="card bg-secondary mb-3 card-qcm">
+                    <div class="card bg-secondary mb-3">
                         <div class="card-header card-question">{{ question.name }}</div>
                         <div class="card-body">
                             <div class="row justify-content-center">
                                 {% for answer in answers %}
                                     <button type="button"
-                                            class="btn btn-outline-primary answer col-9" data-toggle="modal"
+                                            class="btn btn-outline-primary col-9" data-toggle="modal"
                                             data-target="#qcm">{{ answer.name }}</button>
                                 {% endfor %}
                             </div>

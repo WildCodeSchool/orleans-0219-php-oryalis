@@ -7,8 +7,9 @@
     font-family: Quicksand, sans-serif;
 }
 
-@mixin textFont() {
+@mixin textStyle() {
     font-family: Lato, sans-serif;
+    color: darken($font-color, 30%)
 }
 
 body {
@@ -56,27 +57,26 @@ body {
     background-color: lighten($section-color, 60%);
     padding-top: 4vw;
     padding-bottom: 4vw;
-    .qcm-title{
+    h2{
         @include titleFont;
         font-size: 2.5em;
         text-align: center;
         padding-bottom: 2vw;
     }
-    .qcm-text{
-        @include textFont;
+    p{
+        @include textStyle;
         text-align: center;
         padding-bottom: 2vw;
         font-size: 1.1em;
-        color: $dark;
     }
-    .card-qcm{
+    .card{
         max-width: 40rem;
         border-radius: 3px;
         .card-question{
             font-size: 1.2em;
-            @include textFont;
+            @include textStyle;
         }
-        .answer {
+        .btn {
             margin-top: 1vw;
             border-radius: 5px;
             border: $primary-color solid 2px;
