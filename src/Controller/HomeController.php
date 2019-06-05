@@ -19,7 +19,7 @@ class HomeController extends AbstractController
     /**
      * @Route("/",name="index")
      */
-    public function index(QCMAnswersRepository $answersRepository, QCMQuestionsRepository $questionsRepository): Response
+    public function index(QCMAnswersRepository $answersRepository, QCMQuestionsRepository $questionsRepository):Response
     {
         return $this->render('home.html.twig', [
             'answers' => $answersRepository->findAll(),
