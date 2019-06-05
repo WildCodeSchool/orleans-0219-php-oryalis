@@ -1,20 +1,26 @@
-<nav class="navbar navbar-style navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light">
     <a class="navbar-brand" href="{{ path('index') }}"><img src="{{ asset('build/images/LogoTransparent.png') }}" class="logo-navbar" alt="Logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
             aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars"></i>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Equipe</a>
+                <a class="nav-link" href="#">L'équipe</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Nos Prestations</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Formations</a>
+                    <a class="dropdown-item" href="#">Audit</a>
+                    <a class="dropdown-item" href="#">Veille Règlementaire</a>
+                    <a class="dropdown-item" href="#">Conseil</a>
+                </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Prestations</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#">Le Blog</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>

@@ -11,13 +11,13 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class DefaultController extends AbstractController
+class HomeeController extends AbstractController
 {
     /**
      * @Route("/",name="index")
      */
     public function index()
     {
-        return $this->render('default.html.twig');
+        return $this->render('home.html.twig');
     }
 }

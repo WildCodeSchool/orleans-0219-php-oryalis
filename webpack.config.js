@@ -1,4 +1,5 @@
 var Encore = require('@symfony/webpack-encore');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 Encore
     // directory where compiled assets will be stored
@@ -49,6 +50,10 @@ Encore
 
     // enables Sass/SCSS support
     .enableSassLoader()
+
+    .addPlugin(new CopyWebpackPlugin([
+        { from: './assets/images', to: 'images' }
+    ]))
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()

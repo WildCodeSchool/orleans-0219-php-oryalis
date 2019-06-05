@@ -7,21 +7,35 @@ body {
     background-color: $bg-color;
 }
 
-.nav-item {
-    padding-left: 170px;
-}
-
-.nav-link {
-    font-size: 1.7em;
-    color: $black;
-    transition: 0.5s;
-    font-family: Quicksand, sans-serif;
-    &:hover {
-        color: $primary-color;
+.navbar {
+    .logo-navbar {
+        max-width: 250px;
+        margin-left: 20px;
     }
-}
+    .navbar-toggler{
+        font-family: 'Font Awesome\ 5 Free';
+        color: $primary-color;
+        font-size: 3em;
+    }
+    .nav-item {
+        padding-left: 5vw;
 
-.logo-navbar {
-    max-width: 200px;
-    margin-left: 20px;
+        .nav-link {
+            font-size: 1.7em;
+            color: $black;
+            transition: 0.5s;
+            font-family: Quicksand, sans-serif;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    .dropdown-menu {
+        left: auto;
+
+        .dropdown-item {
+            font-size: 1.5em;
+        }
+    }
 }
