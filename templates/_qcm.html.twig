@@ -1,23 +1,22 @@
 {% block body %}
     <section class="container-fluid qcm">
         <div class="container">
-            <h2>Découvrez notre quiz du mois de </h2>
+            {% for question in questions %}
+            <h2>Découvrez notre quiz du mois de <span>{{ question.month }} {{ question.year }}</span></h2>
             <p>Chaque mois, découvrez une nouvelle question portant sur les normes QSE.</p>
             <div class="row justify-content-center">
-                {% for question in questions %}
-                    <div class="card bg-secondary mb-3">
-                        <div class="card-header card-question">{{ question.name }}</div>
-                        <div class="card-body">
-                            <div class="row justify-content-center">
-                                {% for answer in answers %}
-                                    <button type="button"
-                                            class="btn btn-outline-primary col-9" data-toggle="modal"
-                                            data-target="#qcm">{{ answer.name }}</button>
-                                {% endfor %}
-                            </div>
+                <div class="card bg-secondary mb-3">
+                    <div class="card-header card-question">{{ question.name }}</div>
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            {% for answer in answers %}
+                                <button type="button"
+                                        class="btn btn-outline-primary col-9" data-toggle="modal"
+                                        data-target="#qcm">{{ answer.name }}</button>
+                            {% endfor %}
                         </div>
                     </div>
-                {% endfor %}
+                </div>
             </div>
             <div class="modal" id="qcm" tabindex="-1" role="dialog" aria-labelledby="qcm" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -29,7 +28,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Modal body text goes here.</p>
+                            <p>{{ question.explication }}</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary close-button" data-dismiss="modal">Fermer</button>
@@ -37,6 +36,7 @@
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </section>
 {% endblock %}
