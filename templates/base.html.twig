@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
@@ -10,7 +12,7 @@
     {% endblock %}
 </head>
 <header>
-
+    {% include "_navbar.html.twig" %}
 </header>
 <body>
 {% block body %}{% endblock %}
@@ -20,3 +22,8 @@
     <script src="build/js/app.js"></script>
 {% endblock %}
 </body>
+</html>
+
+
+
+

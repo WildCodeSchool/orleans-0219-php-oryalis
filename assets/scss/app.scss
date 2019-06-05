@@ -1,4 +1,7 @@
 @import "vars";
+@import "~bootswatch/dist/lux/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/lux/bootswatch";
 
 @import "~bootswatch/dist/lux/variables";
 @import "~bootstrap/scss/bootstrap";
@@ -32,4 +35,36 @@ footer {
     font-size: 1.3em;
 }
 
+.navbar {
+    .logo-navbar {
+        max-width: 250px;
+        margin-left: 20px;
+    }
+    .navbar-toggler{
+        font-family: 'Font Awesome\ 5 Free';
+        color: $primary-color;
+        font-size: 3em;
+    }
+    .nav-item {
+        padding-left: 5vw;
+
+        .nav-link {
+            font-size: 1.7em;
+            color: $black;
+            transition: 0.5s;
+            font-family: Quicksand, sans-serif;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    .dropdown-menu {
+        left: auto;
+
+        .dropdown-item {
+            font-size: 1.5em;
+        }
+    }
+}
 
