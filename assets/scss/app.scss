@@ -21,6 +21,7 @@ footer {
     color: $dark;
     transition: 0.5s;
     font-family: Quicksand, sans-serif;
+
     &:hover {
         text-decoration: none;
         color: $primary-color;
@@ -34,8 +35,7 @@ footer {
 
 .list-group-item {
     border: none;
-
-
+}
     .navbar {
         .logo-navbar {
             max-width: 250px;
@@ -71,5 +71,5 @@ footer {
             }
         }
     }
-}
+
 
