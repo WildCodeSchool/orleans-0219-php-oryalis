@@ -3,10 +3,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/lux/bootswatch";
 
-h1 h2 h3 h4 {
-  font-family: $quicksand;
-}
-
 /* Default banner */
 .banner {
   width: 100%;
@@ -40,7 +36,7 @@ h1 h2 h3 h4 {
   font-weight: 600;
   color: white;
   margin-top: 8rem;
-  font-family: $quicksand;
+  font-family: $mainFont;
   text-transform: uppercase;
   text-shadow: 0 0 .1rem grey;
 }
@@ -48,7 +44,7 @@ h1 h2 h3 h4 {
 .banner h2 {
   font-size: 1.6em;
   color: white;
-  font-family: $quicksand;
+  font-family: $mainFont;
   font-weight: 600;
   text-shadow: 0 0 .1rem grey;
 }
