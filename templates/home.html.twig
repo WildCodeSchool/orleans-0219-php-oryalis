@@ -3,4 +3,31 @@
 {% block title %}Homepage{% endblock %}
 
 {% block body %}
+    <section class="container-fluid presta pt-5 pb-5 mt-5 mb-5">
+        <section class="container justify-content-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="pb-5 text-center">Nos prestations</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center justify-content-md-between ">
+                <div class="justify-content-center picto col-12 col-lg-2 p-1">
+                    <a href="#"><img src="{{ asset('build/images/formation.png') }}" alt="picto formation"></a>
+                    <h3 class="text-center pr-0 pl-0">formations</h3>
+                </div>
+                <div class="justify-content-center picto col-12 col-lg-2 p-1">
+                    <a href="#"><img src="{{ asset('build/images/conseil.png') }}" alt="picto conseil"></a>
+                    <h3 class="text-center">conseil</h3>
+                </div>
+                <div class="justify-content-center picto col-12 col-lg-2 p-1">
+                    <a href="#"><img src="{{ asset('build/images/audit.png') }}" alt="picto audit"></a>
+                    <h3 class="text-center">audit</h3>
+                </div>
+                <div class="justify-content-center picto col-12 col-lg-2 p-1">
+                    <a href="#"><img src="{{ asset('build/images/veille.png') }}" alt="picto veille règlementaire"></a>
+                    <h3 class="text-center">veille</h3>
+                </div>
+            </div>
+        </section>
+    </section>
 {% endblock %}

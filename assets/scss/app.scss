@@ -6,6 +6,9 @@
 body {
     background-color: $bg-color;
 }
+h2 {
+    font-size: $h2FontSize;
+}
 
 .navbar {
     .logo-navbar {
@@ -13,7 +16,6 @@ body {
         margin-left: 20px;
     }
     .navbar-toggler{
-        font-family: 'Font Awesome\ 5 Free';
         color: $primary-color;
         font-size: 3em;
     }
@@ -38,4 +40,27 @@ body {
             font-size: 1.5em;
         }
     }
+}
+
+.presta {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    img{
+        min-width: 100%;
+        max-width: 100%;
+        border-radius: 50%;
+        border: 8px solid #ffffff;
+        transform: scale(0.9);
+        filter: grayscale(0.4);
+        transition: all .2s ease-out;
+    }
+    img:hover {
+        transform: scale(1);
+        filter: contrast(120%);
+        transition: all .2s ease-in;
+    }
+}
+
+.picto h3 {
+    padding-top: 1em;
 }
