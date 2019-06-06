@@ -10,7 +10,7 @@ body {
 }
 
 footer {
-    font-family: Quicksand, sans-serif;
+    font-family: $mainFont;
 }
 
 .logo_footer {
@@ -21,7 +21,7 @@ footer {
     font-size: 1.4em;
     color: $dark;
     transition: 0.5s;
-    font-family: $quicksand;
+    font-family: $mainFont;
 
     &:hover {
         text-decoration: none;
@@ -55,7 +55,7 @@ address {
                 font-size: 1.7em;
                 color: $black;
                 transition: 0.5s;
-                font-family: $quicksand;
+                font-family: $mainFont;
 
                 &:hover {
                     color: $primary-color;
