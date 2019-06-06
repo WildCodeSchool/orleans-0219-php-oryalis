@@ -4,7 +4,7 @@
 @import "~bootswatch/dist/lux/bootswatch";
 
 h1 h2 h3 h4 {
-  font-family: Quicksand;
+  font-family: $quicksand;
 }
 
 /* Default banner */
@@ -17,7 +17,6 @@ h1 h2 h3 h4 {
 /* Parallax effect */
 .paral {
   min-height: 25rem;
-  background-color: lightgrey;
   background-attachment: fixed;
   background-size: cover;
   background-position: 30% 70%;
@@ -25,7 +24,7 @@ h1 h2 h3 h4 {
 
 /* Image for Parallax Section */
 .backgroundban {
-  background-image: url("https://c.pxhere.com/photos/3f/28/dandelion_the_spore_the_wind_plant_flower_blue_sky-879693.jpg!d");
+  background-image: url('../images/BannerHome.jpg');
 }
 
 /* Default image container */
@@ -41,16 +40,17 @@ h1 h2 h3 h4 {
   font-weight: 600;
   color: white;
   margin-top: 8rem;
+  font-family: $quicksand;
   text-transform: uppercase;
-  font-family: Quicksand;
   text-shadow: 0 0 .1rem grey;
 }
 
 .banner h2 {
   font-size: 1.6em;
   color: white;
-  font-family: Quicksand;
+  font-family: $quicksand;
   font-weight: 600;
+  text-shadow: 0 0 .1rem grey;
 }
 
 body {

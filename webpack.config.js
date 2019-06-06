@@ -68,9 +68,6 @@ Encore
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
-    .addPlugin(new CopyWebpackPlugin([
-        { from: './assets/images', to: 'images' }
-    ]))
 ;
 
 module.exports = Encore.getWebpackConfig();
