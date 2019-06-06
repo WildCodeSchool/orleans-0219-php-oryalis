@@ -41,20 +41,12 @@ body {
     }
 }
 
-.whoweare {
-    background-color: white;
+section {
     padding-top: 6em;
     padding-bottom: 6em;
     h2 {
         font-size: 3em;
     }
-    p::first-letter{
-        color: $primary-color;
-        font-size: 2.5em;
-        vertical-align: middle;
-
-    }
-
     p {
         line-height: 1.7em;
         font-size: 1.7em;
@@ -62,5 +54,17 @@ body {
     }
     .bold {
         font-weight: bold;
+    }
+}
+
+section:nth-child(even) {
+    background-color: white;
+}
+
+.whoweare {
+    p::first-letter{
+        color: $primary-color;
+        font-size: 2.5em;
+        vertical-align: middle;
     }
 }
