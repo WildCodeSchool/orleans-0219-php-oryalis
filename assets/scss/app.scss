@@ -4,6 +4,7 @@
 @import "~bootswatch/dist/lux/bootswatch";
 
 
+
 body {
     background-color: $bg-color;
 }
@@ -13,14 +14,14 @@ footer {
 }
 
 .logo_footer {
-    max-width: 100%;
+    max-width: 250px;
 }
 
 .footer_link {
     font-size: 1.4em;
     color: $dark;
     transition: 0.5s;
-    font-family: Quicksand, sans-serif;
+    font-family: $quicksand;
 
     &:hover {
         text-decoration: none;
@@ -28,7 +29,7 @@ footer {
     }
 }
 
-.address {
+address {
     color: $dark;
     font-size: 1.3em;
 }
@@ -43,7 +44,6 @@ footer {
         }
 
         .navbar-toggler {
-            font-family: 'Font Awesome\ 5 Free';
             color: $primary-color;
             font-size: 3em;
         }
@@ -55,7 +55,7 @@ footer {
                 font-size: 1.7em;
                 color: $black;
                 transition: 0.5s;
-                font-family: Quicksand, sans-serif;
+                font-family: $quicksand;
 
                 &:hover {
                     color: $primary-color;
