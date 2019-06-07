@@ -34,57 +34,82 @@
 .banner h1 {
   font-size: 5em;
   font-weight: 600;
-  color: white;
+  color: $banner-title;
   margin-top: 8rem;
   font-family: $mainFont;
   text-transform: uppercase;
-  text-shadow: 0 0 .1rem grey;
 }
 
 .banner h2 {
   font-size: 1.6em;
-  color: white;
+  color: $banner-title;
   font-family: $mainFont;
   font-weight: 600;
-  text-shadow: 0 0 .1rem grey;
 }
 
 body {
   background-color: $bg-color;
 }
 
-.navbar {
-  .logo-navbar {
-    max-width: 250px;
-    margin-left: 20px;
-  }
-
-  .navbar-toggler {
-    font-family: 'Font Awesome\ 5 Free';
-    color: $primary-color;
-    font-size: 3em;
-  }
-
-  .nav-item {
-    padding-left: 5vw;
-
-    .nav-link {
-      font-size: 1.7em;
-      color: $black;
-      transition: 0.5s;
-      font-family: Quicksand, sans-serif;
-
-      &:hover {
-        color: $primary-color;
-      }
-    }
-  }
-
-  .dropdown-menu {
-    left: auto;
-
-    .dropdown-item {
-      font-size: 1.5em;
-    }
-  }
+footer {
+    font-family: $mainFont;
 }
+
+.logo_footer {
+    max-width: 250px;
+}
+
+.footer_link {
+    font-size: 1.4em;
+    color: $dark;
+    transition: 0.5s;
+    font-family: $mainFont;
+
+    &:hover {
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+
+address {
+    color: $dark;
+    font-size: 1.3em;
+}
+
+.list-group-item {
+    border: none;
+}
+    .navbar {
+        .logo-navbar {
+            max-width: 250px;
+            margin-left: 20px;
+        }
+
+        .navbar-toggler {
+            color: $primary-color;
+            font-size: 3em;
+        }
+
+        .nav-item {
+            padding-left: 5vw;
+
+            .nav-link {
+                font-size: 1.7em;
+                color: $black;
+                transition: 0.5s;
+                font-family: $mainFont;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        .dropdown-menu {
+            left: auto;
+
+            .dropdown-item {
+                font-size: 1.5em;
+            }
+        }
+    }
