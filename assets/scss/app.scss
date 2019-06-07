@@ -3,10 +3,50 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/lux/bootswatch";
 
+/* Default banner */
+.banner {
+  width: 100%;
+  height: 23rem;
+  overflow: hidden;
+}
 
+/* Parallax effect */
+.paral {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 30% 70%;
+}
+
+/* Image for Parallax Section */
+.backgroundban {
+  background-image: url('../images/BannerHome.jpg');
+}
+
+/* Default image container */
+.banner .backgroundban {
+  width: 100%;
+  position: absolute;
+}
+
+/* Titles */
+.banner h1 {
+  font-size: 5em;
+  font-weight: 600;
+  color: $banner-title;
+  margin-top: 3rem;
+  font-family: $mainFont;
+  text-transform: uppercase;
+}
+
+.banner h2 {
+  font-size: 1.6em;
+  color: $banner-title;
+  font-family: $mainFont;
+  font-weight: 600;
+}
 
 body {
-    background-color: $bg-color;
+  background-color: $bg-color;
 }
 h1,h2,h3,h4 {
     font-family: $mainFont;
@@ -134,4 +174,7 @@ section:nth-child(even) {
         vertical-align: middle;
     }
 }
+
+
+
 
