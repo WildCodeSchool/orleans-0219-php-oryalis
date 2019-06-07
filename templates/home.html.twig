@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block body %}
+
+    {% include '_banner.html.twig' %}
+
+    <section class="container-fluid whoweare">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="pb-4 text-center">Qui sommes-nous ?</h2>
+                </div>
+                <div class="col-12">
+                    <p>
+                    <span class="bold">Oryalis est une société spécialisée dans la formation et le conseil dans les domaines de la qualité,
+                        
+                            l'environnement et la sécurité.</span> Son équipe de consultants expérimentés peut vous
+                        aider à mettre en place
+
+                        votre système de management qualité, sécurité, environnement selon les référentiels <span
+                                class="bold">ISO 9001, IATF 16949,
+                        
+                            ISO 13485, ISO 14001, OHSAS 18001, ILO OSH 2001, ISO 50001, ISO 45001. <br></span>
+
+                        Ses Auditeurs certifiés ICA vous aideront dans vos audits à blanc avant la certification ou vous
+
+                        apporteront la valeur ajoutée de l'oeil externe pour vos audits internes.
+
+                        Ses formations intra ou inter s'appuient toujours sur l'expérience terrain des consultants et
+                        sur
+
+                        la réalisation d'exercices pratiques.<br>
+
+                        Son expertise environnementale pourra vous aider à réaliser votre dossier<span
+                                class="bold">ICPE</span>, et à mettre
+
+                        en place une <span class="bold">veille réglementaire</span> environnement ou sécurité adaptée à
+                        votre entreprise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-fluid presta pt-5 pb-5 mt-5 mb-5">
+        <div class="container justify-content-center">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="pb-5 text-center">Nos prestations</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center justify-content-md-between ">
+                <div class="justify-content-center picto col-12 col-lg-2 p-1">
+                    <a href="#"><img src="{{ asset('build/images/formation.png') }}" alt="picto formation"></a>
+                    <h3 class="text-center pr-0 pl-0">formations</h3>
+                </div>
+                <div class="justify-content-center picto col-12 col-lg-2 p-1">
+                    <a href="#"><img src="{{ asset('build/images/conseil.png') }}" alt="picto conseil"></a>
+                    <h3 class="text-center">conseil</h3>
+                </div>
+                <div class="justify-content-center picto col-12 col-lg-2 p-1">
+                    <a href="#"><img src="{{ asset('build/images/audit.png') }}" alt="picto audit"></a>
+                    <h3 class="text-center">audit</h3>
+                </div>
+                <div class="justify-content-center picto col-12 col-lg-2 p-1">
+                    <a href="#"><img src="{{ asset('build/images/veille.png') }}" alt="picto veille règlementaire"></a>
+                    <h3 class="text-center">veille</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
