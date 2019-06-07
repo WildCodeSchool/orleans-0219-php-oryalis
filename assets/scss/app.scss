@@ -3,6 +3,8 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/lux/bootswatch";
 
+
+
 body {
     background-color: $bg-color;
 }
@@ -10,12 +12,42 @@ h2 {
     font-size: $h2FontSize;
 }
 
+footer {
+    font-family: $mainFont;
+}
+
+.logo_footer {
+    max-width: 250px;
+}
+
+.footer_link {
+    font-size: 1.4em;
+    color: $dark;
+    transition: 0.5s;
+    font-family: $mainFont;
+
+    &:hover {
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+
+address {
+    color: $dark;
+    font-size: 1.3em;
+}
+
+.list-group-item {
+    border: none;
+}
+
 .navbar {
     .logo-navbar {
         max-width: 250px;
         margin-left: 20px;
     }
-    .navbar-toggler{
+
+    .navbar-toggler {
         color: $primary-color;
         font-size: 3em;
     }
@@ -26,7 +58,7 @@ h2 {
             font-size: 1.7em;
             color: $black;
             transition: 0.5s;
-            font-family: Quicksand, sans-serif;
+            font-family: $mainFont;
 
             &:hover {
                 color: $primary-color;
@@ -49,7 +81,7 @@ h2 {
         min-width: 100%;
         max-width: 100%;
         border-radius: 50%;
-        border: 8px solid #ffffff;
+        border: 8px solid $border-color;
         transform: scale(0.9);
         filter: grayscale(0.4);
         transition: all .2s ease-out;
@@ -63,4 +95,31 @@ h2 {
 
 .picto h3 {
     padding-top: 1em;
+}
+section {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    h2 {
+        font-size: 3em;
+    }
+    p {
+        line-height: 1.7em;
+        font-size: 1.7em;
+        color:darken($fontColor, 30%);
+    }
+    .bold {
+        font-weight: bold;
+    }
+}
+
+section:nth-child(even) {
+    background-color: $background-color-light;
+}
+
+.whoweare {
+    p::first-letter{
+        color: $primary-color;
+        font-size: 2.5em;
+        vertical-align: middle;
+    }
 }
