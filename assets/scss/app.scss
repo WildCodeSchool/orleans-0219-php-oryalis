@@ -8,6 +8,9 @@
 body {
     background-color: $bg-color;
 }
+h1,h2,h3,h4 {
+    font-family: $mainFont;
+}
 h2 {
     font-size: $h2FontSize;
 }
@@ -51,6 +54,12 @@ address {
         color: $primary-color;
         font-size: 3em;
     }
+
+    .navbar-toggler {
+        color: $primary-color;
+        font-size: 3em;
+    }
+
     .nav-item {
         padding-left: 5vw;
 
@@ -65,10 +74,11 @@ address {
             }
         }
     }
+
     .dropdown-menu {
         left: auto;
 
-        .dropdown-item {
+		.dropdown-item {
             font-size: 1.5em;
         }
     }
@@ -96,6 +106,7 @@ address {
 .picto h3 {
     padding-top: 1em;
 }
+
 section {
     padding-top: 6em;
     padding-bottom: 6em;
@@ -123,3 +134,4 @@ section:nth-child(even) {
         vertical-align: middle;
     }
 }
+
