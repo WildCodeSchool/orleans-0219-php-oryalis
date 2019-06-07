@@ -84,7 +84,10 @@ address {
     border: none;
 }
 
+/* Navbar */
+
 .navbar {
+    padding: 0;
     .logo-navbar {
         max-width: 250px;
         margin-left: 20px;
@@ -94,12 +97,6 @@ address {
         color: $primary-color;
         font-size: 3em;
     }
-
-    .navbar-toggler {
-        color: $primary-color;
-        font-size: 3em;
-    }
-
     .nav-item {
         padding-left: 5vw;
 
@@ -175,6 +172,16 @@ section:nth-child(even) {
     }
 }
 
+@media screen and (max-width: 410px) {
+    .navbar-brand{
+        width: 70px;
+    }
+}
 
-
-
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+    .navbar{
+        .nav-item{
+            padding-left: 1vw;
+        }
+    }
+}
