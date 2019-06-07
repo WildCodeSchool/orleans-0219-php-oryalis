@@ -79,37 +79,64 @@ address {
 .list-group-item {
     border: none;
 }
-    .navbar {
-        .logo-navbar {
-            max-width: 250px;
-            margin-left: 20px;
-        }
 
-        .navbar-toggler {
-            color: $primary-color;
-            font-size: 3em;
-        }
+.navbar {
+    .logo-navbar {
+        max-width: 250px;
+        margin-left: 20px;
+    }
 
-        .nav-item {
-            padding-left: 5vw;
+    .navbar-toggler {
+        color: $primary-color;
+        font-size: 3em;
+    }
+    .nav-item {
+        padding-left: 5vw;
 
-            .nav-link {
-                font-size: 1.7em;
-                color: $black;
-                transition: 0.5s;
-                font-family: $mainFont;
+        .nav-link {
+            font-size: 1.7em;
+            color: $black;
+            transition: 0.5s;
+            font-family: $mainFont;
 
-                &:hover {
-                    color: $primary-color;
-                }
-            }
-        }
-
-        .dropdown-menu {
-            left: auto;
-
-            .dropdown-item {
-                font-size: 1.5em;
+            &:hover {
+                color: $primary-color;
             }
         }
     }
+    .dropdown-menu {
+        left: auto;
+
+        .dropdown-item {
+            font-size: 1.5em;
+        }
+    }
+}
+
+section {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    h2 {
+        font-size: 3em;
+    }
+    p {
+        line-height: 1.7em;
+        font-size: 1.7em;
+        color:darken($fontColor, 30%);
+    }
+    .bold {
+        font-weight: bold;
+    }
+}
+
+section:nth-child(even) {
+    background-color: white;
+}
+
+.whoweare {
+    p::first-letter{
+        color: $primary-color;
+        font-size: 2.5em;
+        vertical-align: middle;
+    }
+}
