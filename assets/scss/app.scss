@@ -3,28 +3,103 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/lux/bootswatch";
 
-@mixin titleFont() {
-    font-family: Quicksand, sans-serif;
-}
-
 @mixin textStyle() {
     font-family: Lato, sans-serif;
     color: darken($font-color, 30%)
 }
 
+/* Default banner */
+.banner {
+  width: 100%;
+  height: 23rem;
+  overflow: hidden;
+}
+
+/* Parallax effect */
+.paral {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 30% 70%;
+}
+
+/* Image for Parallax Section */
+.backgroundban {
+  background-image: url('../images/BannerHome.jpg');
+}
+
+/* Default image container */
+.banner .backgroundban {
+  width: 100%;
+  position: absolute;
+}
+
+/* Titles */
+.banner h1 {
+  font-size: 5em;
+  font-weight: 600;
+  color: $banner-title;
+  margin-top: 3rem;
+  font-family: $mainFont;
+  text-transform: uppercase;
+}
+
+.banner h2 {
+  font-size: 1.6em;
+  color: $banner-title;
+  font-family: $mainFont;
+  font-weight: 600;
+}
+
 body {
-    background-color: $bg-color;
+  background-color: $bg-color;
+}
+h1,h2,h3,h4 {
+    font-family: $mainFont;
+}
+h2 {
+    font-size: $h2FontSize;
 }
 
 /* NAVBAR */
+footer {
+    font-family: $mainFont;
+}
+
+.logo_footer {
+    max-width: 250px;
+}
+
+.footer_link {
+    font-size: 1.4em;
+    color: $dark;
+    transition: 0.5s;
+    font-family: $mainFont;
+
+    &:hover {
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+
+address {
+    color: $dark;
+    font-size: 1.3em;
+}
+
+.list-group-item {
+    border: none;
+}
+
+/* Navbar */
 
 .navbar {
+    padding: 0;
     .logo-navbar {
         max-width: 250px;
         margin-left: 20px;
     }
-    .navbar-toggler{
-        font-family: 'Font Awesome\ 5 Free';
+
+    .navbar-toggler {
         color: $primary-color;
         font-size: 3em;
     }
@@ -35,17 +110,18 @@ body {
             font-size: 1.7em;
             color: $black;
             transition: 0.5s;
-            font-family: Quicksand, sans-serif;
+            font-family: $mainFont;
 
             &:hover {
                 color: $primary-color;
             }
         }
     }
+
     .dropdown-menu {
         left: auto;
 
-        .dropdown-item {
+		.dropdown-item {
             font-size: 1.5em;
         }
     }
@@ -58,7 +134,6 @@ body {
     padding-top: 4vw;
     padding-bottom: 4vw;
     h2{
-        @include titleFont;
         font-size: 2.5em;
         text-align: center;
         padding-bottom: 2vw;
@@ -98,10 +173,75 @@ body {
     color: white;
 }
 
-.modal{
-    p{
+.modal {
+    p {
         text-align: left;
         margin-top: 20px;
         @include textStyle;
+    }
+}
+
+.presta {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    img{
+        min-width: 100%;
+        max-width: 100%;
+        border-radius: 50%;
+        border: 8px solid $border-color;
+        transform: scale(0.9);
+        filter: grayscale(0.4);
+        transition: all .2s ease-out;
+    }
+    img:hover {
+        transform: scale(1);
+        filter: contrast(120%);
+        transition: all .2s ease-in;
+    }
+}
+
+.picto h3 {
+    padding-top: 1em;
+}
+
+section {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    h2 {
+        font-size: 3em;
+    }
+    p {
+        line-height: 1.7em;
+        font-size: 1.7em;
+        color:darken($fontColor, 30%);
+    }
+    .bold {
+        font-weight: bold;
+    }
+}
+
+section:nth-child(even) {
+    background-color: $background-color-light;
+}
+
+.whoweare {
+    p::first-letter{
+        color: $primary-color;
+        font-size: 2.5em;
+        vertical-align: middle;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .navbar-brand{
+        width: 70px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1439px) {
+    .navbar{
+        .nav-item{
+            padding-left: 1vw;
+        }
     }
 }
