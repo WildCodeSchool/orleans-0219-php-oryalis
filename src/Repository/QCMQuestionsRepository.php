@@ -33,5 +33,4 @@ class QCMQuestionsRepository extends ServiceEntityRepository
 
             return $result;
     }
-
 }
