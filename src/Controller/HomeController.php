@@ -22,10 +22,4 @@ class HomeController extends AbstractController
      * @param FormationRepository $formationRepository
      * @return Response
      */
-    public function showFormation (FormationRepository $formationRepository): Response
-    {
-        return $this->render('home/formation.html.twig', [
-            'formations' => $formationRepository -> findAll(),
-        ]);
-    }
 }

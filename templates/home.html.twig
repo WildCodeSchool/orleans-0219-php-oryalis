@@ -2,6 +2,8 @@
 
 {% block title %}Homepage{% endblock %}
 
+{% include "_navbar.html.twig" %}
+
 {% block body %}
 
     {% include '_banner.html.twig' %}
@@ -70,4 +72,5 @@
             </div>
         </div>
     </section>
+    {% include '_Footer.html.twig' %}
 {% endblock %}
