@@ -18,19 +18,4 @@ class QCMQuestionsRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, QCMQuestions::class);
     }
-
-    public function findOneById()
-    {
-        $queryBuilder = $this->createQueryBuilder('q')
-            ->select('MAX(q.id)')
-            ->orderBy('q.id', 'DESC')
-            ->setMaxResults(1)
-            ->getQuery()
-            ->getResult()
-        ;
-
-        $result = $queryBuilder->getResult();
-
-            return $result;
-    }
 }

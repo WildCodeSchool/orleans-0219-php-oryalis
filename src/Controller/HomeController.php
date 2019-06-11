@@ -16,13 +16,17 @@ class HomeController extends AbstractController
      */
     public function index(QCMAnswersRepository $answersRepository, QCMQuestionsRepository $questionsRepository):Response
     {
+//        $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates');
+//        $twig = new \Twig\Environment($loader);
+//        $twig->addExtension(new Twig_Extensions_Extension_Date());
 
-        $questions = $questionsRepository->findOneById();
-        $answers = $answersRepository->findAll();
+        $question = $questionsRepository->findOneBy([], ['year' => 'DESC', 'month' => 'DESC']);
+        dump($question);
+        $answers = $answersRepository->findBy(['name' => 'DESC']);
 
         return $this->render('home.html.twig', [
-            'questions' => $questions,
+            'question' => $question,
             'answers' => $answers,
-            ]);
+        ]);
     }
 }
