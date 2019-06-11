@@ -19,22 +19,9 @@ class QCMAnswersRepository extends ServiceEntityRepository
         parent::__construct($registry, QCMAnswers::class);
     }
 
-    // /**
-    //  * @return QCMAnswers[] Returns an array of QCMAnswers objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('q')
-            ->andWhere('q.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('q.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+ /**
+  * @return QCMAnswers[] Returns an array of QCMAnswers objects
+  */
 
     /*
     public function findOneBySomeField($value): ?QCMAnswers

@@ -130,9 +130,6 @@ address {
 /* QCM */
 
 .qcm{
-    background-color: lighten($section-color, 60%);
-    padding-top: 4vw;
-    padding-bottom: 4vw;
     h2{
         font-size: 2.5em;
         text-align: center;
@@ -165,19 +162,6 @@ address {
                 color: white;
             }
         }
-    }
-}
-
-.close-button:hover {
-    background-color: lighten($primary-color, 15%);
-    color: white;
-}
-
-.modal {
-    p {
-        text-align: left;
-        margin-top: 20px;
-        @include textStyle;
     }
 }
 
