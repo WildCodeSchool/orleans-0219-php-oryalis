@@ -14,12 +14,12 @@ class FormationFixtures extends Fixture
         $faker = Faker\Factory::create('fr_FR');
         for ($i= 1; $i <= 10; $i++) {
             $formation = new Formation();
-            $formation->setTitre($faker->sentence);
-            $formation->setDuree($faker->monthName);
+            $formation->setTitle($faker->sentence);
+            $formation->setPeriod($faker->monthName);
             $formation->setPublic($faker->sentence);
-            $formation->setPedagogie($faker->sentence);
-            $formation->setFormateur($faker->word);
-            $formation->setProgramme($faker->name);
+            $formation->setPedagogy($faker->sentence);
+            $formation->setTrainer($faker->word);
+            $formation->setProgram($faker->name);
 
             $manager->persist($formation);
         }

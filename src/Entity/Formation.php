@@ -19,12 +19,12 @@ class Formation
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $titre;
+    private $title;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $duree;
+    private $period;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -34,43 +34,43 @@ class Formation
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $pedagogie;
+    private $pedagogy;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $formateur;
+    private $trainer;
 
     /**
      * @ORM\Column(type="text")
      */
-    private $programme;
+    private $program;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getTitre(): ?string
+    public function getTitle(): ?string
     {
-        return $this->titre;
+        return $this->title;
     }
 
-    public function setTitre(string $titre): self
+    public function setTitle(string $title): self
     {
-        $this->titre = $titre;
+        $this->title = $title;
 
         return $this;
     }
 
-    public function getDuree(): ?string
+    public function getPeriod(): ?string
     {
-        return $this->duree;
+        return $this->period;
     }
 
-    public function setDuree(string $duree): self
+    public function setPeriod(string $period): self
     {
-        $this->duree = $duree;
+        $this->period = $period;
 
         return $this;
     }
@@ -87,38 +87,38 @@ class Formation
         return $this;
     }
 
-    public function getPedagogie(): ?string
+    public function getPedagogy(): ?string
     {
-        return $this->pedagogie;
+        return $this->pedagogy;
     }
 
-    public function setPedagogie(string $pedagogie): self
+    public function setPedagogy(string $pedagogy): self
     {
-        $this->pedagogie = $pedagogie;
+        $this->pedagogy = $pedagogy;
 
         return $this;
     }
 
-    public function getFormateur(): ?string
+    public function getTrainer(): ?string
     {
-        return $this->formateur;
+        return $this->trainer;
     }
 
-    public function setFormateur(string $formateur): self
+    public function setTrainer(string $trainer): self
     {
-        $this->formateur = $formateur;
+        $this->trainer = $trainer;
 
         return $this;
     }
 
-    public function getProgramme(): ?string
+    public function getProgram(): ?string
     {
-        return $this->programme;
+        return $this->program;
     }
 
-    public function setProgramme(string $programme): self
+    public function setProgram(string $program): self
     {
-        $this->programme = $programme;
+        $this->program = $program;
 
         return $this;
     }
