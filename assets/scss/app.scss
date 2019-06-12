@@ -3,6 +3,24 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/lux/bootswatch";
 
+/* Team admin */
+.card-title{
+    font-size: 2rem;
+    text-transform: none;
+    color: $dark;
+}
+
+.img-team {
+    max-width: 150px;
+    min-width: 150px;
+    border-radius: 50%;
+}
+
+.far {
+    font-size: 25px;
+    color: $dark;
+}
+
 /* Default banner */
 .banner {
   width: 100%;
