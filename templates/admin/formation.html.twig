@@ -3,30 +3,30 @@
 {% block title %}Interface administrateur{% endblock %}
 
 {% block body %}
-    <h1 class="formation p-4 text-center"> Formations </h1>
+    <h1 class="formation-title p-4 text-center">Formations</h1>
+    <h2 class="formation-sub-title text-center mb-4">Gérez vos formations</h2>
+    <div class="text-center">
+    <button type="submit" class="btn add mb-4">+ Ajouter une formation</button>
+    </div>
+    <div class="row justify-content-center">
 
-    <div class ="container">
-        <table class="table table-striped table-bordered ">
-            <thead class="thead-dark">
+    <table class="table col-8 table-striped">
+            <thead class="thead">
             <tr>
-                <th scope="col">Titre de la formation</th>
-                <th scope="col">Editer</th>
-                <th scope="col">Supprimer</th>
-
+                <th scope="col" class="table-title">Titre de la formation</th>
+                <th scope="col" class="table-title text-center">Editer</th>
+                <th scope="col" class="table-title text-center">Supprimer</th>
             </tr>
             </thead>
-
             <tbody>
             {% for formation in formations %}
                 <tr>
-                    <td>{{ formation.titre }}</td>
-                    <td></td>
-                    <td></td>
+                    <td><a href="{{ formation.id }}" class="link-formation"> {{ formation.titre }}</a></td>
+                    <td><a href="{{ formation.id }}"><img src="{{ asset('build/images/edit-filled.png') }}" class="icon mx-auto d-block" alt="Icone d'édition" ></a></td>
+                    <td><a href="{{ formation.id }}"><img src="{{ asset('build/images/delete-filled.png') }}" class="icon mx-auto d-block" alt="Icone de suppression"></a></td>
                 </tr>
             {% endfor %}
             </tbody>
         </table>
-    </div>
-
-
+</div>
 {% endblock %}
