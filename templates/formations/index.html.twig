@@ -3,9 +3,32 @@
 {% block title %}Oryalis - Formations{% endblock %}
 
 {% block body %}
-    <section>
-        <div>
-
+    <section class="container">
+        <h2 class="formations-title">Formations</h2>
+        <div class="row justify-content-center">
+            <nav class="dropdown-formations col-md-6 col-sm-12">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Auditeur Interne de Système de Management Qualité</a>
+                        <div class="dropdown-menu" x-placement="bottom-start">
+                            <a class="dropdown-item" href="#">IATF 16949 2016 – Système de management de la qualité pour l'automobile </a>
+                            <a class="dropdown-item" href="#">ISO 13485 – Dispositifs médicaux</a>
+                            <a class="dropdown-item" href="#">ISO 9001 2015 – Système de management de la qualité</a>
+                            <a class="dropdown-item" href="#">ISO 45001 - 2018 – Systèmes de management de la santé et de la sécurité au travail</a>
+                            <a class="dropdown-item" href="#">OHSAS 18001 – Hygiène Santé Sécurité au Travail</a>
+                            <a class="dropdown-item" href="#">ISO 14001 2015 – Système de management environnemental</a>
+                            <a class="dropdown-item" href="#">Auditeur Interne de Système Environnemental</a>
+                            <a class="dropdown-item" href="#">Auditeur Interne : Système de Management HSST</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <h3 class="formation-name">Title</h3>
+        <div class="row justify-content-around">
+            <p><i class="far fa-clock"></i>Durée</p>
+            <p><i class="fas fa-user-check"></i>Public Concerné</p>
+            <p><i class="fas fa-tasks"></i>Pré-requis</p>
         </div>
     </section>
 {% endblock %}

@@ -185,3 +185,28 @@ section:nth-child(even) {
         }
     }
 }
+
+/* PAGE FORMATION */
+
+.formations-title{
+    text-align: center;
+    margin-top: 3vw;
+}
+
+.dropdown-formations {
+    margin-top: 1vw;
+    padding: 30px;
+    .dropdown-menu{
+        position: absolute;
+        will-change: transform;
+        top: 0;
+        left: 0;
+        transform: translate3d(0px, 37px, 0px);
+    }
+}
+
+.formation-name{
+    background-color: lighten($primary-color, 20%);
+    padding: 20px;
+    text-align: center;
+}
