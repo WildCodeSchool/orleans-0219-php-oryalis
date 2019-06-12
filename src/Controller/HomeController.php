@@ -22,7 +22,7 @@ class HomeController extends AbstractController
 
         $question = $questionsRepository->findOneBy([], ['year' => 'DESC', 'month' => 'DESC']);
         dump($question);
-        $answers = $answersRepository->findBy(['name' => 'DESC']);
+        $answers = $answersRepository->findAll();
 
         return $this->render('home.html.twig', [
             'question' => $question,
