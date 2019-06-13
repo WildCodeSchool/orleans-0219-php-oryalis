@@ -16,10 +16,4 @@ class HomeController extends AbstractController
     {
         return $this->render('home/index.html.twig');
     }
-
-    /**
-     * @Route("/formation", name="formation")
-     * @param FormationRepository $formationRepository
-     * @return Response
-     */
 }
