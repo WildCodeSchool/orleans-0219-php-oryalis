@@ -13,15 +13,15 @@ class TrainingFixtures extends Fixture
     {
         $faker = Faker\Factory::create('fr_FR');
         for ($i= 1; $i <= 10; $i++) {
-            $formation = new Training();
-            $formation->setTitle($faker->sentence);
-            $formation->setPeriod($faker->monthName);
-            $formation->setPublic($faker->sentence);
-            $formation->setPedagogy($faker->sentence);
-            $formation->setTrainer($faker->word);
-            $formation->setProgram($faker->name);
+            $training = new Training();
+            $training->setTitle($faker->sentence);
+            $training->setPeriod($faker->monthName);
+            $training->setPublic($faker->sentence);
+            $training->setPedagogy($faker->sentence);
+            $training->setTrainer($faker->word);
+            $training->setProgram($faker->name);
 
-            $manager->persist($formation);
+            $manager->persist($training);
         }
         $manager->flush();
     }
