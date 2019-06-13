@@ -4,9 +4,10 @@
 
 {% block body %}
     <section class="container">
-        <h2 class="formations-title">Formations</h2>
+        <h2 class="trainings-title">Formations</h2>
+        <p class="text-center">Découvrez les formations dispensées par Oryalis.</p>
         <div class="row justify-content-center">
-            <nav class="dropdown-formations col-md-6 col-sm-12">
+            <nav class="dropdown-trainings">
                 <ul class="nav nav-pills flex-column">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Auditeur Interne de Système de Management Qualité</a>
@@ -24,11 +25,19 @@
                 </ul>
             </nav>
         </div>
-        <h3 class="formation-name">Title</h3>
-        <div class="row justify-content-center">
-            <p class="col"><i class="far fa-clock"></i>Durée</p>
-            <p class="col"><i class="fas fa-users"></i>Public Concerné</p>
-            <p class="col"><i class="fas fa-tasks"></i>Pré-requis</p>
+        <h3 class="training-name">Title</h3>
+        <div class="row justify-content-around">
+            <p><i class="far fa-clock picto-formations"></i>Durée</p>
+            <p><i class="fas fa-users picto-formations"></i>Public Concerné</p>
+            <p><i class="fas fa-tasks picto-formations"></i>Pré-requis</p>
+        </div>
+        <div class="program">
+            <h4><i class="far fa-check-circle picto-formations"></i>Objectifs</h4>
+            <p>Oui</p>
+            <h4><i class="fas fa-book picto-formations"></i>Programme</h4>
+            <p>Oui</p>
+            <h4><i class="fas fa-cogs picto-formations"></i>Méthodes et Moyens pédagogiques</h4>
+            <p>Oui</p>
         </div>
     </section>
 {% endblock %}

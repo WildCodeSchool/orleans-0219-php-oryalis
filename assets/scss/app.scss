@@ -188,14 +188,19 @@ section:nth-child(even) {
 
 /* PAGE FORMATION */
 
-.formations-title{
+.trainings-title{
     text-align: center;
     margin-top: 3vw;
+    font-size: 4em;
 }
 
-.dropdown-formations {
+.dropdown-trainings {
     margin-top: 1vw;
-    padding: 30px;
+    margin-bottom: 2vw;
+    .dropdown{
+        margin: 0;
+        border: 1px solid $dark;
+    }
     .dropdown-menu{
         position: absolute;
         will-change: transform;
@@ -205,12 +210,23 @@ section:nth-child(even) {
     }
 }
 
-.formation-name{
+.training-name{
     background-color: lighten($primary-color, 20%);
     padding: 20px;
     text-align: center;
+    font-size: 2em;
+    margin-bottom: 2vw;
 }
 
 .picto-formations {
-    padding: 20px;
+    margin-right: 10px;
+}
+
+.program{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    h4{
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
 }
