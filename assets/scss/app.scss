@@ -6,48 +6,49 @@
 
 /* Default banner */
 .banner {
-  width: 100%;
-  height: 40vw;
-  overflow: hidden;
+    width: 100%;
+    //height: 40vw;
+    overflow: hidden;
 }
 
 /* Parallax effect */
 .paral {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 20% 80%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 20% 80%;
 }
 
 /* Image for Parallax Section */
 .backgroundban {
-  background-image: url('../images/BannerHome.jpg');
+    background-image: url('../images/BannerHome.jpg');
+    margin-top: 5%;
 }
 
 /* Default image container */
 .banner .backgroundban {
-  width: 100%;
-  position: absolute;
+    width: 100%;
+    position: absolute;
 }
 
-/* Titles */
+/* Titles Banner */
 .banner h1 {
-  font-size: 5em;
-  font-weight: 600;
-  color: $banner-title;
-  margin-top: 12rem;
-  font-family: $mainFont;
-  text-transform: uppercase;
+    font-size: 5em;
+    font-weight: 600;
+    color: $banner-title;
+
+    font-family: $mainFont;
+    text-transform: uppercase;
 }
 
 .banner h2 {
-  font-size: 1.6em;
-  color: $banner-title;
-  font-family: $mainFont;
-  font-weight: 600;
+    font-size: 1.6em;
+    color: $banner-title;
+    font-family: $mainFont;
+    font-weight: 600;
 }
 
 body {
-  background-color: $bg-color;
+    background-color: $bg-color;
 }
 h1,h2,h3,h4 {
     font-family: $mainFont;
