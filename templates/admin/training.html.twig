@@ -21,7 +21,7 @@
             <tbody>
             {% for training in trainings %}
                 <tr>
-                    <td><a href="{{ training.id }}" class="link-formation"> {{ training.title }}</a></td>
+                    <td><a href="{{ training.id }}" class="link-training"> {{ training.title }}</a></td>
                     <td><a href="{{ training.id }}"><img src="{{ asset('build/images/edit-filled.png') }}" class="icon mx-auto d-block" alt="Icone d'édition" ></a></td>
                     <td><a href="{{ training.id }}"><img src="{{ asset('build/images/delete-filled.png') }}" class="icon mx-auto d-block" alt="Icone de suppression"></a></td>
                 </tr>
