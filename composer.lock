@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "137739b86fa610a2252f732895bbfe93",
+    "content-hash": "b6439f70d944c9d5b15cb6a89ad2a80b",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -3637,6 +3637,28 @@
             "time": "2019-04-21T09:21:45+00:00"
         },
         {
+            "name": "symfony/apache-pack",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/apache-pack.git",
+                "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/apache-pack/zipball/3aa5818d73ad2551281fc58a75afd9ca82622e6c",
+                "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c",
+                "shasum": ""
+            },
+            "type": "symfony-pack",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A pack for Apache support in Symfony",
+            "time": "2017-12-12T01:46:35+00:00"
+        },
+        {
             "name": "symfony/asset",
             "version": "v4.2.8",
             "source": {
@@ -7125,6 +7147,7 @@
         },
         {
             "name": "doctrine/doctrine-fixtures-bundle",
+<<<<<<< HEAD
             "version": "3.2.2",
             "source": {
                 "type": "git",
@@ -7135,6 +7158,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/90e4a4f968b2dae40e290a6ee516957af043f16c",
                 "reference": "90e4a4f968b2dae40e290a6ee516957af043f16c",
+=======
+            "version": "3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
+                "reference": "13b2e8e1af099bc06f8611497fe079a4e0b4e497"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/13b2e8e1af099bc06f8611497fe079a4e0b4e497",
+                "reference": "13b2e8e1af099bc06f8611497fe079a4e0b4e497",
+>>>>>>> 439f70d080c824796900340af09e9792d7680258
                 "shasum": ""
             },
             "require": {
@@ -7185,7 +7220,7 @@
                 "Fixture",
                 "persistence"
             ],
-            "time": "2019-06-12T12:03:37+00:00"
+            "time": "2019-06-07T11:21:53+00:00"
         },
         {
             "name": "easycorp/easy-log-handler",
