@@ -11,7 +11,6 @@ class EmployeeFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $placeholder =
         $faker  =  Faker\Factory::create('en_US');
         for ($i=0; $i< 6; $i++) {
             $employee = new Employee();
