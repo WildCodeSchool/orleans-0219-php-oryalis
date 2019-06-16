@@ -7147,18 +7147,6 @@
         },
         {
             "name": "doctrine/doctrine-fixtures-bundle",
-<<<<<<< HEAD
-            "version": "3.2.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/DoctrineFixturesBundle.git",
-                "reference": "90e4a4f968b2dae40e290a6ee516957af043f16c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/90e4a4f968b2dae40e290a6ee516957af043f16c",
-                "reference": "90e4a4f968b2dae40e290a6ee516957af043f16c",
-=======
             "version": "3.2.0",
             "source": {
                 "type": "git",
@@ -7169,7 +7157,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/doctrine/DoctrineFixturesBundle/zipball/13b2e8e1af099bc06f8611497fe079a4e0b4e497",
                 "reference": "13b2e8e1af099bc06f8611497fe079a4e0b4e497",
->>>>>>> 439f70d080c824796900340af09e9792d7680258
                 "shasum": ""
             },
             "require": {
