@@ -42,13 +42,6 @@
 .icon-show {
   width: 100%;
 }
-
-
-.far {
-  font-size: 25px;
-  color: $dark;
-}
-
 .edit-form {
   color: whitesmoke;
 
@@ -56,3 +49,26 @@
     color: $dark;
   }
 }
+
+/* Team admin */
+.card-title {
+  font-size: 1.6rem;
+  text-transform: none;
+  color: $dark;
+}
+
+.img-team {
+  max-width: 150px;
+  min-width: 150px;
+  border-radius: 50%;
+}
+
+.far {
+  font-size: 20px;
+  color: $dark;
+}
+
+.btn-primary {
+  background-color: $admin-color;
+}
+
