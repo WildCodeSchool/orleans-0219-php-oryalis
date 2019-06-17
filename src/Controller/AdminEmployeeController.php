@@ -21,7 +21,7 @@ class AdminEmployeeController extends AbstractController
     public function index(EmployeeRepository $employeeRepository): Response
     {
         return $this->render('admin_employee/index.html.twig', [
-            'employees' => $employeeRepository->findAllOrderByLastname(),
+            'employees' => $employeeRepository->findBy([], ['lastname' => 'ASC']),
         ]);
     }
 
