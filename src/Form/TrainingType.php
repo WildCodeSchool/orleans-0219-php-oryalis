@@ -13,6 +13,8 @@ class TrainingType extends AbstractType
     {
         $builder
             ->add('title')
+            ->add('goal')
+            ->add('prerequisite')
             ->add('period')
             ->add('public')
             ->add('pedagogy')

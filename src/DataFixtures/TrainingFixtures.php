@@ -15,6 +15,8 @@ class TrainingFixtures extends Fixture
         for ($i= 1; $i <= 10; $i++) {
             $training = new Training();
             $training->setTitle($faker->sentence);
+            $training->setGoal($faker->sentence);
+            $training->setPrerequisite($faker->sentence);
             $training->setPeriod($faker->monthName);
             $training->setPublic($faker->sentence);
             $training->setPedagogy($faker->sentence);

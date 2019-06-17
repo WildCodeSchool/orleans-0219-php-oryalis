@@ -46,6 +46,21 @@ class Training
      */
     private $program;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $goal;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $prerequisite;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $evaluation;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +134,42 @@ class Training
     public function setProgram(string $program): self
     {
         $this->program = $program;
+
+        return $this;
+    }
+
+    public function getGoal(): ?string
+    {
+        return $this->goal;
+    }
+
+    public function setGoal(string $goal): self
+    {
+        $this->goal = $goal;
+
+        return $this;
+    }
+
+    public function getPrerequisite(): ?string
+    {
+        return $this->prerequisite;
+    }
+
+    public function setPrerequisite(string $prerequisite): self
+    {
+        $this->prerequisite = $prerequisite;
+
+        return $this;
+    }
+
+    public function getEvaluation(): ?string
+    {
+        return $this->evaluation;
+    }
+
+    public function setEvaluation(string $evaluation): self
+    {
+        $this->evaluation = $evaluation;
 
         return $this;
     }
