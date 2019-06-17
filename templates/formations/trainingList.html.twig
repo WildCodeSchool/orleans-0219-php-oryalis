@@ -1,0 +1,21 @@
+{% extends 'layoutVistitor.html.twig' %}
+
+{% block title %}Oryalis - Formations{% endblock %}
+
+{% block body %}
+    <section class="container">
+    <h2 class="trainings-title">Formations</h2>
+    <p class="text-center">Découvrez les formations dispensées par Oryalis.</p>
+        <div class="row justify-content-center">
+            <nav class="dropdown-trainings">
+                <ul class="list-group">
+                    {% for training in trainings %}
+                        <a href="{{ path('training_show', {'id': training.id}) }}" class="list-group-item list-group-item-action">
+                            {{ training.title }}
+                        </a>
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
+    </section>
+{% endblock %}

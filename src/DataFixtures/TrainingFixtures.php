@@ -16,10 +16,10 @@ class TrainingFixtures extends Fixture
             $training = new Training();
             $training->setTitle($faker->sentence);
             $training->setPeriod($faker->monthName);
-            $training->setPublic($faker->sentence);
-            $training->setPedagogy($faker->sentence);
+            $training->setPublic($faker->word);
+            $training->setPedagogy($faker->text);
             $training->setTrainer($faker->word);
-            $training->setProgram($faker->name);
+            $training->setProgram($faker->text);
 
             $manager->persist($training);
         }
