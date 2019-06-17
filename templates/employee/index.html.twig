@@ -3,18 +3,86 @@
 {% block title %}Hello EmployeeController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="py-5 mt-4"></div>
+    <div class="row">
+        {#        {% for employee in employees %}#}
+        <div class="col-md-4 col-lg-4 text-center card-team" data-toggle="modal" data-target="#exampleModal">
+            {#                {% if employee.picture is null %}#}
+            <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
+                 alt="employee">
+            {#                {% else %}#}
+            {#                    <img src="{{ asset( employee.picture ) }}" class="img-team"#}
+            {#                         alt="{{ employee.lastname }} {{ employee.firstname }}">#}
+            {#                {% endif %}#}
+            <div class="card-body">
+                <h2 class="card-title"><span
+                            class="text-uppercase">Arrond</span> Denis</h2>
+                <p>Intitulé du poste</p>
+                <p>Tél: 0235786952</p>
+            </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title text-center" id="exampleModalLabel"><span
+                                        class="text-uppercase">Arrond</span> Denis</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/wilderdp/Documents/Quêtes/orleans-0219-php-oryalis/src/Controller/EmployeeController.php'|file_link(0) }}">src/Controller/EmployeeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/wilderdp/Documents/Quêtes/orleans-0219-php-oryalis/templates/employee/index.html.twig'|file_link(0) }}">templates/employee/index.html.twig</a></code></li>
-    </ul>
-</div>
+                        <div class="modal-body">
+                            <hr>
+                            <div class="row pb-3">
+                                <div class="col">
+                                    <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
+                                         alt="employee">
+                                </div>
+                                <div class="col detail-modal">
+                                    <p>Intitulé du poste</p>
+                                    <p>Tél: 0235786952</p>
+                                </div>
+                            </div>
+                            <h3 class="pb-2">Expérience</h3>
+                            <div class="row text-left modal-text">
+                                <p>Après une formation supérieure technique en électronique, Il a commencé sa carrière
+                                    chez Alcatel comme programmeur en informatique industrielle sur un mini ordinateur
+                                    de la taille d'un réfrigérateur américain et de la puissance d'un agenda
+                                    électronique d'entrée de gamme d'aujourd'hui.
+
+                                    Ensuite chez IBM il a commencé par la maintenance puis l'engineering, la qualité
+                                    produit et enfin l'assurance qualité. Enfin chez Lexmark il était dans le groupe des
+                                    meneurs pour la mise en place des premières certifications ISO 9002 puis ISO 14001.
+
+                                    Aujourd'hui chez Oryalis il conseille les entreprises pour la mise en place de
+                                    système de management qualité, sécurité, environnement dans les différents secteurs
+                                    industriels, y compris automobile, et réalise des audits de certification pour
+                                    l'AFAQ.
+
+                                    Il est actionnaire d'Oryalis avec Alexandre Nivelet et Patrick Albert. Après une formation supérieure technique en électronique, Il a commencé sa carrière
+                                    chez Alcatel comme programmeur en informatique industrielle sur un mini ordinateur
+                                    de la taille d'un réfrigérateur américain et de la puissance d'un agenda
+                                    électronique d'entrée de gamme d'aujourd'hui.
+
+                                    Ensuite chez IBM il a commencé par la maintenance puis l'engineering, la qualité
+                                    produit et enfin l'assurance qualité. Enfin chez Lexmark il était dans le groupe des
+                                    meneurs pour la mise en place des premières certifications ISO 9002 puis ISO 14001.
+
+                                    Aujourd'hui chez Oryalis il conseille les entreprises pour la mise en place de
+                                    système de management qualité, sécurité, environnement dans les différents secteurs
+                                    industriels, y compris automobile, et réalise des audits de certification pour
+                                    l'AFAQ.
+
+                                    Il est actionnaire d'Oryalis avec Alexandre Nivelet et Patrick Albert.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#        {% endfor %}#}
+    </div>
 {% endblock %}
