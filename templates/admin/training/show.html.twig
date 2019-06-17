@@ -1,0 +1,50 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}Training{% endblock %}
+
+{% block body %}
+
+    <h1 class="training-title p-4 text-center">Formation</h1>
+
+<div class="row justify-content-center">
+
+    <table class="table col-8 table-striped">
+        <tbody>
+            <tr>
+                <th class="table-title">Id</th>
+                <td>{{ training.id }}</td>
+            </tr>
+            <tr>
+                <th class="table-title">Titre</th>
+                <td>{{ training.title }}</td>
+            </tr>
+            <tr>
+                <th class="table-title">Durée</th>
+                <td>{{ training.period }}</td>
+            </tr>
+            <tr>
+                <th class="table-title">Public concerné</th>
+                <td>{{ training.public }}</td>
+            </tr>
+            <tr>
+                <th class="table-title">Méthodes et moyens pédagogiques</th>
+                <td>{{ training.pedagogy }}</td>
+            </tr>
+            <tr>
+                <th class="table-title">Formateur</th>
+                <td>{{ training.trainer }}</td>
+            </tr>
+            <tr>
+                <th class="table-title">Programme</th>
+                <td>{{ training.program }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <div class="row justify-content-center">
+
+        <a href="{{ path('training_index') }}"><i class="far fa-arrow-left icon icon-show btn"></i></a>
+        <a href="{{ path('training_edit', {'id': training.id}) }}"><i class="far fa-edit icon icon-show btn"></i></a>
+        <a href="{{ path('training_delete', {'id': training.id}) }}"><i class="far fa-trash-alt icon icon-show btn"></i></a>
+    </div>
+{% endblock %}

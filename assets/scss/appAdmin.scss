@@ -38,3 +38,21 @@
 .icon:hover {
   opacity: 0.5;
 }
+
+.icon-show {
+  width: 100%;
+}
+
+
+.far {
+  font-size: 25px;
+  color: $dark;
+}
+
+.edit-form {
+  color: whitesmoke;
+
+  &:hover {
+    color: $dark;
+  }
+}
