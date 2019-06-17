@@ -8,8 +8,12 @@
     cursor: pointer;
 }
 
+.modal {
+    cursor: default;
+}
+
 .modal-text {
-    max-height: calc(100vh - 425px);
+    max-height: calc(100vh - 450px);
     overflow-y: auto;
 }
 
@@ -28,50 +32,68 @@
     min-width: 150px;
     border-radius: 50%;
 }
+.title-card {
+    text-transform: none;
+    font-size: 1.1rem;
+}
+
+.hr-style {
+    background-color: $admin-color;
+}
 
 .modal-title {
     text-align: center;
+    text-transform: none;
 }
+
+.modal-header {
+    padding-bottom: 0rem;
+}
+
+.modal-body {
+    padding-top: 0rem;
+}
+
 /* Default banner */
 .banner {
-  width: 100%;
-  height: 40vw;
-  overflow: hidden;
+    width: 100%;
+    height: 40vw;
+    overflow: hidden;
 }
 
 /* Parallax effect */
 .paral {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 20% 80%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 20% 80%;
 }
 
 /* Image for Parallax Section */
 .backgroundban {
-  background-image: url('../images/BannerHome.jpg');
+    background-image: url('../images/BannerHome.jpg');
 }
 
 /* Default image container */
 .banner .backgroundban {
-  width: 100%;
-  position: absolute;
+    width: 100%;
+    position: absolute;
 }
 
 /* Titles */
 .banner h1 {
-  font-size: 5em;
-  font-weight: 600;
-  color: $banner-title;
-  margin-top: 12rem;
-  font-family: $mainFont;
-  text-transform: uppercase;
+    font-size: 5em;
+    font-weight: 600;
+    color: $banner-title;
+    margin-top: 12rem;
+    font-family: $mainFont;
+    text-transform: uppercase;
 }
 
 .banner h2 {
-  font-size: 1.6em;
-  color: $banner-title;
-  font-family: $mainFont;
-  font-weight: 600;
+    font-size: 1.6em;
+    color: $banner-title;
+    font-family: $mainFont;
+    font-weight: 600;
 }
 
 body {
