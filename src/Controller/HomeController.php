@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Controller;
-
+use Feed;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Symfony\Component\Intl\Locale;
 class HomeController extends AbstractController
 {
     /**
@@ -12,6 +12,8 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->render('home.html.twig');
+        $rss = Feed::loadRss('http://qualite-securite-environnement.oryalis.com/feed/');
+        $rss = $rss->item;
+        return $this->render('home.html.twig', ['feeds' => $rss]);
     }
 }

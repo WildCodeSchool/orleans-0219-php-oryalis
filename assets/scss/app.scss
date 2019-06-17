@@ -56,8 +56,16 @@ h2 {
     font-size: $h2FontSize;
 }
 
+h3 {
+    font-size: $h2FontSize;
+}
+
 footer {
     font-family: $mainFont;
+}
+
+p {
+    font-family: $textFont;
 }
 
 .logo_footer {
@@ -187,50 +195,42 @@ section:nth-child(even) {
     }
 }
 
-.c-card-flip {
-    width: 450px;
-    height: 250px;
-    margin: 20px auto;
-    cursor: pointer;
-    perspective: 1000;
-    -webkit-perspective: 1000;
-}
-.c-card-flip__flipper {
-    position: relative;
-    transition: 0.8s ease-in-out;
-    transform-style: preserve-3d;
-}
-.c-card-flip__front, .c-card-flip__back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 450px;
-    height: 250px;
-    -webkit-perspective: 1000;
-    perspective: 1000;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    justify-content: center;
-}
-.c-card-flip__front img {
-    max-height: 100%;
-    object-fit: cover;
-    width: 100%;
+/*News*/
 
-}
-.c-card-flip__back {
-    transform: rotateY(180deg);
-    background: rgba(255,255,255,0);
-}
-.c-card-flip__title {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 50px;
-    margin: auto;
-}
-.c-card-flip:hover .c-card-flip__flipper {
-    transform: rotateY(180deg);
+.blog {
+
+    img {
+        max-width: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        min-height: 100%;
+    }
+
+    p {
+        word-break: break-word;
+    }
+
+    h5 {
+        font-size: 2em;
+        font-family:$mainFont ;
+    }
+    h5::first-letter{
+        font-size: 2em;
+        color: $primary-color;
+        vertical-align: middle;
+    }
+    .btn {
+        border: 2px solid $primary-color;
+        padding: 0.5em;
+        border-radius: 5px;
+    }
+    .btn:hover {
+        background-color: #f8f9fa;
+        color: #000000;
+        border:2px solid $secondary-color;
+    }
+
+    .info {
+        padding-top: 3em;
+    }
 }
