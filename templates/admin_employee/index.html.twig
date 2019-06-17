@@ -4,13 +4,12 @@
 
 {% block body %}
     <div class="text-center py-5">
-        <a href="#" class="btn btn-primary">+ Ajouter un membre</a>
+        <a href="#" class="btn add">+ Ajouter un membre</a>
     </div>
-
 
     <div class="row card-team">
         {% for employee in employees %}
-            <div class="col-md-4 col-lg-4 text-center">
+            <div class="col-md-6 col-lg-4 text-center">
                 {% if employee.picture is null %}
                 <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
                      alt="{{ employee.lastname }} {{ employee.firstname }}">

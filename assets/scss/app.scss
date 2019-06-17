@@ -4,28 +4,6 @@
 @import "~bootswatch/dist/lux/bootswatch";
 @import "appAdmin";
 
-/* Team admin */
-.card-title{
-    font-size: 1.6rem;
-    text-transform: none;
-    color: $dark;
-}
-
-.img-team {
-    max-width: 150px;
-    min-width: 150px;
-    border-radius: 50%;
-}
-
-.far {
-    font-size: 25px;
-    color: $dark;
-}
-
-.btn-primary {
-    background-color: $admin-color;
-}
-
 /* Default banner */
 .banner {
   width: 100%;
