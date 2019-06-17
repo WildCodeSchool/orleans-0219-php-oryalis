@@ -18,4 +18,9 @@ class EmployeeRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Employee::class);
     }
+
+    public function findAllOrderByLastname()
+    {
+        return $this->findBy(array(), array('lastname' => 'ASC'));
+    }
 }
