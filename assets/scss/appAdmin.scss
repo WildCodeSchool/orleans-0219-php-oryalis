@@ -3,6 +3,7 @@
 .training-title {
   font-size: $h1-font-size;
 }
+
 .training-sub-title {
   font-size: $h2-font-size;
 }
@@ -16,6 +17,7 @@
 .link-training {
   text-decoration: none;
   font-size: 1.1em;
+
   &:hover {
     color: $admin-color;
     text-decoration: none;
@@ -59,4 +61,8 @@
 
 .btn-primary {
   background-color: $admin-color;
+}
+
+.btn-delete {
+  padding: 0;
 }
