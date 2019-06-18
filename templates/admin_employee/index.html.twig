@@ -20,8 +20,8 @@
                 <div class="card-body">
                     <h2 class="card-title"><span
                                 class="text-uppercase">{{ employee.lastname }}</span> {{ employee.firstname }}</h2>
-                    <a href="#" class="btn"><i class="far fa-edit"></i></a>
-                    <a href="#" class="btn"><i class="far fa-trash-alt"></i></a>
+                    <a href="{{ path('employee_edit', {'id': employee.id}) }}" class="btn"><i class="far faru fa-edit"></i></a>
+                    <a href="#" class="btn"><i class="far faru fa-trash-alt"></i></a>
                 </div>
             </div>
         {% endfor %}
