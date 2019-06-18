@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Controller;
+
 use Feed;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\Intl\Locale;
+
 class HomeController extends AbstractController
 {
     /**
