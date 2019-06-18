@@ -5,7 +5,5 @@ includes:
 parameters:
     autoload_directories:
         - %rootDir%/../../../src/Migrations
-    excludes_analyse:
-        - %rootDir%/../vendor/dg/rss-php/src/Feed.php
     ignoreErrors:
         - '#^Access to an undefined property Feed::\$item.$#'
