@@ -1,13 +1,14 @@
-{% extends 'base.html.twig' %}
+{% extends 'layoutAdmin.html.twig' %}
 
-{% block title %}Edit Employee{% endblock %}
+{% block title %}Modifier Membre{% endblock %}
 
 {% block body %}
-    <h1>Edit Employee</h1>
+    <h1 class="text-capitalize">Modifier <span
+                class="text-uppercase">{{ employee.lastname }}</span> {{ employee.firstname }}</h1>
 
-    {{ include('admin_employee/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('admin_employee') }}">back to list</a>
+    {{ include('admin_employee/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
     {{ include('admin_employee/_delete_form.html.twig') }}
+
+    <a href="{{ path('admin_employee') }}">Liste des membres</a>
 {% endblock %}
