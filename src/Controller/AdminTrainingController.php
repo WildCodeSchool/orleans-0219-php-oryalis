@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 /**
  * @Route("admin/formation")
  */
-class TrainingController extends AbstractController
+class AdminTrainingController extends AbstractController
 {
     /**
      * @Route("/", name="training_index", methods={"GET"})
@@ -21,7 +21,7 @@ class TrainingController extends AbstractController
     public function index(TrainingRepository $trainingRepository): Response
     {
         return $this->render('admin/training/index.html.twig', [
-            'trainings' => $trainingRepository->findAll(),
+            'trainings' => $trainingRepository->findAll(), array('training' => 'ASC')
         ]);
     }
 

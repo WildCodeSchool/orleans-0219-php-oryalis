@@ -12,7 +12,7 @@ class TrainingType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
+            ->add('title', 'string')
             ->add('goal')
             ->add('prerequisite')
             ->add('period')
@@ -22,7 +22,6 @@ class TrainingType extends AbstractType
             ->add('program')
         ;
     }
-
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([

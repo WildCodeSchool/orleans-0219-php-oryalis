@@ -31,6 +31,7 @@
   font-family: $mainFont;
 
   &:hover {
+    text-decoration: none;
     color: $admin-color;
   }
 }
@@ -42,8 +43,10 @@
 .icon-show {
   width: 100%;
 }
+
 .edit-form {
-  color: whitesmoke;
+  color: $bg-color;
+  font-size: 20px;
 
   &:hover {
     color: $dark;
@@ -63,9 +66,13 @@
   border-radius: 50%;
 }
 
-.far {
+.faro {
   font-size: 20px;
   color: $dark;
+
+  &:hover {
+    color: $dark;
+  }
 }
 
 .btn-primary {

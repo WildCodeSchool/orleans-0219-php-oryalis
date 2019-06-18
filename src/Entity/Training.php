@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TrainingRepository")
  */
@@ -17,49 +17,59 @@ class Training
     private $id;
 
     /**
+     * @Assert\Length(max=255)
+     * @Assert\NotNull()
      * @ORM\Column(type="string", length=255)
      */
     private $title;
 
     /**
+     * @Assert\Length(max=255)
+     * @Assert\NotNull()
      * @ORM\Column(type="string", length=255)
      */
     private $period;
 
     /**
+     * @Assert\Length(max=255)
+     * @Assert\NotNull()
      * @ORM\Column(type="string", length=255)
      */
     private $public;
 
     /**
+     * @Assert\Length(max=255)
+     * @Assert\NotNull()
      * @ORM\Column(type="string", length=255)
      */
     private $pedagogy;
 
     /**
+     * @Assert\Length(max=255)
+     * @Assert\NotNull()
      * @ORM\Column(type="string", length=255)
      */
     private $trainer;
 
     /**
+     * @Assert\NotNull()
      * @ORM\Column(type="text")
      */
     private $program;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Assert\NotNull()
+     * @ORM\Column(type="text")
      */
     private $goal;
 
     /**
+     * @Assert\Length(max=255)
+     * @Assert\NotNull()
      * @ORM\Column(type="string", length=255)
      */
     private $prerequisite;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $evaluation;
 
     public function getId(): ?int
     {
@@ -162,15 +172,4 @@ class Training
         return $this;
     }
 
-    public function getEvaluation(): ?string
-    {
-        return $this->evaluation;
-    }
-
-    public function setEvaluation(string $evaluation): self
-    {
-        $this->evaluation = $evaluation;
-
-        return $this;
-    }
 }
