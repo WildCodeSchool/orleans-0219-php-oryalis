@@ -19,9 +19,9 @@ class TrainingFixtures extends Fixture
             $training->setPrerequisite($faker->sentence);
             $training->setPeriod($faker->monthName);
             $training->setPublic($faker->sentence);
-            $training->setPedagogy($faker->sentence);
+            $training->setPedagogy($faker->text);
             $training->setTrainer($faker->name);
-            $training->setProgram($faker->paragraph);
+            $training->setProgram($faker->text);
 
             $manager->persist($training);
         }

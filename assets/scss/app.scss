@@ -187,8 +187,83 @@ section:nth-child(even) {
     }
 }
 
+/* PAGE FORMATION */
 
+.trainings-title {
+    text-align: center;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    font-size: 4em;
+}
 
+.training-name {
+    background-color: lighten($primary-color, 20%);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+}
 
+.infos-trainings {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
 
+.picto-trainings {
+    margin-right: 10px;
+    color: lighten($primary-color, 20%)
+}
 
+.program {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    h4{
+        padding-top: 2vw;
+        padding-bottom: 1vw;
+    }
+}
+
+.training-list {
+    margin-top: 2vw;
+    .training-item {
+        color: $dark;
+        display: inline-block;
+        &:hover{
+            background: none;
+        }
+        &:after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background: transparent;
+            transition: width .7s ease, background-color .7s ease;
+        }
+        &:hover:after {
+            width: 100%;
+            background: $primary-color;
+        }
+        &:active {
+            color: $primary-color;
+        }
+    }
+}
+
+.pic-container {
+    margin-top: 0.8vw;
+    overflow: hidden;
+    height: 350px;
+}
+
+.training-pic {
+    object-fit: cover;
+}
+
+.back-to-list-trainings {
+    transition: 0.5s;;
+    &:hover {
+        color: $primary-color;
+        text-decoration: none;
+    }
+}
