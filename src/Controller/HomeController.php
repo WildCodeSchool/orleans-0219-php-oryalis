@@ -17,10 +17,10 @@ class HomeController extends AbstractController
     public function index(QCMAnswersRepository $answersRepository, QCMQuestionsRepository $questionsRepository):Response
     {
         return $this->render('home/index.html.twig', [
-            'question' => $question,
-            'answers' => $answers,
             $question = $questionsRepository->findOneBy([], ['year' => 'DESC', 'month' => 'DESC']),
             $answers = $answersRepository->findAll(),
+            'question' => $question,
+            'answers' => $answers,
         ]);
     }
 }
