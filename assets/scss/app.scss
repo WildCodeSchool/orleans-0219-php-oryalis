@@ -40,7 +40,7 @@
 }
 
 .banner h2 {
-  font-size: 1.6em;
+  font-size: $subtitleFontSize;
   color: $banner-title;
   font-family: $mainFont;
   font-weight: 600;
@@ -53,13 +53,14 @@ body {
 h1,h2,h3,h4 {
     font-family: $mainFont;
 }
-h2 {
-    font-size: $h2FontSize;
+h2, h3 {
+    font-size: $titleFontSize;
 }
 
-h3 {
-    font-size: $h2FontSize;
+h4,h5,h6 {
+    font-size: $subtitleFontSize;
 }
+
 
 footer {
     font-family: $mainFont;
@@ -137,7 +138,6 @@ address {
         min-width: 100%;
         max-width: 100%;
         border-radius: 50%;
-        border: 8px solid $border-color;
         transform: scale(0.9);
         filter: grayscale(0.4);
         transition: all .2s ease-out;
@@ -150,6 +150,7 @@ address {
 }
 
 .picto h3 {
+    font-size: $subtitleFontSize;
     padding-top: 1em;
 }
 
@@ -170,7 +171,7 @@ section {
 }
 
 section:nth-child(even) {
-    background-color: $background-color-light;
+    background-color:  lighten($bg-color, 100%);
     box-shadow: 0px 15px 10px -15px #111;
 }
 
@@ -229,7 +230,7 @@ section:nth-child(even) {
     }
 
     .btn:hover {
-        background-color: #f8f9fa;
+        background-color: $buttonHoverColor;
         color: #000000;
         border: 2px solid $secondary-color;
     }
