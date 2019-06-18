@@ -15,6 +15,6 @@ class HomeController extends AbstractController
     {
         $rss = Feed::loadRss('http://qualite-securite-environnement.oryalis.com/feed/');
         $rss = $rss->item;
-        return $this->render('home.html.twig', ['feeds' => $rss]);
+        return $this->render('home/index.html.twig', ['feeds' => $rss]);
     }
 }
