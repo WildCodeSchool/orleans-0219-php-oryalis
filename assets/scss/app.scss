@@ -189,33 +189,37 @@ section:nth-child(even) {
 
 /* PAGE FORMATION */
 
-.trainings-title{
+.trainings-title {
     text-align: center;
     margin-top: 3vw;
     margin-bottom: 3vw;
     font-size: 4em;
 }
 
-.training-name{
+.training-name {
     background-color: lighten($primary-color, 20%);
     padding: 20px;
     text-align: center;
     font-size: 2em;
     margin-bottom: 2vw;
     margin-top: 2vw;
-
 }
 
-.picto-formations {
+.infos-trainings {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.picto-trainings {
     margin-right: 10px;
     color: lighten($primary-color, 20%)
 }
 
-.program{
+.program {
     margin-top: 2vw;
     margin-bottom: 2vw;
     h4{
-        padding-top: 1vw;
+        padding-top: 2vw;
         padding-bottom: 1vw;
     }
 }
@@ -236,17 +240,17 @@ section:nth-child(even) {
             background: transparent;
             transition: width .7s ease, background-color .7s ease;
         }
-        &:hover:after{
+        &:hover:after {
             width: 100%;
             background: $primary-color;
         }
-        &:active{
+        &:active {
             color: $primary-color;
         }
     }
 }
 
-.pic-container{
+.pic-container {
     margin-top: 0.8vw;
     overflow: hidden;
     height: 350px;
@@ -254,4 +258,12 @@ section:nth-child(even) {
 
 .training-pic {
     object-fit: cover;
+}
+
+.back-to-list-trainings {
+    transition: 0.5s;;
+    &:hover {
+        color: $primary-color;
+        text-decoration: none;
+    }
 }
