@@ -39,5 +39,4 @@ class TrainingController extends AbstractController
             'training' => $training
         ]);
     }
-
 }
