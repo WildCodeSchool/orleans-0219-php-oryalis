@@ -26,6 +26,11 @@ class News
      */
     private $date;
 
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $content;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -51,6 +56,18 @@ class News
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getContent(): ?string
+    {
+        return $this->content;
+    }
+
+    public function setContent(string $content): self
+    {
+        $this->content = $content;
 
         return $this;
     }
