@@ -47,6 +47,7 @@ class AdminTrainingController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
     /**
      * @Route("/{id}", name="admin_training_show", methods={"GET"})
      */
@@ -56,6 +57,7 @@ class AdminTrainingController extends AbstractController
             'training' => $training,
         ]);
     }
+
     /**
      * @Route("/{id}/edit", name="training_edit", methods={"GET","POST"})
      */
@@ -76,5 +78,20 @@ class AdminTrainingController extends AbstractController
             'training' => $training,
             'form' => $form->createView(),
         ]);
+    }
+
+
+    /**
+     * @Route("/{id}", name="training_delete", methods={"DELETE"})
+     */
+    public function delete(Request $request, Training $training): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$training->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($training);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('training_index');
     }
 }
