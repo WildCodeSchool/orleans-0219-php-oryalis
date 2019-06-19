@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\QCMAnswersRepository")
  */
-class QCMAnswers
+class Answer
 {
     /**
      * @ORM\Id()
@@ -27,7 +27,7 @@ class QCMAnswers
     private $good_answer;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\QCMQuestions")
+     * @ORM\ManyToOne(targetEntity="Question")
      * @ORM\JoinColumn(nullable=false)
      */
     private $question;
@@ -61,12 +61,12 @@ class QCMAnswers
         return $this;
     }
 
-    public function getQuestion(): ?QCMQuestions
+    public function getQuestion(): ?Question
     {
         return $this->question;
     }
 
-    public function setQuestion(?QCMQuestions $question): self
+    public function setQuestion(?Question $question): self
     {
         $this->question = $question;
 

@@ -173,7 +173,7 @@ address {
                 &:hover {
                     background-color: $secondary-color;
                     border-color: $secondary-color;
-                    color: white;
+                    color: $bg-color;
                     transition: 0.5s;
                 }
             }
