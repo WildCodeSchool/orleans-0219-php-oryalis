@@ -60,6 +60,7 @@ class Training
     private $program;
 
     /**
+     * @ORM\Column(type="string", length=255)
      * @Assert\NotNull()
      * @ORM\Column(type="text")
      */
@@ -71,7 +72,6 @@ class Training
      * @ORM\Column(type="string", length=255)
      */
     private $prerequisite;
-
 
     public function getId(): ?int
     {
