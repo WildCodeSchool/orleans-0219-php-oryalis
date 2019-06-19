@@ -18,15 +18,13 @@ class QuestionFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $faker = Faker\Factory::create('fr_FR');
-        for ($i=0; $i<=10; $i++) {
-            $question = new QCMQuestions();
-            $question->setName($faker->sentence(25));
-            $question->setExplication($faker->text(500));
-            $question->setMonth($faker->monthName);
-            $question->setYear($faker->year);
-            $this->addReference('question_' . $id, $question);
-            $manager->persist($question);
-        }
+        $question = new QCMQuestions();
+        $question->setName($faker->sentence(25));
+        $question->setExplication($faker->text(500));
+        $question->setMonth($faker->monthName);
+        $question->setYear($faker->year);
+        $this->addReference('question', $question);
+        $manager->persist($question);
         $manager->flush();
     }
 }

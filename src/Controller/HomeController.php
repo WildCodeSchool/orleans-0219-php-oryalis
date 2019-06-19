@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\QCMAnswers;
 use App\Repository\QCMAnswersRepository;
 use App\Repository\QCMQuestionsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

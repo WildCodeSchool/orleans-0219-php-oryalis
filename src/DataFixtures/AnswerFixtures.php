@@ -19,11 +19,11 @@ class AnswerFixtures extends Fixture implements DependentFixtureInterface
     public function load(ObjectManager $manager)
     {
         $faker = Faker\Factory::create('fr_FR');
-        for ($i = 0; $i <= 10; $i++) {
+        for ($i=0; $i<2; $i++) {
             $answer = new QCMAnswers();
             $answer->setName($faker->sentence(2));
             $answer->setGoodAnswer($faker->numberBetween($min = 0, $max = 1));
-            $answer->setQuestion($this->getReference('question_') . $faker->numberBetween($min = 0, $max = 10));
+            $answer->setQuestion($this->getReference('question'));
             $manager->persist($answer);
         }
         $manager->flush();

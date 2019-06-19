@@ -27,7 +27,7 @@ class QCMQuestions
     private $explication;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=20)
      */
     private $month;
 
@@ -65,12 +65,12 @@ class QCMQuestions
         return $this;
     }
 
-    public function getMonth(): ?int
+    public function getMonth(): ?string
     {
         return $this->month;
     }
 
-    public function setMonth(int $month): self
+    public function setMonth(string $month): self
     {
         $this->month = $month;
 
