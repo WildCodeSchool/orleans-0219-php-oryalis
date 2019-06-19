@@ -73,4 +73,34 @@
     <section>
         {% include '_qcm.html.twig' %}
     </section>
+    <section class="blog container-fluid pr-0 pl-0 pt-5 pb-5">
+        <div class="container justify-content-center">
+            <div class="row info">
+                <div class="col-12">
+                    <h2 class="pt-5 pb-5 text-center">Les actualités</h2>
+                </div>
+                <div class="col-12 col-lg-5">
+                    <img src="{{ asset('build/images/new.jpg') }}" alt="illustration">
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h3>Informations internes</h3>
+                    <p>La norme ISO 45001 a été publiée en 2018, Oryalis peut vous former et vous aider à mettre en place ce
+                        nouveau référentiel. L'équipe ORYALIS est constituée de plusieurs auditeurs qualifiés sur cette nouvelle norme.</p>
+                </div>
+                <h3 class="text-center col-12 mt-5 pt-5 pb-4">Les informations du blog</h3>
+                {% for feed in feeds |slice(0,3) %}
+                    <article class="media mb-5">
+                        <div class="media-body">
+                            <h5>{{ feed.title }}</h5>
+                            <p>{{ feed.category }}<br>{{ feed.pubDate|date("d/m/Y", "Europe/Paris") }}</p>
+                            <p>{{ feed.description|raw|striptags|trim|truncate(155, true, '...') }}</p>
+                            <a class="btn btn-outline-primary" href="{{ feed.link|raw }}" role="button">lire la suite</a>
+                            <hr>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+>>>>>>> dev
+    </section>
 {% endblock %}
