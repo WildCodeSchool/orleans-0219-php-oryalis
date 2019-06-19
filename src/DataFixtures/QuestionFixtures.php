@@ -24,7 +24,7 @@ class QuestionFixtures extends Fixture
             $question->setExplication($faker->text(500));
             $question->setMonth($faker->monthName);
             $question->setYear($faker->year);
-            $this->addReference('question' . $i, $question);
+            $this->addReference('question_' . $i, $question);
             $manager->persist($question);
         }
         $manager->flush();

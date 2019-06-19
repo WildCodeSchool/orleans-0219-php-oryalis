@@ -23,7 +23,7 @@ class AnswerFixtures extends Fixture implements DependentFixtureInterface
             $answer = new Answer();
             $answer->setName($faker->sentence(2));
             $answer->setGoodAnswer($faker->numberBetween($min = 0, $max = 1));
-            $answer->setQuestion($this->getReference('question'));
+            $answer->setQuestion($this->getReference('question_'));
             $manager->persist($answer);
         }
         $manager->flush();

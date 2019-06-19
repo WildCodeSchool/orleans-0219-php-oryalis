@@ -24,7 +24,7 @@ class Answer
     /**
      * @ORM\Column(type="integer", nullable=true)
      */
-    private $good_answer;
+    private $goodAnswer;
 
     /**
      * @ORM\ManyToOne(targetEntity="Question")
@@ -51,12 +51,12 @@ class Answer
 
     public function getGoodAnswer(): ?int
     {
-        return $this->good_answer;
+        return $this->goodAnswer;
     }
 
-    public function setGoodAnswer(?int $good_answer): self
+    public function setGoodAnswer(?int $goodAnswer): self
     {
-        $this->good_answer = $good_answer;
+        $this->goodAnswer = $goodAnswer;
 
         return $this;
     }
