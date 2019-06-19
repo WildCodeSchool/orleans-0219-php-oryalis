@@ -1,0 +1,46 @@
+{% form_theme form 'foundation_5_layout.html.twig' %}
+{{ form_start(form) }}
+    <div class="form-group mt-lg-4">
+            {{ form_label(form.title, 'Titre') }}
+            {{ form_widget(form.title, ({'attr': {'class': 'form-control'}})) }}
+            {{ form_errors(form.title) }}
+        </div>
+        <div class="form-group">
+        {{ form_label(form.goal, 'Objectifs de formation') }}
+        {{ form_widget(form.goal, ({'attr': {'class': 'form-control'}})) }}
+        {{ form_errors(form.goal) }}
+        </div>
+        <div class="form-group">
+        {{ form_label(form.prerequisite, 'Pré requis') }}
+        {{ form_widget(form.prerequisite, ({'attr': {'class': 'form-control'}})) }}
+        {{ form_errors(form.prerequisite) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.title, 'Durée') }}
+            {{ form_widget(form.period, ({'attr': {'class': 'form-control'}})) }}
+            {{ form_errors(form.period) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.title, 'Public concerné') }}
+            {{ form_widget(form.public, ({'attr': {'class': 'form-control'}})) }}
+            {{ form_errors(form.public) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.title, 'Méthodes et moyens pédagogiques') }}
+            {{ form_widget(form.pedagogy, ({'attr': {'class': 'form-control'}})) }}
+            {{ form_errors(form.pedagogy) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.title, 'Formateur') }}
+            {{ form_widget(form.trainer, ({'attr': {'class': 'form-control'}})) }}
+            {{ form_errors(form.trainer) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.title, 'Programme') }}
+            {{ form_widget(form.program, ({'attr': {'class': 'form-control'}})) }}
+            {{ form_errors(form.program) }}
+        </div>
+
+    <button class="btn add edit-form">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
+
