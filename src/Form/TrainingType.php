@@ -22,6 +22,7 @@ class TrainingType extends AbstractType
             ->add('program')
         ;
     }
+
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([

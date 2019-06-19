@@ -6,6 +6,7 @@
  * Time: 16:27
  */
 
+
 namespace App\Controller;
 
 use App\Entity\Training;
