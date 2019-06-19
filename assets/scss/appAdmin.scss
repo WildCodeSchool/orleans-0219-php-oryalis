@@ -3,7 +3,6 @@
 .training-title {
   font-size: $h1-font-size;
 }
-
 .training-sub-title {
   font-size: $h2-font-size;
 }
@@ -17,7 +16,6 @@
 .link-training {
   text-decoration: none;
   font-size: 1.1em;
-
   &:hover {
     color: $admin-color;
     text-decoration: none;
@@ -33,12 +31,26 @@
   font-family: $mainFont;
 
   &:hover {
+    text-decoration: none;
     color: $admin-color;
   }
 }
 
 .icon:hover {
   opacity: 0.5;
+}
+
+.icon-show {
+  width: 100%;
+}
+
+.edit-form {
+  color: $bg-color;
+  font-size: 20px;
+
+  &:hover {
+    color: $dark;
+  }
 }
 
 /* Team admin */
@@ -54,14 +66,19 @@
   border-radius: 50%;
 }
 
-.faru {
+.faro {
   font-size: 20px;
   color: $dark;
+
+  &:hover {
+    color: $dark;
+  }
 }
 
 .btn-primary {
   background-color: $admin-color;
 }
+
 
 .btn-delete {
   padding: 0;
