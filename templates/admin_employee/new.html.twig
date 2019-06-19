@@ -1,11 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Employee{% endblock %}
+{% block title %}Ajouter un membre{% endblock %}
 
 {% block body %}
-    <h1>Create new Employee</h1>
-
-    {{ include('admin_employee/_form.html.twig') }}
-
-    <a href="{{ path('admin_employee') }}">back to list</a>
+    <h1 class="training-title py-4 text-center">Ajouter un membre</h1>
+    <div class="table-title container pt-lg-4 mb-lg-4">
+        <div class="col text-center">
+            {{ include('admin_employee/_form.html.twig') }}
+        </div>
+    </div>
+    <div class="text-center pb-4">
+    <a class="btn btn-primary" href="{{ path('admin_employee') }}">Liste des membres</a>
+    </div>
 {% endblock %}
