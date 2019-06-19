@@ -21,7 +21,7 @@ class AdminTrainingController extends AbstractController
     public function index(TrainingRepository $trainingRepository): Response
     {
         return $this->render('admin/training/index.html.twig', [
-            'trainings' => $trainingRepository->findAll(), array('training' => 'ASC')
+            'trainings' => $trainingRepository->findAll(), array('trainings' => 'ASC')
         ]);
     }
 
@@ -47,9 +47,8 @@ class AdminTrainingController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-
     /**
-     * @Route("/{id}", name="training_show", methods={"GET"})
+     * @Route("/{id}", name="admin_training_show", methods={"GET"})
      */
     public function show(Training $training): Response
     {
@@ -57,7 +56,6 @@ class AdminTrainingController extends AbstractController
             'training' => $training,
         ]);
     }
-
     /**
      * @Route("/{id}/edit", name="training_edit", methods={"GET","POST"})
      */
@@ -78,19 +76,5 @@ class AdminTrainingController extends AbstractController
             'training' => $training,
             'form' => $form->createView(),
         ]);
-    }
-
-    /**
-     * @Route("/{id}", name="training_delete", methods={"DELETE"})
-     */
-    public function delete(Request $request, Training $training): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$training->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($training);
-            $entityManager->flush();
-        }
-
-        return $this->redirectToRoute('training_index');
     }
 }
