@@ -1,3 +1,5 @@
+@import "vars";
+
 /**Training admin**/
 
 .training-title {
@@ -82,4 +84,8 @@
 
 .btn-delete {
   padding: 0;
+}
+
+.news-content {
+  color: $dark;
 }
