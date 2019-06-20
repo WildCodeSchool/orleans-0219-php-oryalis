@@ -21,6 +21,7 @@
 .modal-text {
     max-height: calc(100vh - 450px);
     overflow-y: auto;
+    color: $textModal;
 }
 
 .detail-modal {
@@ -43,6 +44,7 @@
 .title-card {
     text-transform: none;
     font-size: 1.1rem;
+    color: $dark;
 }
 
 .hr-modal {
@@ -51,7 +53,7 @@
 
 .hr-style {
     background-color: $admin-color;
-    margin: 1em 7em 0 7em;
+    margin: 1em 2em 0 2em;
 }
 
 .modal-title {

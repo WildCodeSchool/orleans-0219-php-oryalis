@@ -4,6 +4,7 @@
 
 {% block body %}
     <div class="py-5 mt-4"></div>
+    <div class="container">
     <div class="row">
         {% for employee in employees %}
 
@@ -20,8 +21,11 @@
                 <div class="card-body">
                     <h2 class="card-title"><span
                                 class="text-uppercase">{{ employee.lastname }}</span> {{ employee.firstname }}</h2>
-                    <h3 class="title-card">{{ employee.title }}</h3>
-                    <h3 class="title-card">Tél: {{ employee.tel }}</h3>
+                    <p class="title-card">{{ employee.title }}</p>
+                    {% if employee.picture is null %}
+                    {% else %}
+                        <p class="title-card"><i class="fas faro fa-phone-alt"></i> {{ employee.tel }}</p>
+                    {% endif %}
                 </div>
 
                 <div class="modal fade" id="exampleModal{{ employee.id }}" tabindex="-1" role="dialog"
@@ -30,7 +34,7 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h3 class="modal-title text-center" id="exampleModalLabel"><span
+                                <h3 class="card-title" id="exampleModalLabel"><span
                                             class="text-uppercase">{{ employee.lastname }}</span> {{ employee.firstname }}
                                 </h3>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -51,14 +55,17 @@
                                         {% endif %}
                                     </div>
                                     <div class="col-md-8 col-lg-8 col-sm-12 detail-modal">
-                                        <h3 class="title-card">{{ employee.title }}</h3>
-                                        <hr>
-                                        <h3 class="title-card">Tél: {{ employee.tel }}</h3>
+                                        <p class="title-card">{{ employee.title }}</p>
+                                        {% if employee.picture is null %}
+                                        {% else %}
+                                            <hr>
+                                            <p class="title-card"><i class="fas faro fa-phone-alt"></i> {{ employee.tel }}</p>
+                                        {% endif %}
                                     </div>
                                 </div>
                                 <hr class="hr-modal">
                                 <div class="special-row modal-text">
-                                    <h3 class="pb-1 align-self-center">Expériences</h3>
+{#                                    <h3 class="pb-1 align-self-center card-title text-uppercase">Expériences</h3>#}
                                     <p class="text-left ">{{ employee.description }}</p>
                                 </div>
                             </div>
@@ -69,5 +76,6 @@
             </div>
 
         {% endfor %}
+    </div>
     </div>
 {% endblock %}
