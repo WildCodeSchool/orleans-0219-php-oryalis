@@ -16,7 +16,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class NewsController extends AbstractController
 {
     /**
+     * @param NewsRepository $newsRepository
      * @Route("/", name="news_index", methods={"GET"})
+     * @return Response
      */
     public function index(NewsRepository $newsRepository): Response
     {
