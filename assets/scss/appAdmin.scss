@@ -83,3 +83,17 @@
 .btn-delete {
   padding: 0;
 }
+
+.btn-add {
+  border: solid 1px $admin-color;
+  border-radius: 20px;
+  font-size: 1em;
+  color: $dark;
+  transition: 0.5s;
+  font-family: $mainFont;
+
+  &:hover {
+    text-decoration: none;
+    color: $admin-color;
+  }
+}
