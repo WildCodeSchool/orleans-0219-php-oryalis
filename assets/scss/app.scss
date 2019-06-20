@@ -4,6 +4,10 @@
 @import "~bootswatch/dist/lux/bootswatch";
 @import "appAdmin";
 
+.fa-phone {
+    transform: rotate(95deg);
+}
+
 .card-team {
     cursor: pointer;
 }
@@ -38,7 +42,7 @@
     max-width: 150px;
     min-width: 150px;
     border-radius: 50%;
-    border: 5px solid $border-color;
+    border: 2px solid $fontColor;
 }
 
 .title-card {
@@ -63,6 +67,7 @@
 
 .modal-header {
     padding-bottom: 0rem;
+    border-bottom: none;
 }
 
 .modal-body {
