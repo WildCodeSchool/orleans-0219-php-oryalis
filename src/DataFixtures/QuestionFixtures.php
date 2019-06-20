@@ -20,11 +20,11 @@ class QuestionFixtures extends Fixture
         $faker = Faker\Factory::create('fr_FR');
         for ($i=0; $i<=12; $i++) {
             $question = new Question();
-            $question->setName($faker->sentence(25));
+            $question->setName($faker->sentence(15));
             $question->setExplication($faker->text(500));
             $question->setMonth($faker->monthName);
             $question->setYear($faker->year);
-            $this->addReference('question_' . $i, $question);
+            $this->addReference('question' . $i, $question);
             $manager->persist($question);
         }
         $manager->flush();
