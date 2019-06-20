@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/news")
+ * @Route("/admin/news")
  */
 class NewsController extends AbstractController
 {
@@ -20,7 +20,7 @@ class NewsController extends AbstractController
      */
     public function index(NewsRepository $newsRepository): Response
     {
-        return $this->render('news/index.html.twig', [
+        return $this->render('admin_news/index.html.twig', [
             'news' => $newsRepository->findAll(),
         ]);
     }
@@ -42,8 +42,8 @@ class NewsController extends AbstractController
             return $this->redirectToRoute('news_index');
         }
 
-        return $this->render('news/new.html.twig', [
-            'news' => $news,
+        return $this->render('admin_news/new.html.twig', [
+            'admin_news' => $news,
             'form' => $form->createView(),
         ]);
     }
@@ -53,8 +53,8 @@ class NewsController extends AbstractController
      */
     public function show(News $news): Response
     {
-        return $this->render('news/show.html.twig', [
-            'news' => $news,
+        return $this->render('admin_news/show.html.twig', [
+            'admin_news' => $news,
         ]);
     }
 
@@ -74,8 +74,8 @@ class NewsController extends AbstractController
             ]);
         }
 
-        return $this->render('news/edit.html.twig', [
-            'news' => $news,
+        return $this->render('admin_news/edit.html.twig', [
+            'admin_news' => $news,
             'form' => $form->createView(),
         ]);
     }
