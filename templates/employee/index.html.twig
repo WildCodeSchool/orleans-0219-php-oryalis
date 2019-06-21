@@ -22,9 +22,9 @@
                     <h2 class="card-title"><span
                                 class="text-uppercase">{{ employee.lastname }}</span> {{ employee.firstname }}</h2>
                     <p class="title-card">{{ employee.title }}</p>
-                    {% if employee.picture is null %}
+                    {% if employee.tel is null %}
                     {% else %}
-                        <p class="title-card"><i class="fas faru fa-phone"></i> {{ employee.tel }}</p>
+                        <p class="title-card"><i class="fas fa-phone"></i> {{ employee.tel }}</p>
                     {% endif %}
                 </div>
 
@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="col-md-8 col-lg-8 col-sm-12 detail-modal">
                                         <p class="title-card">{{ employee.title }}</p>
-                                        {% if employee.picture is null %}
+                                        {% if employee.tel is null %}
                                         {% else %}
                                             <hr>
                                             <p class="title-card"><i class="fas fa-phone"></i> {{ employee.tel }}</p>
