@@ -24,7 +24,7 @@ class Question
     /**
      * @ORM\Column(type="text")
      */
-    private $explication;
+    private $explanation;
 
     /**
      * @ORM\Column(type="string", length=20)
@@ -53,14 +53,14 @@ class Question
         return $this;
     }
 
-    public function getExplication(): ?string
+    public function getExplanation(): ?string
     {
-        return $this->explication;
+        return $this->explanation;
     }
 
-    public function setExplication(string $explication): self
+    public function setExplanation(string $explanation): self
     {
-        $this->explication = $explication;
+        $this->explanation = $explanation;
 
         return $this;
     }
