@@ -31,10 +31,55 @@
   font-family: $mainFont;
 
   &:hover {
+    text-decoration: none;
     color: $admin-color;
   }
 }
 
 .icon:hover {
   opacity: 0.5;
+}
+
+.icon-show {
+  width: 100%;
+}
+
+.edit-form {
+  color: $bg-color;
+  font-size: 20px;
+
+  &:hover {
+    color: $dark;
+  }
+}
+
+/* Team admin */
+.card-title {
+  font-size: 1.6rem;
+  text-transform: none;
+  color: $dark;
+}
+
+.img-team {
+  max-width: 150px;
+  min-width: 150px;
+  border-radius: 50%;
+}
+
+.faro {
+  font-size: 20px;
+  color: $dark;
+
+  &:hover {
+    color: $dark;
+  }
+}
+
+.btn-primary {
+  background-color: $admin-color;
+}
+
+
+.btn-delete {
+  padding: 0;
 }

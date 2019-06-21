@@ -1,0 +1,5 @@
+<form class="btn btn-delete" method="post" action="{{ path('employee_delete', {'id': employee.id}) }}" onsubmit="return confirm('Voulez-vous supprimer ce profil ?');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ employee.id) }}">
+    <button class="btn"><i class="far faru fa-trash-alt"></i></button>
+</form>

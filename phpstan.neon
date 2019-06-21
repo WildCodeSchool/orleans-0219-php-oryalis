@@ -3,5 +3,9 @@ includes:
    - vendor/phpstan/phpstan-doctrine/rules.neon
    - vendor/phpstan/phpstan-symfony/extension.neon
 parameters:
-   autoload_directories:
-- %rootDir%/../../../src/Migrations
+    autoload_directories:
+        - %rootDir%/../../../src/Migrations
+    ignoreErrors:
+        - '#^Access to an undefined property Feed::\$item.$#'
+    excludes_analyse:
+        - src/DataFixtures
