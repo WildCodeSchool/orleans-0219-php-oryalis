@@ -46,7 +46,7 @@ class Employee
     private $picture;
 
     /**
-     * @Vich\UploadableField(mapping="employee_images", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="employee", fileNameProperty="image")
      * @var File
      */
     private $pictureFile;
