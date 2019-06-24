@@ -4,50 +4,120 @@
 @import "~bootswatch/dist/lux/bootswatch";
 @import "appAdmin";
 
+.fa-phone {
+    transform: rotate(95deg);
+}
+
+.card-team {
+    cursor: pointer;
+}
+
+.modal {
+    cursor: default;
+}
+
+.special-row {
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -10px;
+}
+
+.modal-text {
+    max-height: calc(100vh - 450px);
+    overflow-y: auto;
+    color: $textModal;
+}
+
+.detail-modal {
+    align-self: center;
+}
+
+.card-title{
+    font-size: 1.6rem;
+    text-transform: none;
+    color: $dark;
+}
+
+.img-team {
+    max-width: 150px;
+    min-width: 150px;
+    border-radius: 50%;
+    border: 2px solid $fontColor;
+}
+
+.title-card {
+    text-transform: none;
+    font-size: 1.1rem;
+    color: $dark;
+}
+
+.hr-modal {
+    background-color: $admin-color;
+}
+
+.hr-style {
+    background-color: $admin-color;
+    margin: 1em 2em 0 2em;
+}
+
+.modal-title {
+    text-align: center;
+    text-transform: none;
+}
+
+.modal-header {
+    padding-bottom: 0rem;
+    border-bottom: none;
+}
+
+.modal-body {
+    padding-top: 0rem;
+}
+
 /* Default banner */
 .banner {
-  width: 100%;
-  height: 40vw;
-  overflow: hidden;
+    width: 100%;
+    height: 40vw;
+    overflow: hidden;
 }
 
 /* Parallax effect */
 .paral {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 20% 80%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 20% 80%;
 }
 
 /* Image for Parallax Section */
 .backgroundban {
-  background-image: url('../images/BannerHome.jpg');
+    background-image: url('../images/BannerHome.jpg');
 }
 
 /* Default image container */
 .banner .backgroundban {
-  width: 100%;
-  position: absolute;
+    width: 100%;
+    position: absolute;
 }
 
 /* Titles */
 .banner h1 {
-  font-size: 5em;
-  font-weight: 600;
-  color: $banner-title;
-  margin-top: 12rem;
-  font-family: $mainFont;
-  text-transform: uppercase;
+    font-size: 5em;
+    font-weight: 600;
+    color: $banner-title;
+    margin-top: 12rem;
+    font-family: $mainFont;
+    text-transform: uppercase;
 }
 
 .banner h2 {
-  font-size: $subtitleFontSize;
-  color: $banner-title;
-  font-family: $mainFont;
-  font-weight: 600;
+    font-size: $subtitleFontSize;
+    color: $banner-title;
+    font-family: $mainFont;
+    font-weight: 600;
 }
 
 body {
-  background-color: $bg-color;
+    background-color: $bg-color;
 }
 
 h1,h2,h3,h4 {
@@ -238,92 +308,92 @@ section:nth-child(even) {
     .info {
         padding-top: 3em;
     }
+}
 
     /* PAGE FORMATION */
 
-    .trainings-title {
-        text-align: center;
-        margin-top: 3vw;
-        margin-bottom: 3vw;
-        font-size: 4em;
-    }
+.trainings-title {
+    text-align: center;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    font-size: 4em;
+}
 
-    .training-name {
-        background-color: lighten($primary-color, 20%);
-        padding: 20px;
-        text-align: center;
-        font-size: 2em;
-        margin-bottom: 2vw;
-        margin-top: 2vw;
-    }
+.training-name {
+    background-color: lighten($primary-color, 20%);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+}
 
-    .infos-trainings {
-        padding-top: 1vw;
+.infos-trainings {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.picto-trainings {
+    margin-right: 10px;
+    color: lighten($primary-color, 20%)
+}
+
+.program {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+    h4 {
+        padding-top: 2vw;
         padding-bottom: 1vw;
     }
+}
 
-    .picto-trainings {
-        margin-right: 10px;
-        color: lighten($primary-color, 20%)
-    }
+.training-list {
+    margin-top: 2vw;
 
-    .program {
-        margin-top: 2vw;
-        margin-bottom: 2vw;
-
-        h4 {
-            padding-top: 2vw;
-            padding-bottom: 1vw;
-        }
-    }
-
-    .training-list {
-        margin-top: 2vw;
-
-        .training-item {
-            color: $dark;
-            display: inline-block;
-
-            &:hover {
-                background: none;
-            }
-
-            &:after {
-                content: '';
-                display: block;
-                height: 2px;
-                width: 0;
-                background: transparent;
-                transition: width .7s ease, background-color .7s ease;
-            }
-
-            &:hover:after {
-                width: 100%;
-                background: $primary-color;
-            }
-
-            &:active {
-                color: $primary-color;
-            }
-        }
-    }
-
-    .pic-container {
-        margin-top: 0.8vw;
-        overflow: hidden;
-        height: 350px;
-    }
-
-    .training-pic {
-        object-fit: cover;
-    }
-
-    .back-to-list-trainings {
-        transition: 0.5s;
+    .training-item {
+        color: $dark;
+        display: inline-block;
 
         &:hover {
-            color: $primary-color;
-            text-decoration: none;
+            background: none;
         }
+
+        &:after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background: transparent;
+            transition: width .7s ease, background-color .7s ease;
+        }
+
+        &:hover:after {
+            width: 100%;
+            background: $primary-color;
+        }
+
+        &:active {
+            color: $primary-color;
+        }
+    }
+}
+
+.pic-container {
+    margin-top: 0.8vw;
+    overflow: hidden;
+    height: 350px;
+}
+
+.training-pic {
+    object-fit: cover;
+}
+
+.back-to-list-trainings {
+    transition: 0.5s;
+
+    &:hover {
+        color: $primary-color;
+        text-decoration: none;
     }
 }
