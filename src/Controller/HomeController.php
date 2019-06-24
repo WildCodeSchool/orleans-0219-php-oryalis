@@ -17,4 +17,12 @@ class HomeController extends AbstractController
         $rss = $rss->item;
         return $this->render('home/index.html.twig', ['feeds' => $rss]);
     }
+
+    /**
+     * @Route("/audit", name="audit")
+     */
+    public function audit()
+    {
+        return $this->render('home/audit.html.twig');
+    }
 }
