@@ -20,7 +20,6 @@ class ContactController extends AbstractController
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-
             $notification->notify($contact);
             $this->addFlash(
                 'success',
