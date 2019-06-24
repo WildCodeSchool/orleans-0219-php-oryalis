@@ -84,6 +84,20 @@
   padding: 0;
 }
 
+.btn-add {
+  border: solid 1px $admin-color;
+  font-size: 0.7em;
+  color: $dark;
+  transition: 0.5s;
+  font-family: $mainFont;
+
+  &:hover {
+    text-decoration: none;
+    color: $banner-title;
+    background-color: $admin-color;
+  }
+}
+
 .form-title {
   font-size: 1.5em;
   color: $admin-color;
