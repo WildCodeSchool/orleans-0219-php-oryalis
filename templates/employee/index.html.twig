@@ -14,7 +14,7 @@
                     <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
                          alt="employee">
                 {% else %}
-                    <img src="{{ asset( employee.picture ) }}" class="img-team"
+                    <img src="{{ asset('uploads/employee/' ~ employee.picture ) }}" class="img-team"
                          alt="{{ employee.lastname }} {{ employee.firstname }}">
                 {% endif %}
                 <hr class="hr-style">
@@ -50,7 +50,7 @@
                                             <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
                                                  alt="employee">
                                         {% else %}
-                                            <img src="{{ asset( employee.picture ) }}" class="img-team"
+                                            <img src="{{ asset('uploads/employee/' ~ employee.picture ) }}" class="img-team"
                                                  alt="{{ employee.lastname }} {{ employee.firstname }}">
                                         {% endif %}
                                     </div>
