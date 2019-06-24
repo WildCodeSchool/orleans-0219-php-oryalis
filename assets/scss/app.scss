@@ -397,3 +397,48 @@ section:nth-child(even) {
         text-decoration: none;
     }
 }
+/*Contact Form*/
+.contact {
+    background-color: lighten($bg-color, 100%);
+
+}
+
+.form {
+    padding: 0;
+    margin: 0;
+    padding-top: 8em;
+    background-color: $form-color;
+    h1 {
+        padding-top: 4em;
+        padding-bottom: 2em;
+    }
+    .card {
+        margin-bottom: 6em;
+        border: none;
+        }
+        .card-body {
+            padding: 2em;
+            color: darken($primary-color, 30%);
+            font-size: 1.5em;
+        }
+        .form-control {
+            margin-bottom: 2em;
+            background-color: $form-color;
+            border-bottom: 1px solid darken($primary-color, 30%);
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .btn {
+            border: 1px solid darken($primary-color, 30%);
+            padding: 0.5em 1em ;
+            font-size: 1em;
+            border-radius: 5px;
+            &:hover {
+                background-color: $bg-color;
+                color: darken($primary-color, 30%);
+            }
+        }
+}
