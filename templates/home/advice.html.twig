@@ -1,0 +1,29 @@
+{% extends 'layoutVistitor.html.twig' %}
+
+{% block title %}Conseil{% endblock %}
+
+{% block body %}
+    <div class="row justify-content-center pic-container">
+        <img src="{{ asset('build/images/advice_jumb.jpeg') }}" class="training-pic" alt="photo de conseil">
+        <h1 class="trainings-title">Conseil</h1>
+    </div>
+    <section class="container advice">
+        <h2>Avec plus de 50 références de clients certifiés,</h2>
+        <p class="pb-3">Oryalis démontre l'efficacité de ses outils d'accompagnement
+            (Analyse environnementale, cartographie des processus, pilotage de SMI, etc).
+        </p>
+        <h2>En matière de risques majeurs,</h2>
+        <p class="pb-3">les communes doivent répondre aux interrogations des citoyens et élaborer les
+            Plans Communaux de Sauvegarde. Oryalis propose aux collectivités un accompagnement dans la mise en place de
+            ces démarches.
+        </p>
+        <h2>L'expérience terrain de ses consultants</h2>
+        <p class="pb-3">permet de mettre en place des solutions réellement adaptées à votre
+            problématique, et qui vous apporteront un réel bénéfice.
+        </p>
+        <h2>Il n'y a pas de solutions standard chez Oryalis,</h2>
+        <p class="pb-3">mais une approche personnalisée en fonction de la demande
+            et des besoins du client.
+        </p>
+    </section>
+{% endblock %}
