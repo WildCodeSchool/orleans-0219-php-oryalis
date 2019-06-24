@@ -97,3 +97,13 @@
     color: $admin-color;
   }
 }
+
+.form-title {
+  font-size: 1.5em;
+  color: $admin-color;
+}
+
+.form-control {
+  border-bottom: solid 3px $admin-color;
+  background-color: $inputColor;
+}

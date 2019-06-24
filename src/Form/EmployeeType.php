@@ -17,8 +17,8 @@ class EmployeeType extends AbstractType
         $builder
             ->add('lastname')
             ->add('firstname')
-            ->add('tel', TelType::class)
-            ->add('title')
+            ->add('tel')
+            ->add('title', TelType::class)
             ->add('picture', FileType::class, ['label' => 'Formats de photos acceptés (.jpg, .png)'])
             ->add('description', TextareaType::class)
         ;

@@ -1,14 +1,16 @@
 {% form_theme form 'foundation_5_layout.html.twig' %}
 {{ form_start(form) }}
-    <div class="form-group mt-lg-4">
-        {{ form_label(form.lastname, 'Nom') }}
-        {{ form_widget(form.lastname, ({'attr': {'class': 'form-control'}})) }}
-        {{ form_errors(form.lastname) }}
-    </div>
-    <div class="form-group">
-        {{ form_label(form.firstname, 'Prénom') }}
-        {{ form_widget(form.firstname, ({'attr': {'class': 'form-control'}})) }}
-        {{ form_errors(form.firstname) }}
+    <div class="row mt-lg-4">
+        <div class="form-group col-6">
+            {{ form_label(form.lastname, 'Nom') }}
+            {{ form_widget(form.lastname, ({'attr': {'class': 'form-control'}})) }}
+            {{ form_errors(form.lastname) }}
+        </div>
+        <div class="form-group col-6">
+            {{ form_label(form.firstname, 'Prénom') }}
+            {{ form_widget(form.firstname, ({'attr': {'class': 'form-control'}})) }}
+            {{ form_errors(form.firstname) }}
+        </div>
     </div>
     <div class="form-group">
         {{ form_label(form.tel, 'Téléphone') }}
@@ -24,13 +26,14 @@
         {{ form_widget(form.description, ({'attr': {'class': 'form-control'}})) }}
         {{ form_errors(form.description) }}
     </div>
-    <div class="form-group">
+    <div class="form-group text-center">
         {{ form_label(form.picture, 'Photos') }}
-        <div class="row justify-content-center">
+        <div class="row justify-content-center text-black-50">
             {{ form_row(form.picture, ({'attr': {'class': 'form-control'}})) }}
             {{ form_errors(form.picture) }}
         </div>
     </div>
-
-    <button class="btn btn-light btn-add my-4">{{ button_label|default('Ajouter') }}</button>
+    <div class="text-center">
+        <button class="btn btn-light btn-add my-4">{{ button_label|default('Ajouter') }}</button>
+    </div>
 {{ form_end(form) }}
