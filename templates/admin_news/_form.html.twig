@@ -1,4 +1,16 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
+<div class="form-group mt-lg-4">
+    {{ form_label(form.name, 'Titre') }}
+    {{ form_widget(form.name, ({'attr': {'class': 'form-control'}})) }}
+    {{ form_errors(form.name) }}
+</div>
+<div class="form-group">
+    {{ form_label(form.date, 'Date') }}
+    {{ form_widget(form.date, ({'attr': {'class': 'form-control'}})) }}
+    {{ form_errors(form.date) }}
+</div>
+{{ form_label(form.content, 'Contenu') }}
+        {{ form_widget(form.content, ({'attr': {'class': 'form-control'}})) }}
+        {{ form_errors(form.content) }}
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}

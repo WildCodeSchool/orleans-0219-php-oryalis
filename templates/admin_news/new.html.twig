@@ -1,11 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New News{% endblock %}
+{% block title %}Admin - Ajouter une actualité{% endblock %}
 
 {% block body %}
-    <h1>Create new News</h1>
-
-    {{ include('admin_news/_form.html.twig') }}
+    <h1>Ajouter une nouvelle acutalité</h1>
+    <div class="table-title container pt-lg-4 mb-lg-4">
+        <div class="col text-center">
+        {{ include('admin_news/_form.html.twig') }}
+        </div>
+    </div>
 
     <a href="{{ path('news_index') }}">back to list</a>
 {% endblock %}

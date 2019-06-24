@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use App\Entity\News;
 use App\Form\NewsType;
 use App\Repository\NewsRepository;
@@ -35,6 +36,9 @@ class NewsController extends AbstractController
         $news = new News();
         $form = $this->createForm(NewsType::class, $news);
         $form->handleRequest($request);
+        $form->add('date', DateType::class, [
+            'widget' => 'choice',
+        ]);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
@@ -46,7 +50,7 @@ class NewsController extends AbstractController
 
         return $this->render('admin_news/new.html.twig', [
             'admin_news' => $news,
-            'form' => $form->createView(),
+            'form' => $form->createView()
         ]);
     }
 
