@@ -310,7 +310,7 @@ section:nth-child(even) {
     }
 }
 
-    /* PAGE FORMATION */
+/* PAGE FORMATION */
 
 .trainings-title {
     text-align: center;
@@ -382,11 +382,12 @@ section:nth-child(even) {
 .pic-container {
     margin-top: 0.8vw;
     overflow: hidden;
-    height: 350px;
+    height: 30vw;
 }
 
 .training-pic {
     object-fit: cover;
+    width: 100%;
 }
 
 .back-to-list-trainings {
