@@ -8,8 +8,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\QuestionRepository")
  * @UniqueEntity(
- *     fields={"month", "year"}
- *     errorPath={"year"}
+ *     fields={"month", "year"},
+ *     errorPath={"year"},
  *     message="Une actualité existe déjà pour cette date"
  * )
  */
