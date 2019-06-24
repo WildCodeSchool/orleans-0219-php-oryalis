@@ -83,7 +83,10 @@ class NewsController extends AbstractController
     }
 
     /**
+     * @param Request $request
+     * @param News $news
      * @Route("/{id}", name="news_delete", methods={"DELETE"})
+     * @return Response
      */
     public function delete(Request $request, News $news): Response
     {
