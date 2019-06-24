@@ -25,7 +25,7 @@
                     <tr>
                         <td><a href="{{ path('news_show', {'id': new.id}) }}" class="link-training"> {{ new.name }}</a></td>
                         <td class="news-content">{{ new.content }}</td>
-                        <td class="news-content">{{ new.date }}</td>
+                        <td class="news-content">{{ new.date | date('d-m-Y') }}</td>
                         <td><a href="{{ path('news_edit', {'id': new.id}) }}"><i class="far faro fa-edit icon icon-show btn mt-3"></i></a></td>
                         <td class="far icon icon-show btn">{{ include('admin_news/_delete_form.html.twig') }}</td>
                     </tr>
