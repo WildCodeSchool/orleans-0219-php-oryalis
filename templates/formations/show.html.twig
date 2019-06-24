@@ -3,8 +3,12 @@
 {% block title %}Oryalis - Formations{% endblock %}
 
 {% block body %}
+    <div class="row justify-content-center pic-container">
+        <img src="{{ asset('build/images/training.jpg') }}" class="training-pic" alt="photo de formation">
+        <h1 class="trainings-title">Formations</h1>
+    </div>
     <section class="container">
-        <h3 class="training-name">{{ training.title }}</h3>
+        <h2 class="training-name">{{ training.title }}</h2>
         <div class="row justify-content-around infos-trainings">
             <p><i class="far fa-clock picto-trainings"></i>{{ training.period }}</p>
             <p><i class="fas fa-users picto-trainings"></i>{{ training.public }}</p>
