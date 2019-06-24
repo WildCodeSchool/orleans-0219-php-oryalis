@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\News;
-use App\Form\News1Type;
+use App\Form\NewsType;
 use App\Repository\NewsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -33,7 +33,7 @@ class NewsController extends AbstractController
     public function new(Request $request): Response
     {
         $news = new News();
-        $form = $this->createForm(News1Type::class, $news);
+        $form = $this->createForm(NewsType::class, $news);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -65,7 +65,7 @@ class NewsController extends AbstractController
      */
     public function edit(Request $request, News $news): Response
     {
-        $form = $this->createForm(News1Type::class, $news);
+        $form = $this->createForm(NewsType::class, $news);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
