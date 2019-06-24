@@ -312,13 +312,6 @@ section:nth-child(even) {
 
 /* PAGE FORMATION */
 
-.trainings-title {
-    text-align: center;
-    margin-top: 3vw;
-    margin-bottom: 3vw;
-    font-size: 4em;
-}
-
 .training-name {
     background-color: lighten($primary-color, 20%);
     padding: 20px;
@@ -348,33 +341,38 @@ section:nth-child(even) {
     }
 }
 
-.training-list {
-    margin-top: 2vw;
+.trainings {
+    background-color: $bg-color;
+    ul {
+        margin-top: 2vw;
 
-    .training-item {
-        color: $dark;
-        display: inline-block;
-
-        &:hover {
+        .list-group-item {
+            color: $dark;
+            display: inline-block;
             background: none;
-        }
+            border-left: solid 1px $primary-color;
 
-        &:after {
-            content: '';
-            display: block;
-            height: 2px;
-            width: 0;
-            background: transparent;
-            transition: width .7s ease, background-color .7s ease;
-        }
+            &:hover {
+                background: none;
+            }
 
-        &:hover:after {
-            width: 100%;
-            background: $primary-color;
-        }
+            &:after {
+                content: '';
+                display: block;
+                height: 1px;
+                width: 0;
+                background: transparent;
+                transition: width .7s ease, background-color .7s ease;
+            }
 
-        &:active {
-            color: $primary-color;
+            &:hover:after {
+                width: 100%;
+                background: $primary-color;
+            }
+
+            &:active {
+                color: $primary-color;
+            }
         }
     }
 }
@@ -383,11 +381,21 @@ section:nth-child(even) {
     margin-top: 0.8vw;
     overflow: hidden;
     height: 30vw;
-}
-
-.training-pic {
-    object-fit: cover;
-    width: 100%;
+    .training-pic {
+        object-fit: cover;
+        width: 100%;
+        filter: brightness(50%);
+    }
+    .trainings-title {
+        position: absolute;
+        text-align: center;
+        margin-top: 14vw;
+        margin-bottom: 3vw;
+        font-size: 6em;
+        z-index: 1;
+        color: $bg-color;
+        letter-spacing: 0px;
+    }
 }
 
 .back-to-list-trainings {
