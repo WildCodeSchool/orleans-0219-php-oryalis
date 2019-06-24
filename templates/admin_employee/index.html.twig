@@ -14,7 +14,7 @@
                     <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
                          alt="{{ employee.lastname }} {{ employee.firstname }}">
                 {% else %}
-                    <img src="{{ asset( employee.picture ) }}" class="img-team"
+                    <img src="{{ asset('uploads/employee/' ~ employee.picture) }}" class="img-team"
                          alt="{{ employee.lastname }} {{ employee.firstname }}">
                 {% endif %}
                 <div class="card-body">

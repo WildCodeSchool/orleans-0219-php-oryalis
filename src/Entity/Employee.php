@@ -46,10 +46,16 @@ class Employee
     private $picture;
 
     /**
-     * @Vich\UploadableField(mapping="employee", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="employee", fileNameProperty="picture")
      * @var File
      */
     private $pictureFile;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var \DateTime
+     */
+    private $updatedAt;
 
     /**
      * @ORM\Column(type="text")
@@ -112,6 +118,10 @@ class Employee
     public function setPictureFile(File $picture = null)
     {
         $this->pictureFile = $picture;
+
+        if ($picture) {
+            $this->updatedAt = new \DateTime('now');
+        }
     }
 
     public function getPictureFile()

@@ -89,9 +89,10 @@
 .btn-add {
   border: solid 1px $admin-color;
   font-size: 0.7em;
-  color: $dark;
+  color: $admin-color;
   transition: 0.5s;
   font-family: $mainFont;
+  box-shadow: 3px 4px 2px $fontColor;
 
   &:hover {
     text-decoration: none;

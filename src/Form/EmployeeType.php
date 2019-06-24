@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class EmployeeType extends AbstractType
 {
@@ -19,7 +20,9 @@ class EmployeeType extends AbstractType
             ->add('firstname')
             ->add('tel')
             ->add('title', TelType::class)
-            ->add('picture', FileType::class, ['label' => 'Formats de photos acceptés (.jpg, .png)'])
+            ->add('pictureFile', VichImageType::class, [
+            'label' => 'Formats de photos acceptés (.jpg, .png)',
+            'required' => false])
             ->add('description', TextareaType::class)
         ;
     }
