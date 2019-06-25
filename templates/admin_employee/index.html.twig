@@ -7,7 +7,7 @@
         <a href="#" class="btn add">+ Ajouter un membre</a>
     </div>
 
-    <div class="row card-team">
+    <div class="row">
         {% for employee in employees %}
             <div class="col-md-6 col-lg-4 text-center">
                 {% if employee.picture is null %}
@@ -21,7 +21,7 @@
                     <h2 class="card-title"><span
                                 class="text-uppercase">{{ employee.lastname }}</span> {{ employee.firstname }}</h2>
                     <div class="edit-del">
-                        <a href="#" class="btn"><i class="far faru fa-edit"></i></a>
+                        <a href="#" class="btn"><i class="far faro fa-edit"></i></a>
                         {% include '/admin_employee/_delete_form.html.twig' %}
                     </div>
                 </div>

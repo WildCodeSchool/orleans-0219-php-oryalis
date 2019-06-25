@@ -15,10 +15,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+/**
+ * Class TrainingController
+ * @package App\Controller
+ * @Route("/formations")
+ */
+
 class TrainingController extends AbstractController
 {
     /**
-     * @Route("/trainings", name="trainings_index")
+     * @Route("/", name="trainings_index")
      * @param TrainingRepository $trainingRepository
      * @return Response
      */
