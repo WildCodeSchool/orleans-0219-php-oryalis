@@ -12,8 +12,6 @@ class AuditController extends AbstractController
      */
     public function index()
     {
-        return $this->render('audit/index.html.twig', [
-            'controller_name' => 'AuditController',
-        ]);
+        return $this->render('audit/index.html.twig');
     }
 }
