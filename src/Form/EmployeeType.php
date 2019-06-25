@@ -19,9 +19,9 @@ class EmployeeType extends AbstractType
             ->add('lastname')
             ->add('firstname')
             ->add('tel')
-            ->add('title', TelType::class)
+            ->add('title')
             ->add('pictureFile', VichImageType::class, [
-            'label' => 'Formats de photos acceptés (.jpg, .png)',
+            'label' => 'Formats de photos acceptés (.jpg, .png, 200ko maximum)',
             'required' => false])
             ->add('description', TextareaType::class)
         ;

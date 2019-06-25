@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EmployeeRepository")
@@ -20,32 +21,43 @@ class Employee
     private $id;
 
     /**
+     * @Assert\Length(max=255)
+     * @Assert\NotNull()
      * @ORM\Column(type="string", length=255)
      */
     private $lastname;
 
     /**
+     * @Assert\Length(max=255)
+     * @Assert\NotNull()
      * @ORM\Column(type="string", length=255)
      */
     private $firstname;
 
     /**
+     * @Assert\IsNull()
+     * @Assert\Length(max=15)
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $tel;
 
     /**
+     * @Assert\Length(max=255)
+     * @Assert\NotNull()
      * @ORM\Column(type="string", length=255)
      */
     private $title;
 
     /**
+     * @Assert\Length(max=255)
      * @ORM\Column(type="string", length=255, nullable=true)
      * @var string
      */
     private $picture;
 
     /**
+     * @Assert\File(maxSize = "200k")
+     * @Assert\Length(max=255)
      * @Vich\UploadableField(mapping="employee", fileNameProperty="picture")
      * @var File
      */
@@ -58,6 +70,8 @@ class Employee
     private $updatedAt;
 
     /**
+     * @Assert\Length(max=1500)
+     * @Assert\NotNull()
      * @ORM\Column(type="text")
      */
     private $description;
