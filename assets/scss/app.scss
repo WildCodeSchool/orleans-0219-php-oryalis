@@ -90,7 +90,10 @@
 
 /* Image for Parallax Section */
 .backgroundban {
-    background-image: url('../images/BannerHome.jpg');
+    background-image: url('../images/oryalis.jpg');
+    height: 70vh;
+    object-fit: cover;
+
 }
 
 /* Default image container */
@@ -100,20 +103,27 @@
 }
 
 /* Titles */
-.banner h1 {
-    font-size: 5em;
-    font-weight: 600;
-    color: $banner-title;
-    margin-top: 12rem;
-    font-family: $mainFont;
-    text-transform: uppercase;
-}
 
-.banner h2 {
-    font-size: $subtitleFontSize;
-    color: $banner-title;
-    font-family: $mainFont;
-    font-weight: 600;
+.banner {
+    border-bottom-left-radius: 800px 50px;
+    border-bottom-right-radius: 800px 50px;
+    .main-title {
+        padding-top: 15em;
+
+    }
+    .bannerTitle {
+        font-size: 8em;
+        font-weight: 600;
+        font-family: $mainFont;
+        text-transform: uppercase;
+        color: $primary-color
+    }
+    .bannerSubtitle {
+        font-size: 1.3em;
+        font-weight: 400;
+        color: $banner-title;
+        font-family: $mainFont;
+    }
 }
 
 body {
@@ -166,8 +176,8 @@ address {
 }
 
 /* Navbar */
-
 .navbar {
+    background-color: rgba($bg-color, .9);
     padding: 0;
     .logo-navbar {
         max-width: 250px;
@@ -178,14 +188,18 @@ address {
         color: $primary-color;
         font-size: 3em;
     }
+    .nav-item.active .nav-link{
+        color: $primary-color;
+    }
     .nav-item {
         padding-left: 5vw;
 
-        .nav-link {
-            font-size: 1.7em;
-            color: $black;
+        .nav-link{
+            font-size: 2em;
+            color: $navLinkColor;
             transition: 0.5s;
-            font-family: $mainFont;
+            font-family: $textFont;
+            text-transform: uppercase;
 
             &:hover {
                 color: $primary-color;
@@ -203,7 +217,7 @@ address {
 }
 
 .presta {
-
+    margin-top: 0;
     img{
         min-width: 100%;
         max-width: 100%;
@@ -227,6 +241,7 @@ address {
 section {
     padding-top: 6em;
     padding-bottom: 6em;
+    box-shadow: 0px 10px 7px -10px #111;
     h2 {
         font-size: 3em;
     }
@@ -242,7 +257,9 @@ section {
 
 section:nth-child(even) {
     background-color:  lighten($bg-color, 100%);
+    /*
     box-shadow: 0px 15px 10px -15px #111;
+    */
 }
 
 .whoweare {
