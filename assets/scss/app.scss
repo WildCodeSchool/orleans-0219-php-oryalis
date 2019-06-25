@@ -406,3 +406,20 @@ section:nth-child(even) {
         text-decoration: none;
     }
 }
+
+.audit {
+    p {
+        font-size: 1.2em;
+    }
+    h2 {
+        font-size: 1.7em;
+    }
+    .img-audit {
+        object-fit: cover;
+        max-width: 500px;
+    }
+    .hr-audit {
+        background-color: $admin-color;
+        height: 1px;
+    }
+}
