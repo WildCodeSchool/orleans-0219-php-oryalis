@@ -405,7 +405,7 @@ section:nth-child(even) {
 
 .form {
     padding: 0;
-    margin: 0;
+    margin-bottom: 5em;
     padding-top: 8em;
     background-color: $form-color;
     h1 {
@@ -441,4 +441,12 @@ section:nth-child(even) {
                 color: darken($primary-color, 30%);
             }
         }
+}
+iframe {
+    filter: brightness(0.8);
+    transition: 0.3s;
+    &:hover {
+        filter: brightness(1);
+        transition: 0.3s;
+    }
 }
