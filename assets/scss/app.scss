@@ -418,4 +418,8 @@ section:nth-child(even) {
         object-fit: cover;
         max-width: 500px;
     }
+    .hr-audit {
+        background-color: $admin-color;
+        height: 1px;
+    }
 }
