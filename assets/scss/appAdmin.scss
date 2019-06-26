@@ -111,6 +111,7 @@
 .form-news {
   background-color: $light-font;
   border-radius: 15px;
+  border: 1px solid $dark;
   margin-top: 4vw;
   h1 {
     margin-top: 2vw;
@@ -150,8 +151,5 @@
   a:hover{
     color: $admin-color;
     text-decoration: none;
-  }
-  select {
-    background-color: white;
   }
 }
