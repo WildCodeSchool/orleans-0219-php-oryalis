@@ -9,50 +9,132 @@
     color: darken($font-color, 30%)
 }
 
+.fa-phone {
+    transform: rotate(95deg);
+}
+
+.card-team {
+    cursor: pointer;
+}
+
+.modal {
+    cursor: default;
+}
+
+.special-row {
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -10px;
+}
+
+.modal-text {
+    max-height: calc(100vh - 450px);
+    overflow-y: auto;
+    color: $textModal;
+}
+
+.detail-modal {
+    align-self: center;
+}
+
+.card-title{
+    font-size: 1.6rem;
+    text-transform: none;
+    color: $dark;
+}
+
+.img-team {
+    max-width: 150px;
+    min-width: 150px;
+    border-radius: 50%;
+    border: 2px solid $fontColor;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.title-card {
+    text-transform: none;
+    font-size: 1.1rem;
+    color: $dark;
+}
+
+.hr-modal {
+    background-color: $admin-color;
+}
+
+.hr-style {
+    background-color: $admin-color;
+    margin: 1em 2em 0 2em;
+}
+
+.modal-title {
+    text-align: center;
+    text-transform: none;
+}
+
+.modal-header {
+    padding-bottom: 0rem;
+    border-bottom: none;
+}
+
+.modal-body {
+    padding-top: 0rem;
+}
+
 /* Default banner */
 .banner {
-  width: 100%;
-  height: 40vw;
-  overflow: hidden;
+    width: 100%;
+    height: 40vw;
+    overflow: hidden;
 }
 
 /* Parallax effect */
 .paral {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 20% 80%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 20% 80%;
 }
 
 /* Image for Parallax Section */
 .backgroundban {
-  background-image: url('../images/BannerHome.jpg');
+    background-image: url('../images/oryalis.jpg');
+    height: 70vh;
+    object-fit: cover;
+
 }
 
 /* Default image container */
 .banner .backgroundban {
-  width: 100%;
-  position: absolute;
+    width: 100%;
+    position: absolute;
 }
 
 /* Titles */
-.banner h1 {
-  font-size: 5em;
-  font-weight: 600;
-  color: $banner-title;
-  margin-top: 12rem;
-  font-family: $mainFont;
-  text-transform: uppercase;
-}
 
-.banner h2 {
-  font-size: $subtitleFontSize;
-  color: $banner-title;
-  font-family: $mainFont;
-  font-weight: 600;
+.banner {
+    border-bottom-left-radius: 800px 50px;
+    border-bottom-right-radius: 800px 50px;
+    .main-title {
+        padding-top: 22em;
+
+    }
+    .bannerTitle {
+        font-size: 8em;
+        font-weight: 600;
+        font-family: $mainFont;
+        text-transform: uppercase;
+        color: $primary-color
+    }
+    .bannerSubtitle {
+        font-size: 1.3em;
+        font-weight: 400;
+        color: $banner-title;
+        font-family: $mainFont;
+    }
 }
 
 body {
-  background-color: $bg-color;
+    background-color: $bg-color;
 }
 
 h1,h2,h3,h4 {
@@ -100,8 +182,8 @@ address {
 }
 
 /* Navbar */
-
 .navbar {
+    background-color: rgba($bg-color, .9);
     padding: 0;
     .logo-navbar {
         max-width: 250px;
@@ -112,14 +194,18 @@ address {
         color: $primary-color;
         font-size: 3em;
     }
+    .nav-item.active .nav-link{
+        color: $primary-color;
+    }
     .nav-item {
         padding-left: 5vw;
 
-        .nav-link {
-            font-size: 1.7em;
-            color: $black;
+        .nav-link{
+            font-size: 2em;
+            color: $navLinkColor;
             transition: 0.5s;
-            font-family: $mainFont;
+            font-family: $textFont;
+            text-transform: uppercase;
 
             &:hover {
                 color: $primary-color;
@@ -190,7 +276,7 @@ address {
 }
 
 .presta {
-
+    margin-top: 0;
     img{
         min-width: 100%;
         max-width: 100%;
@@ -214,6 +300,7 @@ address {
 section {
     padding-top: 6em;
     padding-bottom: 6em;
+    box-shadow: 0px 10px 7px -10px #111;
     h2 {
         font-size: 3em;
     }
@@ -229,7 +316,9 @@ section {
 
 section:nth-child(even) {
     background-color:  lighten($bg-color, 100%);
+    /*
     box-shadow: 0px 15px 10px -15px #111;
+    */
 }
 
 .whoweare {
@@ -295,51 +384,49 @@ section:nth-child(even) {
     .info {
         padding-top: 3em;
     }
+}
 
-    /* PAGE FORMATION */
+/* PAGE FORMATION */
 
-    .trainings-title {
-        text-align: center;
-        margin-top: 3vw;
-        margin-bottom: 3vw;
-        font-size: 4em;
-    }
+.training-name {
+    padding: 20px 10px 40px 10px;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+    border-bottom: solid 1px $primary-color;
+}
 
-    .training-name {
-        background-color: lighten($primary-color, 20%);
-        padding: 20px;
-        text-align: center;
-        font-size: 2em;
-        margin-bottom: 2vw;
-        margin-top: 2vw;
-    }
+.infos-trainings {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
 
-    .infos-trainings {
-        padding-top: 1vw;
+.picto-trainings {
+    margin-right: 10px;
+    color: lighten($primary-color, 20%)
+}
+
+.program {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+    h4 {
+        padding-top: 2vw;
         padding-bottom: 1vw;
     }
+}
 
-    .picto-trainings {
-        margin-right: 10px;
-        color: lighten($primary-color, 20%)
-    }
-
-    .program {
-        margin-top: 2vw;
-        margin-bottom: 2vw;
-
-        h4 {
-            padding-top: 2vw;
-            padding-bottom: 1vw;
-        }
-    }
-
-    .training-list {
+.trainings {
+    background-color: $bg-color;
+    ul {
         margin-top: 2vw;
 
-        .training-item {
+        .list-group-item {
             color: $dark;
             display: inline-block;
+            background: none;
+            border-left: solid 1px $primary-color;
 
             &:hover {
                 background: none;
@@ -348,7 +435,7 @@ section:nth-child(even) {
             &:after {
                 content: '';
                 display: block;
-                height: 2px;
+                height: 1px;
                 width: 0;
                 background: transparent;
                 transition: width .7s ease, background-color .7s ease;
@@ -364,23 +451,51 @@ section:nth-child(even) {
             }
         }
     }
+}
 
-    .pic-container {
-        margin-top: 0.8vw;
-        overflow: hidden;
-        height: 350px;
-    }
-
+.pic-container {
+    margin-top: 0.8vw;
+    overflow: hidden;
+    height: 30vw;
     .training-pic {
         object-fit: cover;
+        width: 100%;
+        filter: brightness(50%);
     }
+    .trainings-title {
+        position: absolute;
+        text-align: center;
+        margin-top: 14vw;
+        margin-bottom: 3vw;
+        font-size: 6em;
+        z-index: 1;
+        color: $bg-color;
+        letter-spacing: 0px;
+    }
+}
 
-    .back-to-list-trainings {
-        transition: 0.5s;
+.back-to-list-trainings {
+    transition: 0.5s;
 
-        &:hover {
-            color: $primary-color;
-            text-decoration: none;
-        }
+    &:hover {
+        color: $primary-color;
+        text-decoration: none;
+    }
+}
+
+.audit {
+    p {
+        font-size: 1.2em;
+    }
+    h2 {
+        font-size: 1.7em;
+    }
+    .img-audit {
+        object-fit: cover;
+        max-width: 500px;
+    }
+    .hr-audit {
+        background-color: $admin-color;
+        height: 1px;
     }
 }
