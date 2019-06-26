@@ -450,4 +450,53 @@ section:nth-child(even) {
     h2 {
         font-size: 1.7em;
     }
+    .div-watch {
+        position: relative;
+        height: 175px;
+        width: 320px;
+    }
+    //.circle {
+    //    position: relative;
+    //    display: inline-block;
+    //    height: 100px;
+    //    width: 100px;
+    //    border-radius: 100%;
+    //    border: 2px solid black;
+    //    top: 20%;
+    //}
+    .level1 {
+        position: relative;
+        display: inline-block;
+        background: $dark;
+        border-radius: 100%;
+        height: 100px;
+        width: 100px;
+        background: radial-gradient(circle at 100px 100px, $primary-color, $dark);
+        top: 20%;
+    }
+    .level2 {
+        position: relative;
+        display: inline-block;
+        background: $dark;
+        border-radius: 100%;
+        height: 125px;
+        width: 125px;
+        background: radial-gradient(circle at 100px 100px, $secondary-color, $dark);
+        top: 13%;
+    }
+    .level3 {
+        position: relative;
+        display: inline-block;
+        background: $dark;
+        border-radius: 100%;
+        height: 150px;
+        width: 150px;
+        background: radial-gradient(circle at 100px 100px, $redCircle, $dark);
+        top: 5%;
+    }
+    .txt-stick {
+        position: relative;
+        top: 35%;
+        color: $light-font;
+    }
 }
