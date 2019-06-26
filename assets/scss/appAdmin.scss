@@ -105,3 +105,21 @@
 .news-content {
   color: $dark;
 }
+
+/* Add News Form*/
+
+.form-news {
+  background-color: $light-font;
+  border-radius: 15px;
+  h1 {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+  p {
+    margin-bottom: 2vw;
+    font-size: $subtitleFontSize;
+  }
+  .form-label {
+    font-size: 1.2em;
+  }
+}

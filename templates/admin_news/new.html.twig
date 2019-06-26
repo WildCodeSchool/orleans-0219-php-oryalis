@@ -3,8 +3,9 @@
 {% block title %}Admin - Ajouter une actualité{% endblock %}
 
 {% block body %}
-    <h1>Ajouter une nouvelle acutalité</h1>
-    <div class="table-title container pt-lg-4 mb-lg-4">
+    <div class="container pt-lg-4 mb-lg-4 form-news">
+        <h1 class="text-center">Ajouter une acutalité</h1>
+        <p class="text-center">Ici, vous pouvez créer votre nouvelle actualité.</p>
         <div class="col text-center">
         {{ include('admin_news/_form.html.twig') }}
         </div>
