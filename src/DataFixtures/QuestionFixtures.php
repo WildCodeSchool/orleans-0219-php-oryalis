@@ -34,11 +34,11 @@ class QuestionFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $faker = Faker\Factory::create('fr_FR');
-        foreach (self::MONTHS as $key => $monthQuestion) {
+        foreach (self::MONTHS as $key => $month) {
             $question = new Question();
             $question->setName($faker->sentence(15));
             $question->setExplanation($faker->text(500));
-            $question->setMonth($faker->monthName);
+            $question->setMonth($month);
             $question->setYear($faker->year);
             $this->addReference('question' . $key, $question);
             $manager->persist($question);
