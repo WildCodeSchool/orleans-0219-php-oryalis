@@ -122,4 +122,21 @@
   .form-label {
     font-size: 1.2em;
   }
+  .btn{
+    transition: 0.5s;
+    font-size: 1.2em;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    border: solid 1px $admin-color;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    color: $admin-color
+  }
+  .btn:hover{
+    color: $light-font;
+    background-color: $admin-color;
+  }
+  .form-control {
+    border: $admin-color 1px solid;
+  }
 }
