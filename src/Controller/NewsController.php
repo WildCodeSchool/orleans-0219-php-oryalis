@@ -33,7 +33,7 @@ class NewsController extends AbstractController
     }
 
     /**
-     * @Route("/ajouter-une-actualite", name="news_new", methods={"GET","POST"})
+     * @Route("/ajouter", name="news_new", methods={"GET","POST"})
      */
     public function new(Request $request, ObjectManager $manager): Response
     {
