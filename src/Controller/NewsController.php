@@ -44,7 +44,7 @@ class NewsController extends AbstractController
             ->add('date', DateType::class, [
                 'widget' => 'choice',
                 'format' => 'dd-MM-yyyy',
-                'years' => range(2019,2069,1)
+                'years' => range(2019, 2069, 1)
             ])
             ->add('content', TextareaType::class)
             ->getForm();
