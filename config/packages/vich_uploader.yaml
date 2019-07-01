@@ -1,0 +1,8 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        employee:
+            uri_prefix: /uploads/employee
+            upload_destination: '%kernel.project_dir%/public/uploads/employee'
+
