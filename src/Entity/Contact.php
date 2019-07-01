@@ -37,7 +37,7 @@ class Contact
     private $email;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private $tel;
 
@@ -138,5 +138,13 @@ class Contact
         $this->object = $object;
 
         return $this;
+    }
+
+    public function contactInfo(Contact $contact)
+    {
+        $contactInfo[] = $contact->getEmail();
+        $contactInfo[] = $contact->getFirstname();
+        $contactInfo[] = $contact->getLastname();
+        return $contactInfo;
     }
 }
