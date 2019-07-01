@@ -39,7 +39,7 @@ class NewsController extends AbstractController
         $form->handleRequest($request);
         $form->add('date', DateType::class, [
             'widget' => 'choice',
-            'format' => 'dd-MMMM-yyyy',
+            'format' => 'dd-MM-yyyy',
             'years' => range(date('Y'), date('Y')+50),
         ]);
         $form->add('content', TextareaType::class);
