@@ -442,3 +442,44 @@ section:nth-child(even) {
         height: 1px;
     }
 }
+
+//.admin:before {
+//    height: 100vh;
+//    background-image: url("../images/admin.jpg");
+//    background-size: cover;
+//    object-fit: cover;
+//    filter: brightness(0.5);
+//    max-width: 100vw;
+//    .login-form {
+//        z-index: 500;
+//    }
+//}
+
+.admin {
+    position: relative;
+}
+.admin::before {
+   content: "";
+   position: absolute;
+   width: 100vw;
+   height: 100vh;
+   background-image: url("../images/admin.jpg");
+   background-size: cover;
+   filter: brightness(0.6);
+}
+.login-form {
+   /* This will make it stack on top of the ::before */
+   position: relative;
+    h1 {
+        padding: 2em;
+        color: $light-font;
+        font-family: $mainFont;
+        font-size: $titleFontSize;
+    }
+    input {
+        margin-bottom: 2em;
+    }
+    .btn {
+        padding: 2em;
+    }
+}
