@@ -2,13 +2,12 @@
 
 namespace App\Controller;
 
-use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use App\Entity\News;
 use App\Form\NewsType;
 use App\Repository\NewsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,7 +34,7 @@ class NewsController extends AbstractController
     /**
      * @Route("/ajouter", name="news_new", methods={"GET","POST"})
      */
-    public function new(Request $request, ObjectManager $manager): Response
+    public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $news = new News();
         $form = $this->createForm(NewsType::class, $news);
@@ -51,8 +50,8 @@ class NewsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $manager ->persist($news);
-            $manager->flush();
+            $entityManager ->persist($news);
+            $entityManager->flush();
 
             return $this->redirectToRoute('news_index');
 //            return $this->redirectToRoute('news_show', ['id' => $news->getId()]);
