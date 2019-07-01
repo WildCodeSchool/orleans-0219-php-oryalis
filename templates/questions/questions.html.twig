@@ -1,0 +1,12 @@
+<section>
+    {% for question in questions %}
+    <div>
+        {{ question.name }}
+        {% for answer in answers %}
+            <button type="button"
+                    class="btn btn-outline-primary col-9" data-toggle="modal"
+                    data-target="#qcm">{{ answer.name }}</button>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</section>
