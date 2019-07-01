@@ -1,6 +1,6 @@
 
 {{ form_start(form) }}
-<div class="row">
+<div class="row justify-content-center">
     <div class="form-group mt-lg-4 col-8">
         {{ form_label(form.name, 'Titre', ({'label_attr': {'class': 'form-label'}})) }}
         {{ form_widget(form.name, ({'attr': {'class': 'form-control'}})) }}
@@ -8,7 +8,7 @@
             {{ form_errors(form.name) }}
         </div>
     </div>
-    <div class="form-group col-12">
+    <div class="form-group col-8">
         {{ form_label(form.content, 'Contenu', ({'label_attr': {'class': 'form-label'}})) }}
         {{ form_widget(form.content, ({'attr': {'class': 'form-control'}})) }}
         <div class="form-error">
