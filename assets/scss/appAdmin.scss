@@ -86,6 +86,31 @@
   padding: 0;
 }
 
+.btn-add {
+  border: solid 1px $admin-color;
+  font-size: 0.7em;
+  color: $admin-color;
+  transition: 0.5s;
+  font-family: $mainFont;
+  box-shadow: 3px 4px 2px $fontColor;
+
+  &:hover {
+    text-decoration: none;
+    color: $banner-title;
+    background-color: $admin-color;
+  }
+}
+
+.form-title {
+  font-size: 1.5em;
+  color: $admin-color;
+}
+
+.form-control {
+  border-bottom: solid 3px $admin-color;
+  background-color: $inputColor;
+}
+
 /* Navbar Admin */
 .logo-navbarAdmin {
   max-width: 175px;
@@ -94,7 +119,6 @@
 
 .bg-navAdmin {
   background-color: $navbarAdmBg;
-
 }
 
 .list-style {
