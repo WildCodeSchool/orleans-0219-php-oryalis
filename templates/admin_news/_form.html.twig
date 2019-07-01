@@ -8,11 +8,6 @@
             {{ form_errors(form.name) }}
         </div>
     </div>
-    <div class="form-group mt-lg-4 col-4">
-        {{ form_label(form.date, 'Date', ({'label_attr': {'class': 'form-label'}})) }}
-        {{ form_widget(form.date) }}
-        {{ form_errors(form.date) }}
-    </div>
     <div class="form-group col-12">
         {{ form_label(form.content, 'Contenu', ({'label_attr': {'class': 'form-label'}})) }}
         {{ form_widget(form.content, ({'attr': {'class': 'form-control'}})) }}

@@ -37,14 +37,10 @@ class NewsController extends AbstractController
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $news = new News();
+        $news->setDate(new \DateTime('now'));
         $form = $this->createForm(NewsType::class, $news);
         $form = $this->createFormBuilder($news)
             ->add('name', TextType::class)
-            ->add('date', DateType::class, [
-                'widget' => 'choice',
-                'format' => 'dd-MM-yyyy',
-                'years' => range(2019, 2069, 1)
-            ])
             ->add('content', TextareaType::class)
             ->getForm();
         $form->handleRequest($request);
