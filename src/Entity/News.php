@@ -24,8 +24,8 @@ class News
      * @Assert\Length(
      *     min=2,
      *     max=255,
-     *     minMessage="Le titre doit contenir au moins 2 caractères",
-     *     maxMessage="Le titre doit contenir au maximum 255 caractères"
+     *     minMessage="Le titre doit contenir au moins {{ limit }} caractères",
+     *     maxMessage="Le titre doit contenir au maximum {{ limit }} caractères"
      * )
      */
     private $name;
@@ -42,8 +42,8 @@ class News
      * @Assert\Length(
      *     min=10,
      *     max=255,
-     *     minMessage="Le message doit contenir au moins 10 caractères",
-     *     maxMessage="Le message doit contenir au maximum 255 caractères"
+     *     minMessage="Le message doit contenir au moins {{ limit }} caractères",
+     *     maxMessage="Le message doit contenir au maximum {{ limit }} caractères"
      * )
      */
     private $content;
