@@ -54,7 +54,6 @@ class NewsController extends AbstractController
             $entityManager->flush();
 
             return $this->redirectToRoute('news_index');
-//            return $this->redirectToRoute('news_show', ['id' => $news->getId()]);
         }
 
         return $this->render('admin_news/new.html.twig', [
