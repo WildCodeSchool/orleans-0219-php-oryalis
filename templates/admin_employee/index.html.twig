@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="text-center py-5">
-        <a href="#" class="btn add">+ Ajouter un membre</a>
+        <a href="{{ path('employee_new') }}" class="btn add">Ajouter un membre</a>
     </div>
 
     <div class="row">
@@ -14,7 +14,7 @@
                     <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
                          alt="{{ employee.lastname }} {{ employee.firstname }}">
                 {% else %}
-                    <img src="{{ asset( employee.picture ) }}" class="img-team"
+                    <img src="{{ asset('uploads/employee/' ~ employee.picture) }}" class="img-team"
                          alt="{{ employee.lastname }} {{ employee.firstname }}">
                 {% endif %}
                 <div class="card-body">
