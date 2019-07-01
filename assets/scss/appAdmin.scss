@@ -176,4 +176,8 @@
     color: $admin-color;
     text-decoration: none;
   }
+  .form-error {
+    text-align:left;
+    color: darken($danger, 10%);
+  }
 }
