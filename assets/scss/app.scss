@@ -561,3 +561,49 @@ section:nth-child(even) {
         color: $light-font;
     }
 }
+
+/* QCM history */
+
+.qcm-history {
+    h2 {
+        margin-top: 2vw;
+        font-size: 1.5em;
+        text-align: center;
+        padding-bottom: 2vw;
+        span {
+            color: $secondary-color;
+        }
+    }
+    p {
+        @include textStyle;
+        text-align: center;
+        padding-bottom: 2vw;
+        font-size: 1.1em;
+    }
+    .card {
+        max-width: 40rem;
+        border-radius: 3px;
+        .card-question{
+            font-size: 1.2em;
+            padding: 1.5vw;
+            @include textStyle;
+        }
+        .card-body {
+            padding: 2vw;
+            .btn {
+                margin-top: 0.5vw;
+                margin-bottom: 0.5vw;
+                border-radius: 5px;
+                border: $secondary-color solid 1px;
+                color: $dark;
+
+                &:hover {
+                    background-color: $secondary-color;
+                    border-color: $secondary-color;
+                    color: $bg-color;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}

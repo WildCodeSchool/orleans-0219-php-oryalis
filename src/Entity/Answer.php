@@ -27,10 +27,12 @@ class Answer
     private $goodAnswer;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Question")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Question", inversedBy="answers")
      * @ORM\JoinColumn(nullable=false)
      */
     private $question;
+
+
 
     public function getId(): ?int
     {
