@@ -21,7 +21,7 @@ class StandardFixtures extends Fixture
         for ($i=0; $i<=3; $i++) {
             $standard = new Standard();
             $standard->setTitle($faker->sentence(2));
-            $standard->setDescription($faker->sentence(40));
+            $standard->setDescription($faker->sentence(70));
             $manager->persist($standard);
         }
         $manager->flush();
