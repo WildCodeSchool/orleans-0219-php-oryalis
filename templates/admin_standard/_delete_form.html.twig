@@ -1,5 +1,5 @@
 <form method="post" action="{{ path('standard_delete', {'id': standard.id}) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cette norme ?');">
     <input type="hidden" name="_method" value="DELETE">
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ standard.id) }}">
-    <button class="btn"><i class="far faro fa-trash-alt icon icon-show btn mt-1"></i></button>
+    <button class="btn"><i class="far faro fa-trash-alt"></i></button>
 </form>
