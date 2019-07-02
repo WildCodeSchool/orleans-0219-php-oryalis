@@ -510,6 +510,32 @@ section:nth-child(even) {
     }
 }
 
+.advice {
+    h2 {
+        font-size: 1.6em;
+    }
+    h2::first-letter {
+        font-size: 1.5em;
+        color: $primary-color;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    hr {
+        background-color: $admin-color;
+    }
+    .img-advice {
+        object-fit: cover;
+        max-width: 500px;
+        vertical-align: middle;
+        display:inline-block;
+        position: relative;
+    }
+    .div-img {
+        margin: auto;
+    }
+}
+
 .audit {
     p {
         font-size: 1.2em;
