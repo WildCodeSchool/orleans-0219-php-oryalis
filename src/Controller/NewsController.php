@@ -2,10 +2,14 @@
 
 namespace App\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use App\Entity\News;
 use App\Form\NewsType;
 use App\Repository\NewsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,17 +32,21 @@ class NewsController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="news_new", methods={"GET","POST"})
+     * @Route("/ajouter", name="news_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $news = new News();
+        $news->setDate(new \DateTime('now'));
         $form = $this->createForm(NewsType::class, $news);
+        $form = $this->createFormBuilder($news)
+            ->add('name', TextType::class)
+            ->add('content', TextareaType::class)
+            ->getForm();
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($news);
+            $entityManager ->persist($news);
             $entityManager->flush();
 
             return $this->redirectToRoute('news_index');
@@ -46,7 +54,7 @@ class NewsController extends AbstractController
 
         return $this->render('admin_news/new.html.twig', [
             'admin_news' => $news,
-            'form' => $form->createView(),
+            'form' => $form->createView()
         ]);
     }
 
