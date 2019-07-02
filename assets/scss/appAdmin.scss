@@ -68,6 +68,7 @@
   border-radius: 50%;
 }
 
+
 .faro {
   font-size: 20px;
   color: $dark;
@@ -128,4 +129,56 @@
 /* News admin */
 .news-content {
   color: $dark;
+}
+
+/* Add News Form*/
+
+.form-news {
+  background-color: $light-font;
+  margin-top: 1.5vw;
+  padding-bottom: 2vw;
+  h1 {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+  p {
+    margin-bottom: 2vw;
+    font-size: $subtitleFontSize;
+  }
+  .form-label {
+    font-size: 1.2em;
+  }
+  .btn{
+    transition: 0.5s;
+    font-size: 1.2em;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    border: solid 1px $admin-color;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    color: $admin-color
+  }
+  .btn:hover{
+    color: $light-font;
+    background-color: $admin-color;
+  }
+  .form-control {
+    border: $admin-color 1px solid;
+    margin-bottom: 2vw;
+  }
+  i {
+    margin-right: 5px;
+  }
+  a {
+    transition: 0.2s;
+    font-size: 1.2em;
+  }
+  a:hover{
+    color: $admin-color;
+    text-decoration: none;
+  }
+  .form-error {
+    text-align:left;
+    color: darken($danger, 10%);
+  }
 }
