@@ -17,6 +17,7 @@ class StandardsController extends AbstractController
 {
     /**
      * @Route("/normes", name="standards_index")
+     * @param StandardRepository $standardRepository
      * @return Response
      */
     public function index(StandardRepository $standardRepository) : Response
