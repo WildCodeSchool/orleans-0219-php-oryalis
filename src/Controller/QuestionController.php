@@ -19,15 +19,14 @@ class QuestionController extends AbstractController
     /**
      * @Route("/history", name="questions_history")
      * @param QuestionRepository $questionRepository
+     * @param AnswerRepository $answerRepository
      * @return Response
      */
     public function index(QuestionRepository $questionRepository, AnswerRepository $answerRepository) : Response
     {
         return $this->render('questions/questions.html.twig', [
-            $question = $questionRepository->findAll(),
-            $answers = $answerRepository->findByQuestion($question),
-            'questions' => $question,
-            'answers' => $answers
+            $questions = $questionRepository->findAll(),
+            'questions' => $questions,
         ]);
     }
 }

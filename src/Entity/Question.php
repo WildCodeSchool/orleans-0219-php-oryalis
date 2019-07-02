@@ -42,6 +42,11 @@ class Question
      */
     private $year;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $answers;
+
     public function getId(): ?int
     {
         return $this->id;
