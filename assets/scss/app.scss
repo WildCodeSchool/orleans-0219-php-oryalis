@@ -148,9 +148,23 @@ h4,h5,h6 {
     font-size: $subtitleFontSize;
 }
 
+/* footer */
+
 footer {
     font-family: $mainFont;
+    background-color: #deebdd;
+    background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
+
 }
+
+
+.footer-list {
+    height: 3em;
+}
+
+/*.footer-expand-lg {
+    border-top: 3px solid $navLinkColor;
+}*/
 
 p {
     font-family: $textFont;
@@ -177,14 +191,13 @@ address {
     font-size: 1.3em;
 }
 
-.list-group-item {
-    border: none;
-}
+/* end footer */
 
 /* Navbar */
 .navbar {
     background-color: rgba($bg-color, .9);
     padding: 0;
+
     .logo-navbar {
         max-width: 250px;
         margin-left: 20px;
@@ -194,13 +207,15 @@ address {
         color: $primary-color;
         font-size: 3em;
     }
-    .nav-item.active .nav-link{
+
+    .nav-item.active .nav-link {
         color: $primary-color;
     }
+
     .nav-item {
         padding-left: 5vw;
 
-        .nav-link{
+        .nav-link {
             font-size: 2em;
             color: $navLinkColor;
             transition: 0.5s;
@@ -216,7 +231,7 @@ address {
     .dropdown-menu {
         left: auto;
 
-		.dropdown-item {
+        .dropdown-item {
             font-size: 1.5em;
         }
     }
@@ -228,26 +243,32 @@ address {
     h2 {
         text-align: center;
         padding-bottom: 2vw;
+
         span {
             color: $secondary-color;
         }
     }
+
     p {
         @include textStyle;
         text-align: center;
         padding-bottom: 2vw;
         font-size: 1.1em;
     }
+
     .card {
         max-width: 40rem;
         border-radius: 3px;
-        .card-question{
+
+        .card-question {
             font-size: 1.2em;
             padding: 1.5vw;
             @include textStyle;
         }
+
         .card-body {
             padding: 2vw;
+
             .btn {
                 margin-top: 0.5vw;
                 margin-bottom: 0.5vw;
@@ -276,7 +297,8 @@ address {
 
 .presta {
     margin-top: 0;
-    img{
+
+    img {
         min-width: 100%;
         max-width: 100%;
         border-radius: 50%;
@@ -284,6 +306,7 @@ address {
         filter: grayscale(0.4);
         transition: all .2s ease-out;
     }
+
     img:hover {
         transform: scale(1);
         filter: contrast(120%);
@@ -300,28 +323,31 @@ section {
     padding-top: 6em;
     padding-bottom: 6em;
     box-shadow: 0px 10px 7px -10px #111;
+
     h2 {
         font-size: 3em;
     }
+
     p {
         line-height: 1.7em;
         font-size: 1.7em;
-        color:darken($fontColor, 30%);
+        color: darken($fontColor, 30%);
     }
+
     .bold {
         font-weight: bold;
     }
 }
 
 section:nth-child(even) {
-    background-color:  lighten($bg-color, 100%);
+    background-color: lighten($bg-color, 100%);
     /*
     box-shadow: 0px 15px 10px -15px #111;
     */
 }
 
 .whoweare {
-    p::first-letter{
+    p::first-letter {
         color: $primary-color;
         font-size: 2.5em;
         vertical-align: middle;
@@ -329,14 +355,14 @@ section:nth-child(even) {
 }
 
 @media screen and (max-width: 410px) {
-    .navbar-brand{
+    .navbar-brand {
         width: 70px;
     }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1439px) {
-    .navbar{
-        .nav-item{
+    .navbar {
+        .nav-item {
             padding-left: 1vw;
         }
     }
@@ -418,6 +444,7 @@ section:nth-child(even) {
 
 .trainings {
     background-color: $bg-color;
+
     ul {
         margin-top: 2vw;
 
@@ -455,11 +482,13 @@ section:nth-child(even) {
 .pic-container {
     overflow: hidden;
     height: 30vw;
+
     .training-pic {
         object-fit: cover;
         width: 100%;
         filter: brightness(50%);
     }
+
     .trainings-title {
         position: absolute;
         text-align: center;
@@ -485,13 +514,16 @@ section:nth-child(even) {
     p {
         font-size: 1.2em;
     }
+
     h2 {
         font-size: 1.7em;
     }
+
     .img-audit {
         object-fit: cover;
         max-width: 500px;
     }
+
     .hr-audit {
         background-color: $admin-color;
         height: 1px;
@@ -503,12 +535,15 @@ section:nth-child(even) {
         padding-top: 3em;
         padding-bottom: 3em;
     }
+
     p {
         font-size: 1.2em;
     }
+
     h2 {
         font-size: 1.7em;
     }
+
     .div-watch {
         position: relative;
         height: 175px;
@@ -525,9 +560,11 @@ section:nth-child(even) {
         background: radial-gradient(circle at 75px 75px, $gr1lvl1, $gr2lvl1);
         top: 20%;
     }
+
     .lvl1 {
         color: $lvl1-color;
     }
+
     .level2 {
         position: relative;
         display: inline-block;
@@ -538,9 +575,11 @@ section:nth-child(even) {
         background: radial-gradient(circle at 100px 100px, $gr1lvl2, $gr2lvl2);
         top: 13%;
     }
+
     .lvl2 {
         color: $lvl2-color;
     }
+
     .level3 {
         position: relative;
         display: inline-block;
@@ -551,9 +590,11 @@ section:nth-child(even) {
         background: radial-gradient(circle at 100px 100px, $primary-color, $gr2lvl3);
         top: 5%;
     }
+
     .lvl3 {
         color: $lvl3-color;
     }
+
     .txt-stick {
         position: relative;
         top: 35%;
@@ -561,3 +602,4 @@ section:nth-child(even) {
         color: $light-font;
     }
 }
+
