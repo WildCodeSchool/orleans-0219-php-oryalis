@@ -21,7 +21,7 @@ class AdminTrainingController extends AbstractController
     public function index(TrainingRepository $trainingRepository): Response
     {
         return $this->render('admin/training/index.html.twig', [
-            'trainings' => $trainingRepository->findAll(), array('trainings' => 'ASC')
+            'trainings' => $trainingRepository->findBy([], ['title' => 'ASC']),
         ]);
     }
 
