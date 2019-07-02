@@ -21,7 +21,7 @@ class QuestionController extends AbstractController
     public function index(QuestionRepository $questionRepository): Response
     {
         return $this->render('admin/question/index.html.twig', [
-            'questions' => $questionRepository->findAll(),
+            'questions' => $questionRepository->findBy(['year' => 'DESC'])
         ]);
     }
 
