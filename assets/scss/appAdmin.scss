@@ -9,10 +9,15 @@
   font-size: $h2-font-size;
 }
 
-.table-title {
+.table-title-index {
   font-size: 1.5em;
   color: $bg-color;
   background-color: $admin-color;
+}
+
+.table-title {
+  font-size: 1.5em;
+  color: $admin-color;
 }
 
 .link-training {
@@ -47,7 +52,7 @@
 }
 
 .edit-form {
-  color: $bg-color;
+  color: $dark;
   font-size: 20px;
 
   &:hover {
