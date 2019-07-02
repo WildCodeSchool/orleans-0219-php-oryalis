@@ -569,20 +569,24 @@ section:nth-child(even) {
    filter: brightness(0.6);
 }
 .login-form {
-   /* This will make it stack on top of the ::before */
-   position: relative;
+    /* This will make it stack on top of the ::before */
+    position: relative;
+
     h1 {
         padding: 2em;
         color: $light-font;
         font-family: $mainFont;
         font-size: $titleFontSize;
     }
+
     input {
         margin-bottom: 2em;
     }
+
     .btn {
         padding: 2em;
-  }
+    }
+}
 .watch-repo {
     section {
         padding-top: 3em;
