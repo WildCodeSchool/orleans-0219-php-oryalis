@@ -23,7 +23,7 @@
                 <tr>
                     <td><a href="{{ path('standard_show', {'id': standard.id}) }}" class="link-training"> {{ standard.title }}</a></td>
                     <td class="text-center">Modifier</td>
-                    <td class="text-center">supprimer</td>
+                    <td class="far icon icon-show btn">{{ include('admin/training/_delete_form.html.twig') }}</td>
                 </tr>
             {% endfor %}
             </tbody>
