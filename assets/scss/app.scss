@@ -12,7 +12,7 @@
 @mixin links() {
     text-decoration: none;
     &:hover{
-        color: $primary-color;
+        color: $secondary-color;
         transition: 0.5s;
     }
 }
