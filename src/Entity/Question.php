@@ -43,7 +43,8 @@ class Question
     private $year;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Answer")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $answers;
 
@@ -96,6 +97,18 @@ class Question
     public function setYear(int $year): self
     {
         $this->year = $year;
+
+        return $this;
+    }
+
+    public function getAnswers(): ?Answer
+    {
+        return $this->answers;
+    }
+
+    public function setAnswers(?Answer $answers): self
+    {
+        $this->answers = $answers;
 
         return $this;
     }
