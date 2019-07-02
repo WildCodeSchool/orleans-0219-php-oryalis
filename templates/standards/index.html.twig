@@ -1,0 +1,18 @@
+{% extends "layoutVistitor.html.twig" %}
+
+{% block body %}
+    <section class="container-fluid">
+        <div class="row justify-content-center pic-container">
+            <img src="{{ asset('build/images/normes.jpg') }}" class="training-pic" alt="photo des normes">
+            <h1 class="trainings-title">Les Normes</h1>
+        </div>
+        <div class="container">
+            {% for standard in standards %}
+                <div>
+                    <h2>{{ standard.title }}</h2>
+                    <p>{{ standard.description }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
