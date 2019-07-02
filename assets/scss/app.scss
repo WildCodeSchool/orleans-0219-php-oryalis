@@ -9,6 +9,14 @@
     color: darken($font-color, 30%)
 }
 
+@mixin links() {
+    text-decoration: none;
+    &:hover{
+        color: $primary-color;
+        transition: 0.5s;
+    }
+}
+
 .fa-phone {
     transform: rotate(95deg);
 }
@@ -565,9 +573,12 @@ section:nth-child(even) {
 /* QCM history */
 
 .qcm-history {
+    h1 {
+        margin-top: 3vw;
+    }
     h2 {
         margin-top: 2vw;
-        font-size: 1.5em;
+        font-size: 1.7em;
         text-align: center;
         padding-bottom: 2vw;
         span {
@@ -575,10 +586,16 @@ section:nth-child(even) {
         }
     }
     p {
+        margin-top: 1vw;
         @include textStyle;
         text-align: center;
         padding-bottom: 2vw;
         font-size: 1.1em;
+    }
+    a {
+        @include links();
+        font-size: 1.3em;
+        margin-left: 3vw;
     }
     .card {
         max-width: 40rem;
