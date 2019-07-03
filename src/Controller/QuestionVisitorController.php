@@ -8,13 +8,12 @@
 
 namespace App\Controller;
 
-use App\Repository\AnswerRepository;
 use App\Repository\QuestionRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class QuestionController extends AbstractController
+class QuestionVisitorController extends AbstractController
 {
     /**
      * @Route("/history", name="questions_history")
@@ -24,7 +23,7 @@ class QuestionController extends AbstractController
     public function index(QuestionRepository $questionRepository) : Response
     {
         return $this->render('questions/questions.html.twig', [
-            'questions' => $questionRepository->findAll()
+            'questions' => $questionRepository->findBy([], ['year' => 'DESC', 'month' => 'DESC'])
         ]);
     }
 }
