@@ -1,0 +1,35 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}Normes {{ standard.id }}{% endblock %}
+
+{% block body %}
+
+    <h1 class="training-title p-4 text-center">Formation</h1>
+
+    <div class="row justify-content-center">
+
+        <table class="table col-8 table-striped">
+            <tbody>
+            <tr>
+                <th class="table-title">Id</th>
+                <td>{{ standard.id }}</td>
+            </tr>
+            <tr>
+                <th class="table-title">Titre</th>
+                <td>{{ standard.title }}</td>
+            </tr>
+            <tr>
+                <th class="table-title">Objectifs de formation</th>
+                <td>{{ standard.description }}</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="row justify-content-center">
+
+        <a href="{{ path('standard_index') }}"><i class="far fa-arrow-left icon icon-show btn"></i></a>
+        <a href="{{ path('standard_edit', {'id': standard.id}) }}"><i class="far fa-edit icon icon-show btn"></i></a>
+        <a href="{{ path('standard_delete', {'id': standard.id}) }}"><i class="far fa-trash-alt icon icon-show btn"></i></a>
+    </div>
+{% endblock %}

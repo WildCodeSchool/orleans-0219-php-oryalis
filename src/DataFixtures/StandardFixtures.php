@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wilder9
- * Date: 02/07/19
- * Time: 15:07
- */
 
 namespace App\DataFixtures;
 
@@ -17,11 +11,11 @@ class StandardFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $faker = Faker\Factory::create('fr_FR');
-        for ($i=0; $i<=3; $i++) {
+        $faker  =  Faker\Factory::create('en_US');
+        for ($i=0; $i< 5; $i++) {
             $standard = new Standard();
-            $standard->setTitle($faker->sentence(2));
-            $standard->setDescription($faker->sentence(70));
+            $standard->setTitle($faker->catchPhrase);
+            $standard->setDescription($faker->realText($maxNbChars = 1250, $indexSize = 2));
             $manager->persist($standard);
         }
         $manager->flush();
