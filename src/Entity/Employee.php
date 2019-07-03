@@ -35,8 +35,7 @@ class Employee
     private $firstname;
 
     /**
-     * @Assert\IsNull()
-     * @Assert\Length(max=15)
+     * @Assert\Length(max=14)
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $tel;
