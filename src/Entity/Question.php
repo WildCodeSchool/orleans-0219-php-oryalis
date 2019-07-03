@@ -41,6 +41,7 @@ class Question
 
     /**
      * @ORM\Column(type="integer")
+     *
      */
     private $year;
 
