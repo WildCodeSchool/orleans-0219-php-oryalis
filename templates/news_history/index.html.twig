@@ -1,0 +1,20 @@
+{% extends 'layoutVistitor.html.twig' %}
+
+{% block title %}Historique des Actualités{% endblock %}
+
+{% block body %}
+    <section class="container-fluid news-history">
+        <div class="container">
+            <h1 class="text-center mt-5">Bienvenue dans l'historique des actualités</h1>
+            <p class="text-center">Retrouvez ici toutes les actualités déjà postées.</p>
+            {% for new in news %}
+                <div class="standards">
+                    <h2>{{ new.name }}</h2>
+                    <div>{{ new.date|date("d/m/Y") }}</div>
+                    <p>{{ new.content }}</p>
+                </div>
+                <hr>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
