@@ -22,7 +22,7 @@
             {% for standard in standards %}
                 <div class="standards">
                     <h2>{{ standard.title }}</h2>
-                    <p>{{ standard.description }}</p>
+                    <p>{{ standard.description|nl2br }}</p>
                 </div>
                 <hr>
             {% endfor %}
