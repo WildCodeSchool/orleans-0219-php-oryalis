@@ -9,6 +9,14 @@
     color: darken($font-color, 30%)
 }
 
+@mixin links() {
+    text-decoration: none;
+    &:hover{
+        color: $secondary-color;
+        transition: 0.5s;
+    }
+}
+
 .fa-phone {
     transform: rotate(95deg);
 }
@@ -587,6 +595,7 @@ section:nth-child(even) {
         padding: 2em;
     }
 }
+
 .watch-repo {
     section {
         padding-top: 3em;
@@ -660,6 +669,60 @@ section:nth-child(even) {
     }
 }
 
+/* QCM history */
+
+.qcm-history {
+    h1 {
+        margin-top: 3vw;
+    }
+    h2 {
+        margin-top: 2vw;
+        font-size: 1.7em;
+        text-align: center;
+        padding-bottom: 2vw;
+        span {
+            color: $secondary-color;
+        }
+    }
+    p {
+        margin-top: 1vw;
+        @include textStyle;
+        text-align: center;
+        padding-bottom: 2vw;
+        font-size: 1.1em;
+    }
+    a {
+        @include links();
+        font-size: 1.3em;
+        margin-left: 3vw;
+    }
+    .card {
+        max-width: 40rem;
+        border-radius: 3px;
+        .card-question{
+            font-size: 1.2em;
+            padding: 1.5vw;
+            @include textStyle;
+        }
+        .card-body {
+            padding: 2vw;
+            .btn {
+                margin-top: 0.5vw;
+                margin-bottom: 0.5vw;
+                border-radius: 5px;
+                border: $secondary-color solid 1px;
+                color: $dark;
+
+                &:hover {
+                    background-color: $secondary-color;
+                    border-color: $secondary-color;
+                    color: $bg-color;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}
 /* Les normes */
 
 .pictos {
