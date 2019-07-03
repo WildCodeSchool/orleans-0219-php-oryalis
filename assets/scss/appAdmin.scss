@@ -141,7 +141,7 @@
 .form-news {
   background-color: $light-font;
   margin-top: 1.5vw;
-  padding-bottom: 2vw;
+  padding-bottom: 7vw;
   h1 {
     margin-top: 2vw;
     margin-bottom: 2vw;
@@ -150,10 +150,26 @@
     margin-bottom: 2vw;
     font-size: $subtitleFontSize;
   }
-  .form-label {
-    font-size: 1.2em;
+  .row {
+    .form-label {
+      font-size: 1.2em;
+    }
+
+    .form-control {
+      border: $admin-color 1px solid;
+      margin-bottom: 2vw;
+    }
+
+    .form-error {
+      text-align: left;
+      color: darken($danger, 10%);
+
+      .required {
+        display: initial;
+      }
+    }
   }
-  .btn{
+  .btn {
     transition: 0.5s;
     font-size: 1.2em;
     margin-top: 1vw;
@@ -163,27 +179,28 @@
     padding: 10px 15px 10px 15px;
     color: $admin-color
   }
-  .btn:hover{
+
+  .btn:hover {
     color: $light-font;
     background-color: $admin-color;
   }
-  .form-control {
-    border: $admin-color 1px solid;
-    margin-bottom: 2vw;
-  }
-  i {
-    margin-right: 5px;
-  }
+
   a {
     transition: 0.2s;
     font-size: 1.2em;
+
+    &:hover {
+      color: $admin-color;
+      text-decoration: none;
+    }
+    i {
+      margin-right: 5px;
+    }
   }
-  a:hover{
-    color: $admin-color;
-    text-decoration: none;
+  #news_date {
+    display: none;
   }
-  .form-error {
-    text-align:left;
-    color: darken($danger, 10%);
+  .required {
+    visibility: hidden;
   }
 }
