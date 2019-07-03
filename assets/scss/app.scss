@@ -569,90 +569,94 @@ section:nth-child(even) {
    filter: brightness(0.6);
 }
 .login-form {
-   /* This will make it stack on top of the ::before */
-   position: relative;
+    /* This will make it stack on top of the ::before */
+    position: relative;
+
     h1 {
         padding: 2em;
         color: $light-font;
         font-family: $mainFont;
         font-size: $titleFontSize;
     }
+
     input {
         margin-bottom: 2em;
     }
+
     .btn {
         padding: 2em;
-  }
-.watch-repo {
-    section {
-        padding-top: 3em;
-        padding-bottom: 3em;
     }
 
-    p {
-        font-size: 1.2em;
-    }
+    .watch-repo {
+        section {
+            padding-top: 3em;
+            padding-bottom: 3em;
+        }
 
-    h2 {
-        font-size: 1.7em;
-    }
+        p {
+            font-size: 1.2em;
+        }
 
-    .div-watch {
-        position: relative;
-        height: 175px;
-        width: 320px;
-    }
+        h2 {
+            font-size: 1.7em;
+        }
 
-    .level1 {
-        position: relative;
-        display: inline-block;
-        background: $dark;
-        border-radius: 100%;
-        height: 100px;
-        width: 100px;
-        background: radial-gradient(circle at 75px 75px, $gr1lvl1, $gr2lvl1);
-        top: 20%;
-    }
+        .div-watch {
+            position: relative;
+            height: 175px;
+            width: 320px;
+        }
 
-    .lvl1 {
-        color: $lvl1-color;
-    }
+        .level1 {
+            position: relative;
+            display: inline-block;
+            background: $dark;
+            border-radius: 100%;
+            height: 100px;
+            width: 100px;
+            background: radial-gradient(circle at 75px 75px, $gr1lvl1, $gr2lvl1);
+            top: 20%;
+        }
 
-    .level2 {
-        position: relative;
-        display: inline-block;
-        background: $dark;
-        border-radius: 100%;
-        height: 125px;
-        width: 125px;
-        background: radial-gradient(circle at 100px 100px, $gr1lvl2, $gr2lvl2);
-        top: 13%;
-    }
+        .lvl1 {
+            color: $lvl1-color;
+        }
 
-    .lvl2 {
-        color: $lvl2-color;
-    }
+        .level2 {
+            position: relative;
+            display: inline-block;
+            background: $dark;
+            border-radius: 100%;
+            height: 125px;
+            width: 125px;
+            background: radial-gradient(circle at 100px 100px, $gr1lvl2, $gr2lvl2);
+            top: 13%;
+        }
 
-    .level3 {
-        position: relative;
-        display: inline-block;
-        background: $dark;
-        border-radius: 100%;
-        height: 150px;
-        width: 150px;
-        background: radial-gradient(circle at 100px 100px, $primary-color, $gr2lvl3);
-        top: 5%;
-    }
+        .lvl2 {
+            color: $lvl2-color;
+        }
 
-    .lvl3 {
-        color: $lvl3-color;
-    }
+        .level3 {
+            position: relative;
+            display: inline-block;
+            background: $dark;
+            border-radius: 100%;
+            height: 150px;
+            width: 150px;
+            background: radial-gradient(circle at 100px 100px, $primary-color, $gr2lvl3);
+            top: 5%;
+        }
 
-    .txt-stick {
-        position: relative;
-        top: 35%;
-        font-weight: 600;
-        color: $light-font;
+        .lvl3 {
+            color: $lvl3-color;
+        }
+
+        .txt-stick {
+            position: relative;
+            top: 35%;
+            font-weight: 600;
+            color: $light-font;
+        }
     }
 }
-
