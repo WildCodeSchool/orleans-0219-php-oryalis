@@ -1,0 +1,31 @@
+{% extends "layoutVistitor.html.twig" %}
+
+{% block title %}Les Normes{% endblock %}
+
+{% block body %}
+    <section class="container-fluid">
+        <div class="row justify-content-center pic-container">
+            <img src="{{ asset('build/images/normes.jpg') }}" class="training-pic" alt="photo des normes">
+            <h1 class="trainings-title">Les Normes</h1>
+        </div>
+        <div class="container pictos">
+            <div class="row justify-content-around">
+                <img src="{{ asset('build/images/quality1.png') }}" alt="pictogramme qualité" class="col-2">
+                <img src="{{ asset('build/images/security.jpg') }}" alt="pictogramme sécurité" class="col-2">
+                <img src="{{ asset('build/images/environment.jpg') }}" alt="pictogramme environnement" class="col-2">
+            </div>
+            <div class="row justify-content-around">
+                <p class="col-2 text-center picto-title">Qualité</p>
+                <p class="col-2 text-center picto-title">Sécurité</p>
+                <p class="col-2 text-center picto-title">Environnement</p>
+            </div>
+            {% for standard in standards %}
+                <div class="standards">
+                    <h2>{{ standard.title }}</h2>
+                    <p>{{ standard.description }}</p>
+                </div>
+                <hr>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

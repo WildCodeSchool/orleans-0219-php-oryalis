@@ -656,3 +656,28 @@ section:nth-child(even) {
     }
 }
 
+/* Les normes */
+
+.pictos {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    img {
+        border-radius: 50%;
+    }
+}
+.standards {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    h2 {
+        color: $secondary-color;
+        font-size: 1.7em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+}
+
+.picto-title {
+    font-size: 1.5em;
+    color: $primary-color;
+}
