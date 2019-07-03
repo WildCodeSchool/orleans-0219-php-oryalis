@@ -22,7 +22,7 @@
             {% for standard in standards %}
                 <tr>
                     <td><a href="{{ path('standard_show', {'id': standard.id}) }}" class="link-training"> {{ standard.title }}</a></td>
-                    <td class="text-center">Modifier</td>
+                    <td class="text-center"><a href="{{ path('standard_edit', {'id': standard.id}) }}" class="btn"><i class="far faro fa-edit"></i></a></td>
                     <td class="far icon icon-show btn">{{ include('admin_standard/_delete_form.html.twig') }}</td>
                 </tr>
             {% endfor %}
