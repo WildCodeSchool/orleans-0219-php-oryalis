@@ -1,0 +1,29 @@
+{% extends 'layoutVistitor.html.twig' %}
+
+{% block body %}
+    <section class="container-fluid qcm-history">
+        <div class="container">
+        <h1 class="text-center">Bienvenue dans l'historique des QCM.</h1>
+        <p>Retrouvez ici tous les QCM déjà proposés.</p>
+            {% for question in questions %}
+            <div class="container">
+                <h2>Question du mois de <span>{{ question.month }} {{ question.year }}</span></h2>
+                <div class="row justify-content-center">
+                    <div class="card bg-secondary mb-3">
+                        <div class="card-header card-question">{{ question.name }}</div>
+                        <div class="card-body">
+                            <div class="row justify-content-center">
+                                {% for answer in question.answers %}
+                                    <button type="button"
+                                            class="btn btn-outline-primary col-9" data-toggle="modal"
+                                            data-target="#qcm">{{ answer.name }}</button>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <a href="{{ path('index') }}">Retour à l'accueil</a>
+        </div>
+    </section>
+{% endblock %}
