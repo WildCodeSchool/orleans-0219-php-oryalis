@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-navAdmin">
+<nav class="navbar navbar-expand-lg bg-light">
     <a class="navbar-brand" href="#"><img src="{{ asset('build/images/LogoAdmin.png') }}" class="logo-navbarAdmin"
                                           alt="Logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -8,7 +8,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="{{ path('training_index') }}"><i class="fas fa-user"></i> Formation</a>
             </li>
             <li class="nav-item">
@@ -20,14 +20,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('news_index') }}"><i class="fas fa-newspaper"></i> News</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('standard_index') }}"><i class="fas fa-book"></i> Normes</a>
+            </li>
         </ul>
         <span class="navbar-text">
             <li class="nav-item dropdown list-style">
                 <a class="nav-link dropdown-toggle btn" data-toggle="dropdown" href="" role="button"
-                   aria-haspopup="true" aria-expanded="false"><i class="fas faro fa-lock"></i></a>
+                   aria-haspopup="true" aria-expanded="false"><i class="fas fa-sign-out-alt"></i></a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Modifier les informations</a>
-                    <hr>
                     <a class="dropdown-item" href="{{ path('app_logout') }}">Déconnexion</a>
                 </div>
             </li>
