@@ -1,0 +1,29 @@
+{% extends 'layoutVistitor.html.twig' %}
+
+{% block title %}Les News{% endblock %}
+
+{% block body %}
+<div class="row justify-content-center pic-container">
+    <img src="{{ asset('build/images/news_jumb.jpeg') }}" class="training-pic" alt="photo de news">
+    <h1 class="trainings-title">Les News</h1>
+</div>
+<section class="container news">
+<div class="row">
+    {% for new in news %}
+        <div class="col col-lg-6 col-md-6 col-sm-12 pb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">{{ new.name }}</h2>
+                </div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p class="title-card">{{ new.content | nl2br }}</p>
+                        <p class="blockquote-footer">Publié le {{ new.date | date('d-m-Y') }}</p>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+</section>
+{% endblock %}
