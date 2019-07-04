@@ -10,44 +10,42 @@ use Doctrine\ORM\Mapping as ORM;
 class Contact
 {
     /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @assert\NotNull
      */
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Assert\String
      */
     private $firstname;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Assert\String
      */
     private $lastname;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Assert\String
      */
     private $firm;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Assert\Email
      */
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @Assert\String
      */
     private $tel;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Assert\String
      */
     private $message;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Assert\String
      */
     private $object;
 
@@ -138,13 +136,5 @@ class Contact
         $this->object = $object;
 
         return $this;
-    }
-
-    public function contactInfo(Contact $contact)
-    {
-        $contactInfo[] = $contact->getEmail();
-        $contactInfo[] = $contact->getFirstname();
-        $contactInfo[] = $contact->getLastname();
-        return $contactInfo;
     }
 }
