@@ -748,3 +748,9 @@ section:nth-child(even) {
     font-size: 1.5em;
     color: $primary-color;
 }
+
+.news {
+    .bg-news {
+        background-color: $newsBg;
+    }
+}
