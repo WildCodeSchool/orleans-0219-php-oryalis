@@ -21,7 +21,7 @@ class ContactType extends AbstractType
             ->add('firm', TextType::class)
             ->add('object', TextType::class)
             ->add('email', EmailType::class)
-            ->add('tel', TelType::class)
+            ->add('tel', TextType::class)
             ->add('message', TextareaType::class)
         ;
     }

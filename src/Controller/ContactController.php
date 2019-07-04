@@ -4,8 +4,11 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
-use App\Service\Mailer;
+use Doctrine\ORM\Configuration;
+use Swift_Mailer;
+use Swift_Message;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Dotenv\Dotenv;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -14,13 +17,25 @@ class ContactController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function index(Mailer $mailer, Request $request)
+    public function index(Swift_Mailer $mailer, Request $request)
     {
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $mailer->notify();
+            $mail = $contact->getEmail();
+            $mailAdmin = $this->getParameter('mailAdmin');
+            $message = (new \Swift_Message())
+                ->setFrom($mail)
+                ->setTo($mailAdmin)
+                ->setBody(
+                    $this->renderView(
+                        'mail/mail.html.twig',
+                        ['contact' => $contact, 'mail' => $mail, 'mailAdmin' => $mailAdmin]
+                    ),
+                    'text/html'
+                );
+            $mailer->send($message);
             $this->addFlash(
                 'success',
                 'Votre message a bien été envoyé'
@@ -32,13 +47,5 @@ class ContactController extends AbstractController
             'contact' => $contact,
             'form' => $form->createView()
         ]);
-    }
-
-    /**
-     * @Route("/contact/success", name="contact_success")
-     */
-    public function success()
-    {
-        return $this->render('contact/success.html.twig');
     }
 }
