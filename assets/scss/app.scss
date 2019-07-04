@@ -120,8 +120,8 @@
 /* Titles */
 
 .banner {
-    border-bottom-left-radius: 800px 50px;
-    border-bottom-right-radius: 800px 50px;
+    border-bottom-left-radius: 800px 15px;
+    border-bottom-right-radius: 800px 15px;
     .main-title {
         padding-top: 22em;
 
@@ -131,13 +131,15 @@
         font-weight: 600;
         font-family: $mainFont;
         text-transform: uppercase;
-        color: $primary-color
+        color: $banner-title;
+        text-shadow: -1px 0 $fontColor, 0 1px $fontColor, 1px 0 $fontColor, 0 -1px $fontColor;
     }
     .bannerSubtitle {
         font-size: 1.3em;
-        font-weight: 400;
+        font-weight: 600;
         color: $banner-title;
         font-family: $mainFont;
+        text-shadow: -1px 0 $fontColor, 0 1px $fontColor, 1px 0 $fontColor, 0 -1px $fontColor;
     }
 }
 
@@ -305,7 +307,6 @@ address {
 
 .presta {
     margin-top: 0;
-
     img {
         min-width: 100%;
         max-width: 100%;
@@ -319,6 +320,9 @@ address {
         transform: scale(1);
         filter: contrast(120%);
         transition: all .2s ease-in;
+    }
+    h2, h3 {
+        color: $light-font;
     }
 }
 
@@ -348,11 +352,9 @@ section {
 }
 
 section:nth-child(even) {
-    background-color: lighten($bg-color, 100%);
-    /*
-    box-shadow: 0px 15px 10px -15px #111;
-    */
+    background-color: lighten($sectionColor, 10%);
 }
+
 
 .whoweare {
     p::first-letter {
@@ -377,9 +379,13 @@ section:nth-child(even) {
 }
 
 /*News*/
+.actu-int {
+    h2, p {
+        color: $light-font;
+    }
+}
 
 .blog {
-
     img {
         max-width: 100%;
         min-width: 100%;
@@ -490,6 +496,7 @@ section:nth-child(even) {
 .pic-container {
     overflow: hidden;
     height: 30vw;
+
 
     .training-pic {
         object-fit: cover;
