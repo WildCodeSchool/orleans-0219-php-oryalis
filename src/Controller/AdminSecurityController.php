@@ -56,7 +56,6 @@ class AdminSecurityController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             if ($mail !== $adminEmail) {
-                $mail = $form->getData('mail[email]');
                 $this->addFlash('danger', 'Email Inconnu');
                 return $this->redirectToRoute('index');
             }
