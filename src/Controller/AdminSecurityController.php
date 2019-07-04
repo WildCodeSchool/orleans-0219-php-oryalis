@@ -56,7 +56,7 @@ class AdminSecurityController extends AbstractController
             $admin = $em->getRepository(Admin::class)->findOneByEmail($email);
             if ($admin === null) {
                 $this->addFlash('danger', 'Email Inconnu');
-                return $this->redirectToRoute('index');
+                return $this->redirectToRoute('forgottenPassword');
             }
             $token = $tokenGenerator->generateToken();
             $admin->setResetToken($token);
@@ -81,11 +81,10 @@ class AdminSecurityController extends AbstractController
         if ($form->isSubmitted()) {
             $em = $this->getDoctrine()->getManager();
             $admin = $em->getRepository(Admin::class)->findOneByResetToken($token);
-            $admin->setPassword($passwordEncoder->encodePassword($admin, $form->getData()['password']['first']));
+            $admin->setPassword($passwordEncoder->encodePassword($admin, $form->getData()['password']));
             $token = null;
             $admin->setResetToken($token);
             $em->flush();
-            dd($admin);
             return $this->redirectToRoute('app_login');
         }
         return $this->render('security/resetPassword.html.twig', ['token' => $token, 'form' => $form->createView()]);
