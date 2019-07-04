@@ -1,9 +1,8 @@
 {# templates/emails/registration.html.twig #}
 <h3>You did it! You registered!</h3>
 
-Hi {{ lastname }}! You're successfully registered.
+Hi! You're successfully registered.
 
 {# example, assuming you have a route named "login" #}
-To login, go to: <a href="http://127.0.0.1:8000/login/resetPassword">{{ token }}</a>.
-
+To login, go to: <a href="/login/resetPassword/{{token}}">Réinitialiser le mot de passe</a>.
 Thanks!
