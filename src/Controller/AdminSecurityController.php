@@ -45,21 +45,22 @@ class AdminSecurityController extends AbstractController
      */
     public function forgottenPassword(
         Request $request,
-        AdminRepository $adminRepository,
         TokenGeneratorInterface $tokenGenerator,
         \Swift_Mailer $mailer
     ): Response {
-        $adminEmail = 'gabriel80@gmail.com';
-        $mail = 'gabriel81@gmail.com';
         $form = $this->createForm(MailType::class);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
-            if ($mail !== $adminEmail) {
+            $email = $form->getData()['email'];
+            $em = $this->getDoctrine()->getManager();
+            $admin = $em->getRepository(Admin::class)->findOneByEmail($email);
+            if ($admin === null) {
                 $this->addFlash('danger', 'Email Inconnu');
                 return $this->redirectToRoute('index');
             }
             $token = $tokenGenerator->generateToken();
+            $admin->setResetToken($token);
+            $em->flush();
             $message = (new \Swift_Message('Hello Email'))
                 ->setFrom('send@example.com')
                 ->setTo('recipient@example.com')
@@ -73,21 +74,18 @@ class AdminSecurityController extends AbstractController
     /**
      * @Route("/login/resetPassword/{token}", name="app_reset_password")
      */
-    public function reset(
-        $token,
-        Request $request,
-        EntityManager $entityManager,
-        Admin $admin
-    ) {
+    public function reset(Request $request,UserPasswordEncoderInterface $passwordEncoder,string $token)
+    {
         $form = $this->createForm(SecurityType::class);
         $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $pass = $request->request->get('password');
+        if ($form->isSubmitted()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($admin);
+            $admin = $em->getRepository(Admin::class)->findOneByResetToken($token);
+            $admin->setPassword($passwordEncoder->encodePassword($admin, $form->getData()['password']['first']));
             $token = null;
             $admin->setResetToken($token);
             $em->flush();
+            dd($admin);
             return $this->redirectToRoute('app_login');
         }
         return $this->render('security/resetPassword.html.twig', ['token' => $token, 'form' => $form->createView()]);

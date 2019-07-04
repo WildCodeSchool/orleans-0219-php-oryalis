@@ -2,12 +2,10 @@
 
 namespace App\Form;
 
-use App\Entity\Admin;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class SecurityType extends AbstractType
 {
@@ -22,9 +20,5 @@ class SecurityType extends AbstractType
             'first_options'  => ['label' => 'Password'],
             'second_options' => ['label' => 'Repeat Password']
             ]);
-    }
-
-    public function configureOptions(OptionsResolver $resolver)
-    {
     }
 }
