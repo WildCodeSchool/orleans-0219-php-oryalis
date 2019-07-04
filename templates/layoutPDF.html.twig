@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PDF training</title>
+</head>
+<body>
+
+{% block header %}
+{% endblock %}
+
+<main class="container-fluid">
+    {% block body %}
+        {% include 'formations/_trainingDetails.html.twig' %}
+    {% endblock %}
+</main>
+
+{% block footer %}
+    <footer>
+        ORYALIS
+        <address>Centre routier Pôle 45, 321 rue des Chataigniers, 45770 Saran</address>
+        <div><a href="http://www.oryalis.com">http://www.oryalis.com</a></div>
+    </footer>
+{% endblock %}
+
+</body>
+</html>
+

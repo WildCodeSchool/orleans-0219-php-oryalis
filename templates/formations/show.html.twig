@@ -8,20 +8,8 @@
         <h1 class="trainings-title">Formations</h1>
     </div>
     <section class="container">
-        <h2 class="training-name">{{ training.title }}</h2>
-        <div class="row justify-content-around infos-trainings">
-            <p><i class="far fa-clock picto-trainings"></i>{{ training.period }}</p>
-            <p><i class="fas fa-users picto-trainings"></i>{{ training.public }}</p>
-            <p><i class="fas fa-tasks picto-trainings"></i>Pré-requis</p>
-        </div>
-        <div class="program">
-            <h4><i class="far fa-check-circle picto-trainings"></i>Objectifs</h4>
-            <p>Oui</p>
-            <h4><i class="fas fa-book picto-trainings"></i>Programme</h4>
-            <p>{{ training.program }}</p>
-            <h4><i class="fas fa-cogs picto-trainings"></i>Méthodes et Moyens pédagogiques</h4>
-            <p>{{ training.pedagogy }}</p>
-        </div>
+        {% include 'formations/_trainingDetails.html.twig' %}
+        <a class="btn btn-primary" href="{{ path('training_download', {'id': training.id}) }}">Télécharger en PDF</a>
         <p class="text-center"><a href="{{ path('trainings_index') }}" class="back-to-list-trainings">Retour à la
                 liste</a></p>
     </section>
