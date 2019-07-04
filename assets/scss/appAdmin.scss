@@ -9,10 +9,15 @@
   font-size: $h2-font-size;
 }
 
-.table-title {
+.table-title-index {
   font-size: 1.5em;
   color: $bg-color;
   background-color: $admin-color;
+}
+
+.table-title {
+  font-size: 1.5em;
+  color: $admin-color;
 }
 
 .link-training {
@@ -47,7 +52,7 @@
 }
 
 .edit-form {
-  color: $bg-color;
+  color: $dark;
   font-size: 20px;
 
   &:hover {
@@ -68,6 +73,7 @@
   border-radius: 50%;
 }
 
+
 .faro {
   font-size: 20px;
   color: $dark;
@@ -86,6 +92,31 @@
   padding: 0;
 }
 
+.btn-add {
+  border: solid 1px $admin-color;
+  font-size: 0.7em;
+  color: $admin-color;
+  transition: 0.5s;
+  font-family: $mainFont;
+  box-shadow: 3px 4px 2px $fontColor;
+
+  &:hover {
+    text-decoration: none;
+    color: $banner-title;
+    background-color: $admin-color;
+  }
+}
+
+.form-title {
+  font-size: 1.5em;
+  color: $admin-color;
+}
+
+.form-control {
+  border-bottom: solid 3px $admin-color;
+  background-color: $inputColor;
+}
+
 /* Navbar Admin */
 .logo-navbarAdmin {
   max-width: 175px;
@@ -94,7 +125,6 @@
 
 .bg-navAdmin {
   background-color: $navbarAdmBg;
-
 }
 
 .list-style {
@@ -104,4 +134,73 @@
 /* News admin */
 .news-content {
   color: $dark;
+}
+
+/* Add News Form*/
+
+.form-news {
+  background-color: $light-font;
+  margin-top: 1.5vw;
+  padding-bottom: 7vw;
+  h1 {
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+  }
+  p {
+    margin-bottom: 2vw;
+    font-size: $subtitleFontSize;
+  }
+  .row {
+    .form-label {
+      font-size: 1.2em;
+    }
+
+    .form-control {
+      border: $admin-color 1px solid;
+      margin-bottom: 2vw;
+    }
+
+    .form-error {
+      text-align: left;
+      color: darken($danger, 10%);
+
+      .required {
+        display: initial;
+      }
+    }
+  }
+  .btn {
+    transition: 0.5s;
+    font-size: 1.2em;
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+    border: solid 1px $admin-color;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    color: $admin-color
+  }
+
+  .btn:hover {
+    color: $light-font;
+    background-color: $admin-color;
+  }
+
+  a {
+    transition: 0.2s;
+    font-size: 1.2em;
+
+    &:hover {
+      color: $admin-color;
+      text-decoration: none;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
+  #news_date {
+    display: none;
+  }
+  .required {
+    visibility: hidden;
+  }
 }

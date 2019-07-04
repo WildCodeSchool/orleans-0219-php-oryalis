@@ -15,10 +15,10 @@
                 <a class="nav-link" href="{{ path('admin_employee') }}"><i class="fas fa-handshake"></i> Equipe</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-question-circle"></i> QCM</a>
+                <a class="nav-link" href="{{ path('question_index') }}"><i class="fas fa-question-circle"></i> QCM</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fas fa-newspaper"></i> News</a>
+                <a class="nav-link" href="{{ path('news_index') }}"><i class="fas fa-newspaper"></i> News</a>
             </li>
         </ul>
         <span class="navbar-text">
@@ -28,7 +28,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Modifier les informations</a>
                     <hr>
-                    <a class="dropdown-item" href="#">Déconnexion</a>
+                    <a class="dropdown-item" href="{{ path('app_logout') }}">Déconnexion</a>
                 </div>
             </li>
         </span>
