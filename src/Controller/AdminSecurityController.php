@@ -49,7 +49,6 @@ class AdminSecurityController extends AbstractController
         TokenGeneratorInterface $tokenGenerator,
         \Swift_Mailer $mailer
     ): Response {
-        $mail = $request->request->get("mail[email]");
         $adminEmail = 'gabriel80@gmail.com';
         $mail = 'gabriel81@gmail.com';
         $form = $this->createForm(MailType::class);
@@ -57,6 +56,7 @@ class AdminSecurityController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             if ($mail !== $adminEmail) {
+                $mail = $form->getData('mail[email]');
                 $this->addFlash('danger', 'Email Inconnu');
                 return $this->redirectToRoute('index');
             }
