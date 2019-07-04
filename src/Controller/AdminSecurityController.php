@@ -74,7 +74,7 @@ class AdminSecurityController extends AbstractController
     /**
      * @Route("/login/resetPassword/{token}", name="app_reset_password")
      */
-    public function reset(Request $request,UserPasswordEncoderInterface $passwordEncoder,string $token)
+    public function reset(Request $request, UserPasswordEncoderInterface $passwordEncoder, string $token)
     {
         $form = $this->createForm(SecurityType::class);
         $form->handleRequest($request);
