@@ -65,6 +65,7 @@ class AdminSecurityController extends AbstractController
                 ->setFrom('send@example.com')
                 ->setTo('recipient@example.com')
                 ->setBody($this->renderView('mail/resetMail.html.twig', ['token' => $token]))
+                ->setContentType("text/html");
             ;
             $mailer->send($message);
         }
