@@ -50,12 +50,12 @@ class AdminSecurityController extends AbstractController
         \Swift_Mailer $mailer
     ): Response {
         $mail = $request->request->get("mail[email]");
-        $adminEmail = 'gabriel81@gmail.com';
+        $adminEmail = 'gabriel80@gmail.com';
         $mail = 'gabriel81@gmail.com';
         $form = $this->createForm(MailType::class);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid() && $mail === $adminEmail) {
+        if ($form->isSubmitted() && $form->isValid()) {
             if ($mail !== $adminEmail) {
                 $this->addFlash('danger', 'Email Inconnu');
                 return $this->redirectToRoute('index');
