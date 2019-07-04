@@ -221,7 +221,7 @@ address {
     }
 
     .nav-item {
-        padding-left: 5vw;
+        padding-left: 2vw;
 
         .nav-link {
             font-size: 2em;
@@ -756,4 +756,10 @@ section:nth-child(even) {
 .picto-title {
     font-size: 1.5em;
     color: $primary-color;
+}
+
+.news {
+    .bg-news {
+        background-color: $newsBg;
+    }
 }
