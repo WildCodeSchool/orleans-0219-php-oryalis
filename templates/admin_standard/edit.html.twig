@@ -1,0 +1,16 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}Edit Standard{% endblock %}
+
+{% block body %}
+    <h1 class="training-title py-4 text-center">Modifier la norme {{ standard.title }}</h1>
+    <div class="form-title container pt-lg-4 mb-lg-4">
+        <div class="col">
+            {{ include('admin_standard/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+        </div>
+    </div>
+    <div class="pb-4 text-center">
+        {{ include('admin_standard/_delete_form.html.twig') }}
+        <a class="btn btn-primary" href="{{ path('standard_index') }}">Liste des normes</a>
+    </div>
+{% endblock %}

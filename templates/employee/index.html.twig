@@ -1,20 +1,22 @@
 {% extends 'layoutVistitor.html.twig' %}
 
-{% block title %}Hello EmployeeController!{% endblock %}
+{% block title %}L'Équipe{% endblock %}
 
 {% block body %}
-    <div class="py-5 mt-4"></div>
-    <div class="container">
+    <div class="row justify-content-center pic-container">
+        <img src="{{ asset('build/images/equipe_jumb.jpeg') }}" class="training-pic" alt="photo d'une équipe">
+        <h1 class="trainings-title">Notre Équipe</h1>
+    </div>
+    <div class="container pt-2 mt-5">
     <div class="row">
         {% for employee in employees %}
-
             <div class="col-md-6 col-lg-4 text-center card-team pb-4" data-toggle="modal"
                  data-target="#exampleModal{{ employee.id }}">
                 {% if employee.picture is null %}
                     <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
                          alt="employee">
                 {% else %}
-                    <img src="{{ asset( employee.picture ) }}" class="img-team"
+                    <img src="{{ asset('uploads/employee/' ~ employee.picture ) }}" class="img-team"
                          alt="{{ employee.lastname }} {{ employee.firstname }}">
                 {% endif %}
                 <hr class="hr-style">
@@ -50,7 +52,7 @@
                                             <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
                                                  alt="employee">
                                         {% else %}
-                                            <img src="{{ asset( employee.picture ) }}" class="img-team"
+                                            <img src="{{ asset('uploads/employee/' ~ employee.picture ) }}" class="img-team"
                                                  alt="{{ employee.lastname }} {{ employee.firstname }}">
                                         {% endif %}
                                     </div>
@@ -65,7 +67,7 @@
                                 </div>
                                 <hr class="hr-modal">
                                 <div class="special-row modal-text">
-                                    <p class="text-left ">{{ employee.description }}</p>
+                                    <p class="text-left px-4">{{ employee.description|nl2br }}</p>
                                 </div>
                             </div>
 

@@ -1,0 +1,46 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}Interface administrateur{% endblock %}
+
+{% block body %}
+    <h1 class="training-title p-4 text-center">QCM</h1>
+
+    <h2 class="training-sub-title text-center mb-4">Gérez vos questions</h2>
+
+<div class="row justify-content-center">
+
+    <table class="table col-8 table-striped">
+        <thead class="thead">
+            <tr>
+                <th scope="col" class="table-title-index">Nom</th>
+                <th scope="col" class="table-title-index">Détails</th>
+                <th scope="col" class="table-title-index">Mois</th>
+                <th scope="col" class="table-title-index">Année</th>
+                <th scope="col" class="table-title-index">Editer</th>
+                <th scope="col" class="table-title-index">Supprimer</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for question in questions %}
+            <tr>
+                <td>{{ question.name }}</td>
+                <td>{{ question.explanation }}</td>
+                <td>{{ question.month }}</td>
+                <td>{{ question.year }}</td>
+                <td>
+                    <a href="{{ path('question_show', {'id': question.id}) }}">show</a>
+                </td>
+                <td>
+                    <a href="{{ path('question_edit', {'id': question.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('question_new') }}">Create new</a>
+{% endblock %}
