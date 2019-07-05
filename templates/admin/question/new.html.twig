@@ -1,11 +1,14 @@
-{% extends 'base.html.twig' %}
+{% extends 'layoutAdmin.html.twig' %}
 
 {% block title %}New Question{% endblock %}
 
 {% block body %}
-    <h1>Create new Question</h1>
+    <h1 class="training-title p-4 text-center">Ajouter une Question</h1>
 
-    {{ include('question/_form.html.twig') }}
-
-    <a href="{{ path('question_index') }}">back to list</a>
+<div class="table-title container pt-lg-4 mb-lg-4">
+    <div class="col text-center">
+        {{ include('admin/question/_form.html.twig') }}
+        <a href="{{ path('question_index') }}"><i class="fas fa-arrow-left icon edit-form"></i> Retour à la liste</a>
+    </div>
+</div>
 {% endblock %}
