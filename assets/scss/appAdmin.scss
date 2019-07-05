@@ -87,7 +87,6 @@
   background-color: $admin-color;
 }
 
-
 .btn-delete {
   padding: 0;
 }
@@ -175,12 +174,10 @@
     padding: 10px 15px 10px 15px;
     color: $admin-color
   }
-
   .btn:hover {
     color: $light-font;
     background-color: $admin-color;
   }
-
   a {
     transition: 0.2s;
     font-size: 1.2em;

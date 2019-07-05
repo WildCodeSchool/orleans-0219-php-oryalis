@@ -237,7 +237,10 @@ address {
             }
         }
     }
-
+    .dropdown-item:hover {
+        background-color: $navLinkColor;
+        color: $light-font;
+    }
     .dropdown-menu {
         left: auto;
 
@@ -425,6 +428,18 @@ section:nth-child(even) {
     }
 }
 
+.btn-blog {
+    background-color: $navLinkColor;
+    transition: 0.5s;
+    color: $light-font;
+    border: 2px solid $navLinkColor;
+    border-radius: 3px;
+    &:hover {
+        background-color: $light-font;
+        color: $textModal;
+        border: 2px solid $primary-color;
+    }
+}
 /* PAGE FORMATION */
 
 .training-name {
