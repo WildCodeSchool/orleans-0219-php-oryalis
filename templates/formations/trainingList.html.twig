@@ -14,8 +14,7 @@
                 {% for training in trainings %}
                     <a href="{{ path('training_show', {'id': training.id}) }}"
                        class="list-group-item list-group-item-action">
-                        {{ training.title }}
-                    </a>
+                        {{ training.title }} </a>
                 {% endfor %}
             </ul>
         </div>

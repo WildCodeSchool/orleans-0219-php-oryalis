@@ -22,7 +22,12 @@
             <h4><i class="fas fa-cogs picto-trainings"></i>Méthodes et Moyens pédagogiques</h4>
             <p>{{ training.pedagogy }}</p>
         </div>
-        <p class="text-center"><a href="{{ path('trainings_index') }}" class="back-to-list-trainings">Retour à la
-                liste</a></p>
+        <div class="row justify-content-center">
+        <div>
+        <a class="btn btn-blog" href="{{ path('trainings_index') }}"
+           role="button">Retour à la
+            liste</a>
+        </div>
+        </div>
     </section>
 {% endblock %}
