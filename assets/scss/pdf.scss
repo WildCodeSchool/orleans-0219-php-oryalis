@@ -1,0 +1,124 @@
+@import "vars";
+@import "~bootswatch/dist/lux/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/lux/bootswatch";
+
+@mixin textStyle() {
+  font-family: Lato, sans-serif;
+  color: darken($font-color, 30%)
+}
+
+.card-title{
+  font-size: 1.6rem;
+  text-transform: none;
+  color: $dark;
+}
+
+
+.title-card {
+  text-transform: none;
+  font-size: 1.1rem;
+  color: $dark;
+}
+
+body {
+  background-color: $light;
+}
+
+h1,h2,h3,h4 {
+  font-family: $mainFont;
+}
+h2, h3 {
+  font-size: $titleFontSize;
+}
+
+h4,h5,h6 {
+  font-size: $subtitleFontSize;
+}
+
+/* header */
+
+header {
+  font-family: $mainFont;
+  background-color: #deebdd;
+  background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
+
+}
+/* footer */
+
+footer {
+  font-family: $mainFont;
+  background-color: #deebdd;
+  background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
+}
+
+p {
+  font-family: $textFont;
+}
+
+
+section {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  box-shadow: 0px 10px 7px -10px #111;
+
+  h2 {
+    font-size: 3em;
+  }
+
+  p {
+    line-height: 1.7em;
+    font-size: 1.7em;
+    color: darken($fontColor, 30%);
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+}
+
+/* PAGE FORMATION */
+
+.training-name {
+  padding: 20px 10px 40px 10px;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 2vw;
+  margin-top: 1vw;
+  border-bottom: solid 1px $primary-color;
+  border-top: solid 1px $primary-color;
+}
+
+.infos-trainings {
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+.picto-trainings {
+  margin-right: 10px;
+  color: lighten($primary-color, 20%)
+}
+
+.program {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+
+  h4 {
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+  }
+}
+
+.logo-footer {
+  max-width: 250px;
+  margin-left: 20px;
+}
+
+.training {
+  h3 {
+    font-size: 1.7em;
+  }
+  p {
+    font-size: 1.2em;
+  }
+}
