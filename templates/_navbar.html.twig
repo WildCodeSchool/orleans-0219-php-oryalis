@@ -8,10 +8,10 @@
     <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('employee') }}">L'équipe</a>
+                <a class="nav-link" href="{{ path('employee') }}">Équipe</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Nos Prestations</a>
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Prestations</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="{{ path('trainings_index') }}">Formations</a>
                     <a class="dropdown-item" href="{{ path('audit') }}">Audit</a>
@@ -20,10 +20,17 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Le Blog</a>
+                <a class="nav-link" href="{{ path('standards_index') }}">Normes</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Actualités</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="http://qualite-securite-environnement.oryalis.com/" target="_blank">Le Blog</a>
+                    <a class="dropdown-item" href="{{ path('news') }}">Les News</a>
+                </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="{{ path('contact') }}">Contact</a>
             </li>
         </ul>
     </div>

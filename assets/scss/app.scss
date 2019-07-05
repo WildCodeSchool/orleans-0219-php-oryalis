@@ -57,6 +57,7 @@
     border-radius: 50%;
     border: 2px solid $fontColor;
     max-height: 150px;
+    min-height: 150px;
     object-fit: cover;
 }
 
@@ -120,8 +121,8 @@
 /* Titles */
 
 .banner {
-    border-bottom-left-radius: 800px 50px;
-    border-bottom-right-radius: 800px 50px;
+    border-bottom-left-radius: 800px 15px;
+    border-bottom-right-radius: 800px 15px;
     .main-title {
         padding-top: 22em;
 
@@ -131,13 +132,15 @@
         font-weight: 600;
         font-family: $mainFont;
         text-transform: uppercase;
-        color: $primary-color
+        color: $banner-title;
+        text-shadow: -1px 0 $fontColor, 0 1px $fontColor, 1px 0 $fontColor, 0 -1px $fontColor;
     }
     .bannerSubtitle {
         font-size: 1.3em;
-        font-weight: 400;
+        font-weight: 600;
         color: $banner-title;
         font-family: $mainFont;
+        text-shadow: -1px 0 $fontColor, 0 1px $fontColor, 1px 0 $fontColor, 0 -1px $fontColor;
     }
 }
 
@@ -160,11 +163,11 @@ h4,h5,h6 {
 
 footer {
     font-family: $mainFont;
-    background-color: #deebdd;
-    background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
-
+    background-color: $sectionColor;
+    address, h5 , ul li a{
+        color: $light-font;
+    }
 }
-
 
 .footer-list {
     height: 3em;
@@ -184,7 +187,7 @@ p {
 
 .footer_link {
     font-size: 1.4em;
-    color: $dark;
+    color: $light-font;
     transition: 0.5s;
     font-family: $mainFont;
 
@@ -221,7 +224,7 @@ address {
     }
 
     .nav-item {
-        padding-left: 5vw;
+        padding-left: 2vw;
 
         .nav-link {
             font-size: 2em;
@@ -235,7 +238,10 @@ address {
             }
         }
     }
-
+    .dropdown-item:hover {
+        background-color: $navLinkColor;
+        color: $light-font;
+    }
     .dropdown-menu {
         left: auto;
 
@@ -305,7 +311,6 @@ address {
 
 .presta {
     margin-top: 0;
-
     img {
         min-width: 100%;
         max-width: 100%;
@@ -319,6 +324,9 @@ address {
         transform: scale(1);
         filter: contrast(120%);
         transition: all .2s ease-in;
+    }
+    h2, h3 {
+        color: $light-font;
     }
 }
 
@@ -348,11 +356,9 @@ section {
 }
 
 section:nth-child(even) {
-    background-color: lighten($bg-color, 100%);
-    /*
-    box-shadow: 0px 15px 10px -15px #111;
-    */
+    background-color: lighten($sectionColor, 20%);
 }
+
 
 .whoweare {
     p::first-letter {
@@ -377,9 +383,13 @@ section:nth-child(even) {
 }
 
 /*News*/
+.actu-int {
+    h2, p {
+        color: $light-font;
+    }
+}
 
 .blog {
-
     img {
         max-width: 100%;
         min-width: 100%;
@@ -419,6 +429,18 @@ section:nth-child(even) {
     }
 }
 
+.btn-blog {
+    background-color: $navLinkColor;
+    transition: 0.5s;
+    color: $light-font;
+    border: 2px solid $navLinkColor;
+    border-radius: 3px;
+    &:hover {
+        background-color: $light-font;
+        color: $textModal;
+        border: 2px solid $primary-color;
+    }
+}
 /* PAGE FORMATION */
 
 .training-name {
@@ -491,6 +513,7 @@ section:nth-child(even) {
     overflow: hidden;
     height: 30vw;
 
+
     .training-pic {
         object-fit: cover;
         width: 100%;
@@ -515,6 +538,58 @@ section:nth-child(even) {
     &:hover {
         color: $primary-color;
         text-decoration: none;
+    }
+}
+/*Contact Form*/
+.contact {
+    background-color: lighten($bg-color, 100%);
+}
+
+.form {
+    padding: 0;
+    margin-bottom: 5em;
+    padding-top: 8em;
+    background-color: $form-color;
+    h1 {
+        padding-top: 4em;
+        padding-bottom: 2em;
+    }
+    .card {
+        margin-bottom: 6em;
+        border: none;
+        }
+        .card-body {
+            padding: 2em;
+            color: darken($primary-color, 30%);
+            font-size: 1.5em;
+        }
+        .form-control {
+            margin-bottom: 2em;
+            background-color: $form-color;
+            border-bottom: 1px solid darken($primary-color, 30%);
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .btn {
+            border: 1px solid darken($primary-color, 30%);
+            padding: 0.5em 1em ;
+            font-size: 1em;
+            border-radius: 5px;
+            &:hover {
+                background-color: $bg-color;
+                color: darken($primary-color, 30%);
+            }
+        }
+}
+iframe {
+    filter: brightness(0.8);
+    transition: 0.3s;
+    &:hover {
+        filter: brightness(1);
+        transition: 0.3s;
     }
 }
 
@@ -747,4 +822,10 @@ section:nth-child(even) {
 .picto-title {
     font-size: 1.5em;
     color: $primary-color;
+}
+
+.news {
+    .bg-news {
+        background-color: $newsBg;
+    }
 }

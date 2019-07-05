@@ -1,23 +1,28 @@
 {% block body %}
-    <section class="container-fluid qcm">
         <div class="container">
-            <h2>Découvrez notre quiz du mois de <span>{{ question.month }} {{ question.year }}</span></h2>
+
+            <h2>Découvrez notre quiz du mois
+                {% if question is not null %}
+                    de <span>{{ question.month }} {{ question.year }}</span>
+                {% endif %}
+            </h2>
             <p>Chaque mois, découvrez une nouvelle question portant sur les normes QSE.</p>
             <div class="row justify-content-center">
                 <div class="card bg-secondary mb-3">
-                    <div class="card-header card-question">{{ question.name }}</div>
-                    <div class="card-body">
-                        <div class="row justify-content-center">
-                            {% for answer in answers %}
-                                <button type="button"
-                                        class="btn btn-outline-primary col-9" data-toggle="modal"
-                                        data-target="#qcm">{{ answer.name }}</button>
-                            {% endfor %}
+                    <div class="card-header card-question">{{ question.name ?? "Le quizz pour ce mois n'est pas encore disponible" }}</div>
+                    {% if question is not null %}
+                        <div class="card-body">
+                            <div class="row justify-content-center">
+                                {% for answer in answers %}
+                                    <button type="button"
+                                            class="btn btn-outline-primary col-9" data-toggle="modal"
+                                            data-target="#qcm">{{ answer.name }}</button>
+                                {% endfor %}
+                            </div>
                         </div>
-                    </div>
+                    {% endif %}
                 </div>
             </div>
             <p><a href="{{ path('questions_history') }}" class="text-center qcm-histo">Faire d'autres QCM</a></p>
         </div>
-    </section>
 {% endblock %}
