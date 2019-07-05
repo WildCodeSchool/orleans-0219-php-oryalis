@@ -340,9 +340,6 @@
     "symfony/dom-crawler": {
         "version": "v4.2.8"
     },
-    "symfony/dotenv": {
-        "version": "v4.2.8"
-    },
     "symfony/event-dispatcher": {
         "version": "v4.2.8"
     },

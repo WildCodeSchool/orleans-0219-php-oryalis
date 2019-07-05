@@ -1,4 +1,3 @@
-{% form_theme form 'foundation_5_layout.html.twig' %}
 {{ form_start(form) }}
 <div class="row mt-lg-4">
     <div class="form-group col-6">
@@ -17,27 +16,27 @@
         {{ form_errors(form.prerequisite) }}
         </div>
         <div class="form-group col-6">
-            {{ form_label(form.title, 'Durée') }}
+            {{ form_label(form.period, 'Durée') }}
             {{ form_widget(form.period, ({'attr': {'class': 'form-control'}})) }}
             {{ form_errors(form.period) }}
         </div>
         <div class="form-group col-6">
-            {{ form_label(form.title, 'Public concerné') }}
+            {{ form_label(form.public, 'Public concerné') }}
             {{ form_widget(form.public, ({'attr': {'class': 'form-control'}})) }}
             {{ form_errors(form.public) }}
         </div>
         <div class="form-group col-6">
-            {{ form_label(form.title, 'Formateur') }}
+            {{ form_label(form.trainer, 'Formateur') }}
             {{ form_widget(form.trainer, ({'attr': {'class': 'form-control'}})) }}
             {{ form_errors(form.trainer) }}
         </div>
     <div class="form-group col-12">
-        {{ form_label(form.title, 'Méthodes et moyens pédagogiques') }}
+        {{ form_label(form.pedagogy, 'Méthodes et moyens pédagogiques') }}
         {{ form_widget(form.pedagogy, ({'attr': {'class': 'form-control'}})) }}
         {{ form_errors(form.pedagogy) }}
     </div>
         <div class="form-group col-12">
-            {{ form_label(form.title, 'Programme') }}
+            {{ form_label(form.program, 'Programme') }}
             {{ form_widget(form.program, ({'attr': {'class': 'form-control'}})) }}
             {{ form_errors(form.program) }}
         </div>

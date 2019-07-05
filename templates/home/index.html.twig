@@ -43,6 +43,7 @@
             </div>
         </div>
     </section>
+
     <section class="container-fluid presta pt-5 pb-5">
         <div class="container justify-content-center">
             <div class="row">
@@ -52,54 +53,68 @@
             </div>
             <div class="row justify-content-center justify-content-md-between ">
                 <div class="justify-content-center picto col-12 col-lg-2 p-1">
-                    <a href="#"><img src="{{ asset('build/images/formation.png') }}" alt="picto formation"></a>
+                    <a href="{{ path('trainings_index') }}"><img src="{{ asset('build/images/formation.png') }}" alt="picto formation"></a>
                     <h3 class="text-center pr-0 pl-0">formations</h3>
                 </div>
                 <div class="justify-content-center picto col-12 col-lg-2 p-1">
-                    <a href="#"><img src="{{ asset('build/images/conseil.png') }}" alt="picto conseil"></a>
+                    <a href="{{ path('advice') }}"><img src="{{ asset('build/images/conseil.png') }}" alt="picto conseil"></a>
                     <h3 class="text-center">conseil</h3>
                 </div>
                 <div class="justify-content-center picto col-12 col-lg-2 p-1">
-                    <a href="#"><img src="{{ asset('build/images/audit.png') }}" alt="picto audit"></a>
+                    <a href="{{ path('audit') }}"><img src="{{ asset('build/images/audit.png') }}" alt="picto audit"></a>
                     <h3 class="text-center">audit</h3>
                 </div>
                 <div class="justify-content-center picto col-12 col-lg-2 p-1">
-                    <a href="#"><img src="{{ asset('build/images/veille.png') }}" alt="picto veille règlementaire"></a>
+                    <a href="{{ path('watch') }}"><img src="{{ asset('build/images/veille.png') }}" alt="picto veille règlementaire"></a>
                     <h3 class="text-center">veille</h3>
                 </div>
             </div>
         </div>
     </section>
-    <section>
+
+    <section class="container-fluid qcm">
         {% include '_question.html.twig' %}
     </section>
-    <section class="blog container-fluid pr-0 pl-0 pt-5 pb-5">
+
+    <section class="blog actu-int container-fluid pr-0 pl-0 pt-5 pb-5">
         <div class="container justify-content-center">
-            <div class="row info">
+            <div class="row info pb-4">
                 <div class="col-12">
-                    <h2 class="pt-5 pb-5 text-center">Les actualités</h2>
+                    <h2 class="text-center pb-5">Les actualités internes</h2>
                 </div>
                 <div class="col-12 col-lg-5">
                     <img src="{{ asset('build/images/new.jpg') }}" alt="illustration">
                 </div>
                 <div class="col-12 col-lg-6">
-                    <h3>Informations internes</h3>
                     <p>La norme ISO 45001 a été publiée en 2018, Oryalis peut vous former et vous aider à mettre en place ce
                         nouveau référentiel. L'équipe ORYALIS est constituée de plusieurs auditeurs qualifiés sur cette nouvelle norme.</p>
                 </div>
-                <h3 class="text-center col-12 mt-5 pt-5 pb-4">Les informations du blog</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid pr-0 pl-0 pt-3 pb-5">
+        <div class="blog container justify-content-center">
+            <div class="row info">
+                <div class="col-12">
+                <h2 class="text-center col-12 mt-5 pb-5">Les informations du blog</h2>
                 {% for feed in feeds |slice(0,3) %}
                     <article class="media mb-5">
                         <div class="media-body">
                             <h5>{{ feed.title }}</h5>
                             <p>{{ feed.category }}<br>{{ feed.pubDate|date("d/m/Y", "Europe/Paris") }}</p>
                             <p>{{ feed.description|raw|striptags|trim|truncate(155, true, '...') }}</p>
-                            <a class="btn btn-outline-primary" href="{{ feed.link|raw }}" role="button">lire la suite</a>
+                            <a class="btn btn-outline-primary" href="{{ feed.link|raw }}" target="_blank" role="button">lire la suite</a>
                             <hr>
                         </div>
                     </article>
                 {% endfor %}
+                </div>
             </div>
+        </div>
+        <div class="text-center">
+        <a class="btn btn-blog" href="http://qualite-securite-environnement.oryalis.com/"
+           target="_blank" role="button">Voir le Blog</a>
         </div>
     </section>
 {% endblock %}

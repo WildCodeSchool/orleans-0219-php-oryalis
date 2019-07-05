@@ -20,7 +20,6 @@ class News
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
-     * @Assert\NotNull()
      * @Assert\Length(
      *     min=2,
      *     max=255,
@@ -38,7 +37,6 @@ class News
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
-     * @Assert\NotNull()
      * @Assert\Length(
      *     min=10,
      *     max=255,

@@ -85,25 +85,32 @@
 
 .btn-primary {
   background-color: $admin-color;
+  border: solid 1px $banner-title;
+  &:hover {
+    background-color: $banner-title;
+    border: solid 1px $admin-color;
+    color: $admin-color;
+  }
 }
-
 
 .btn-delete {
   padding: 0;
 }
 
 .btn-add {
-  border: solid 1px $admin-color;
+  border: solid 1px $banner-title;
   font-size: 0.7em;
-  color: $admin-color;
+  color: $banner-title;
   transition: 0.5s;
   font-family: $mainFont;
   box-shadow: 3px 4px 2px $fontColor;
-
+  background-color: $admin-color;
   &:hover {
     text-decoration: none;
-    color: $banner-title;
-    background-color: $admin-color;
+    color: $admin-color;
+    background-color: $banner-title;
+    border: solid 1px $admin-color;
+    box-shadow: 3px 4px 2px $fontColor;
   }
 }
 
@@ -175,12 +182,10 @@
     padding: 10px 15px 10px 15px;
     color: $admin-color
   }
-
   .btn:hover {
     color: $light-font;
     background-color: $admin-color;
   }
-
   a {
     transition: 0.2s;
     font-size: 1.2em;
