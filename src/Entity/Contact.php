@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Contact
 {
     /**
-     * @assert\NotNull
+     * @Assert\NotNull
      */
     private $id;
 
