@@ -163,11 +163,11 @@ h4,h5,h6 {
 
 footer {
     font-family: $mainFont;
-    background-color: #deebdd;
-    background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
-
+    background-color: $sectionColor;
+    address, h5 , ul li a{
+        color: $light-font;
+    }
 }
-
 
 .footer-list {
     height: 3em;
@@ -187,7 +187,7 @@ p {
 
 .footer_link {
     font-size: 1.4em;
-    color: $dark;
+    color: $light-font;
     transition: 0.5s;
     font-family: $mainFont;
 
@@ -538,6 +538,58 @@ section:nth-child(even) {
     &:hover {
         color: $primary-color;
         text-decoration: none;
+    }
+}
+/*Contact Form*/
+.contact {
+    background-color: lighten($bg-color, 100%);
+}
+
+.form {
+    padding: 0;
+    margin-bottom: 5em;
+    padding-top: 8em;
+    background-color: $form-color;
+    h1 {
+        padding-top: 4em;
+        padding-bottom: 2em;
+    }
+    .card {
+        margin-bottom: 6em;
+        border: none;
+        }
+        .card-body {
+            padding: 2em;
+            color: darken($primary-color, 30%);
+            font-size: 1.5em;
+        }
+        .form-control {
+            margin-bottom: 2em;
+            background-color: $form-color;
+            border-bottom: 1px solid darken($primary-color, 30%);
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .btn {
+            border: 1px solid darken($primary-color, 30%);
+            padding: 0.5em 1em ;
+            font-size: 1em;
+            border-radius: 5px;
+            &:hover {
+                background-color: $bg-color;
+                color: darken($primary-color, 30%);
+            }
+        }
+}
+iframe {
+    filter: brightness(0.8);
+    transition: 0.3s;
+    &:hover {
+        filter: brightness(1);
+        transition: 0.3s;
     }
 }
 
