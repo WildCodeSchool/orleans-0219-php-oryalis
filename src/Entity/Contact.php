@@ -15,37 +15,38 @@ class Contact
     private $id;
 
     /**
-     * @Assert\String
+     * @Assert\NotBlank
      */
     private $firstname;
 
     /**
-     * @Assert\String
+     * @Assert\NotBlank
      */
     private $lastname;
 
     /**
-     * @Assert\String
+     * @Assert\NotBlank
      */
     private $firm;
 
     /**
      * @Assert\Email
+     * @assert\NotBlank
      */
     private $email;
 
     /**
-     * @Assert\String
+     * @Assert\NotBlank
      */
     private $tel;
 
     /**
-     * @Assert\String
+     * @Assert\NotBlank
      */
     private $message;
 
     /**
-     * @Assert\String
+     * @Assert\NotBlank
      */
     private $object;
 
