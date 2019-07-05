@@ -163,11 +163,11 @@ h4,h5,h6 {
 
 footer {
     font-family: $mainFont;
-    background-color: #deebdd;
-    background-image: linear-gradient(315deg, #deebdd 0%, #bbdbbe 74%);
-
+    background-color: $sectionColor;
+    address, h5 , ul li a{
+        color: $light-font;
+    }
 }
-
 
 .footer-list {
     height: 3em;
@@ -187,7 +187,7 @@ p {
 
 .footer_link {
     font-size: 1.4em;
-    color: $dark;
+    color: $light-font;
     transition: 0.5s;
     font-family: $mainFont;
 
