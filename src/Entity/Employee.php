@@ -22,14 +22,14 @@ class Employee
 
     /**
      * @Assert\Length(max=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $lastname;
 
     /**
      * @Assert\Length(max=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $firstname;
@@ -42,7 +42,7 @@ class Employee
 
     /**
      * @Assert\Length(max=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $title;
@@ -70,7 +70,7 @@ class Employee
 
     /**
      * @Assert\Length(max=1500)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="text")
      */
     private $description;
