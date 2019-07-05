@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="text-center py-5">
-        <a href="{{ path('employee_new') }}" class="btn add">Ajouter un membre</a>
+        <a href="{{ path('employee_new') }}" class="btn add"><i class="fas fa-plus"></i> Ajouter un membre</a>
     </div>
     <div class="row">
         {% for employee in employees %}
@@ -20,7 +20,7 @@
                     <h2 class="card-title"><span
                                 class="text-uppercase">{{ employee.lastname }}</span> {{ employee.firstname }}</h2>
                     <div class="edit-del">
-                        <a href="{{ path('employee_edit', {'id': employee.id}) }}" class="btn"><i class="far faro fa-edit"></i></a>
+                        <a href="{{ path('employee_edit', {'id': employee.id}) }}" class="btn"><i class="far faro icon-show icon fa-edit p-2"></i></a>
                         {% include '/admin_employee/_delete_form.html.twig' %}
                     </div>
                 </div>

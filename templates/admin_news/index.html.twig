@@ -7,7 +7,7 @@
         <h1 class="training-title p-4 text-center">Actualités</h1>
         <h2 class="training-sub-title text-center mb-4">Gérez vos actualités</h2>
         <div class="text-center">
-            <button type="submit" class="btn add mb-4"><a href="{{ path('news_new') }}" class="link-training">+ Ajouter une actualité</a></button>
+            <button type="submit" class="btn add mb-4"><a href="{{ path('news_new') }}" class="link-training"><i class="fas fa-plus"></i> Ajouter une actualité</a></button>
         </div>
         <div class="row justify-content-center">
             <table class="table col-8 table-striped">
@@ -26,8 +26,8 @@
                         <td><a href="{{ path('news_show', {'id': new.id}) }}" class="link-training"> {{ new.name }}</a></td>
                         <td class="news-content">{{ new.content }}</td>
                         <td class="news-content">{{ new.date | date('d-m-Y') }}</td>
-                        <td><a href="{{ path('news_edit', {'id': new.id}) }}"><i class="far faro fa-edit icon icon-show btn mt-3"></i></a></td>
-                        <td class="far icon icon-show btn">{{ include('admin_news/_delete_form.html.twig') }}</td>
+                        <td><a href="{{ path('news_edit', {'id': new.id}) }}"><i class="far faro text-center fa-edit icon icon-show mt-3"></i></a></td>
+                        <td class="far text-center icon icon-show btn">{{ include('admin_news/_delete_form.html.twig') }}</td>
                     </tr>
                 {% endfor %}
                 </tbody>

@@ -10,8 +10,8 @@
             {{ include('admin_employee/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
         </div>
     </div>
-    <div class="pb-4 text-center">
-        {{ include('admin_employee/_delete_form.html.twig') }}
-        <a class="btn btn-primary" href="{{ path('admin_employee') }}">Liste des membres</a>
+
+    <div class="pb-4 pr-5 text-right container">
+        <a class="btn btn-primary" href="{{ path('admin_employee') }}"><i class="fas fa-arrow-left"></i> Liste des membres</a>
     </div>
 {% endblock %}

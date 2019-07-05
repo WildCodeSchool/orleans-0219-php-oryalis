@@ -6,7 +6,7 @@
     <h1 class="training-title p-4 text-center">Formations</h1>
     <h2 class="training-sub-title text-center mb-4">Gérez vos formations</h2>
     <div class="text-center">
-        <button type="submit" class="btn add mb-4"><a href="{{ path('training_new') }}" class="link-training">+ Ajouter une formation</a></button>
+        <button type="submit" class="btn add mb-4"><a href="{{ path('training_new') }}" class="link-training"><i class="fas fa-plus"></i> Ajouter une formation</a></button>
     </div>
     <div class="row justify-content-center">
 
@@ -22,9 +22,9 @@
             {% for training in trainings %}
                 <tr>
                    <td><a href="{{ path('admin_training_show', {'id': training.id}) }}" class="link-training"> {{ training.title }}</a></td>
-                    <td><a href="{{ path('training_edit', {'id': training.id}) }}"><i class="far faro fa-edit icon icon-show btn mt-3"></i></a></td>
+                    <td><a href="{{ path('training_edit', {'id': training.id}) }}"><i class="far text-center faro fa-edit icon icon-show p-2 mt-1"></i></a></td>
 
-                    <td class="far icon icon-show btn">{{ include('admin/training/_delete_form.html.twig') }}</td>
+                    <td class="far text-center icon icon-show">{{ include('admin/training/_delete_form.html.twig') }}</td>
                 </tr>
             {% endfor %}
             </tbody>
