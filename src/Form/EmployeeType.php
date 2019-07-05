@@ -22,7 +22,9 @@ class EmployeeType extends AbstractType
             ->add('title')
             ->add('pictureFile', VichImageType::class, [
             'label' => 'Formats de photos acceptés (.jpg, .png, 200ko maximum)',
-            'required' => false])
+            'required' => false,
+            'download_label' => false,
+            'delete_label' => 'Supprimer l\'image actuelle !'])
             ->add('description', TextareaType::class)
         ;
     }

@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\NewsRepository")
@@ -18,6 +19,14 @@ class News
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(
+     *     min=2,
+     *     max=255,
+     *     minMessage="Le titre doit contenir au moins {{ limit }} caractères",
+     *     maxMessage="Le titre doit contenir au maximum {{ limit }} caractères"
+     * )
      */
     private $name;
 
@@ -28,6 +37,14 @@ class News
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
+     * @Assert\NotNull()
+     * @Assert\Length(
+     *     min=10,
+     *     max=255,
+     *     minMessage="Le message doit contenir au moins {{ limit }} caractères",
+     *     maxMessage="Le message doit contenir au maximum {{ limit }} caractères"
+     * )
      */
     private $content;
 
