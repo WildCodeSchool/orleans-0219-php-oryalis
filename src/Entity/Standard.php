@@ -19,14 +19,14 @@ class Standard
 
     /**
      * @Assert\Length(max=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $title;
 
     /**
      * @Assert\Length(max=1250)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="text")
      */
     private $description;
