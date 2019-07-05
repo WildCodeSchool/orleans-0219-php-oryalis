@@ -9,7 +9,9 @@
         <div class="col">
             {{ include('admin_employee/_form.html.twig') }}
         </div>
-        <a class="btn btn-primary" href="{{ path('admin_employee') }}">Liste des membres</a>
+        <div class="text-right">
+            <a class="btn btn-primary" href="{{ path('admin_employee') }}"><i class="fas fa-arrow-left"></i> Liste des membres</a>
+        </div>
     </div>
 
 {% endblock %}
