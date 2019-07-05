@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Admin;
 use App\Repository\AdminRepository;
 use Doctrine\ORM\EntityManager;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Swift_Message;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -46,15 +47,17 @@ class AdminSecurityController extends AbstractController
     public function forgottenPassword(
         Request $request,
         TokenGeneratorInterface $tokenGenerator,
-        \Swift_Mailer $mailer
+        \Swift_Mailer $mailer,
+        AdminRepository $adminRepository
     ): Response {
         $form = $this->createForm(MailType::class);
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
             $email = $form->getData()['email'];
             $em = $this->getDoctrine()->getManager();
-            $admin = $em->getRepository(Admin::class)->findOneByEmail($email);
-            if ($admin === null) {
+            $admin = $adminRepository->findOneByEmail($email);
+            if (!$admin instanceof Admin) {
                 $this->addFlash('danger', 'Email Inconnu');
                 return $this->redirectToRoute('forgottenPassword');
             }
@@ -68,6 +71,8 @@ class AdminSecurityController extends AbstractController
                 ->setContentType("text/html");
             ;
             $mailer->send($message);
+            $this->addFlash('success', 'Email envoyé');
+            return $this->redirectToRoute('app_login');
         }
         return $this->render('security/forgottenPassword.html.twig', ['form' => $form->createView()]);
     }
@@ -75,19 +80,28 @@ class AdminSecurityController extends AbstractController
     /**
      * @Route("/login/resetPassword/{token}", name="app_reset_password")
      */
-    public function reset(Request $request, UserPasswordEncoderInterface $passwordEncoder, string $token)
-    {
+    public function reset(
+        Request $request,
+        AdminRepository $adminRepository,
+        UserPasswordEncoderInterface $passwordEncoder,
+        string $token
+    ) {
         $form = $this->createForm(SecurityType::class);
         $form->handleRequest($request);
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $admin = $em->getRepository(Admin::class)->findOneByResetToken($token);
-            $admin->setPassword($passwordEncoder->encodePassword($admin, $form->getData()['password']));
-            $token = null;
-            $admin->setResetToken($token);
-            $em->flush();
+            $admin = $adminRepository->findOneByResetToken($token);
+            if (!$admin instanceof Admin) {
+                $this->addFlash('danger', 'Le token est inconnu');
+            } else {
+                $admin->setPassword($passwordEncoder->encodePassword($admin, $form->getData()['password']));
+                $admin->setResetToken(null);
+                $em->flush();
+                $this->addFlash('success', 'Mot de passe modifié avec succes');
+            }
+
             return $this->redirectToRoute('app_login');
         }
-        return $this->render('security/resetPassword.html.twig', ['token' => $token, 'form' => $form->createView()]);
+        return $this->render('security/resetPassword.html.twig', ['form' => $form->createView()]);
     }
 }

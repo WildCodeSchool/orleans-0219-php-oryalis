@@ -35,7 +35,7 @@ class Admin implements UserInterface
 
     /**
      * @var string
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true, unique=true)
      */
     protected $resetToken;
 

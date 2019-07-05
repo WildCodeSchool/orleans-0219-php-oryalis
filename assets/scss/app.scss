@@ -471,3 +471,13 @@ section:nth-child(even) {
         padding: 2em;
     }
 }
+#mail {
+    min-width: 600px;
+    input {
+        width: 100%;
+    }
+}
+
+.password-field {
+    margin-bottom: 1em;
+}
