@@ -29,8 +29,3 @@ function toggleDropdown (e) {
 $('body')
     .on('mouseenter mouseleave','.dropdown',toggleDropdown)
     .on('click', '.dropdown-menu a', toggleDropdown);
-
-
-function myFunction() {
-    document.getElementById("demo").style.color = "red";
-}

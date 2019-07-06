@@ -846,6 +846,8 @@ iframe {
         background-color: $newsBg;
     }
 }
-.navbar-nav .nav-item.active .nav-link{
-    color: #7d5a29;
+
+navbar-collapse {
+    margin-right: 0;
+    justify-content: center;
 }
