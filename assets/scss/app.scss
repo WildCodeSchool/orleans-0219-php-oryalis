@@ -121,8 +121,9 @@
 /* Titles */
 
 .banner {
-    border-bottom-left-radius: 800px 15px;
-    border-bottom-right-radius: 800px 15px;
+    //border-bottom-left-radius: 800px 15px;
+    //border-bottom-right-radius: 800px 15px;
+    box-shadow: 0px 11px 9px -11px $sectionColor;
     .main-title {
         padding-top: 22em;
 
@@ -206,7 +207,7 @@ address {
 
 /* Navbar */
 .navbar {
-    background-color: rgba($bg-color, .9);
+    background-color: rgba($sectionColor, .9);
     padding: 0;
 
     .logo-navbar {
@@ -227,10 +228,11 @@ address {
         padding-left: 2vw;
 
         .nav-link {
-            font-size: 2em;
-            color: $navLinkColor;
+            font-size: 1.8em;
+            font-weight: 100;
+            color: $light-font;
             transition: 0.5s;
-            font-family: $textFont;
+            font-family: $navbarLink;
             text-transform: uppercase;
 
             &:hover {
@@ -244,6 +246,21 @@ address {
     }
     .dropdown-menu {
         left: auto;
+        background-color: rgba($sectionColor,0.9);
+        border: none;
+        margin-top: .9em;
+        padding: 0;
+        min-width: 13rem;
+        a {
+            color: $navLinkColor;
+            font-family: $navbarLink;
+            text-transform: uppercase;
+            font-size: 1.5em;
+            padding: .8em;
+        }
+        a:hover {
+            color: $primary-color;
+        }
 
         .dropdown-item {
             font-size: 1.5em;
@@ -828,4 +845,7 @@ iframe {
     .bg-news {
         background-color: $newsBg;
     }
+}
+.navbar-nav .nav-item.active .nav-link{
+    color: #7d5a29;
 }
