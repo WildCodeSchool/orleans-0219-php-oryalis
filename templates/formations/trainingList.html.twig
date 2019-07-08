@@ -7,17 +7,27 @@
         <img src="{{ asset('build/images/training.jpg') }}" class="training-pic" alt="photo de formation">
         <h1 class="trainings-title">Formations</h1>
     </div>
-    <section class="container trainings">
+    <section class="trainings">
         <p class="text-center">Découvrez les formations dispensées par Oryalis.</p>
         <div class="row justify-content-center">
-            <ul class="list-group">
-                {% for training in trainings %}
-                    <a href="{{ path('training_show', {'id': training.id}) }}"
-                       class="list-group-item list-group-item-action">
-                        {{ training.title }}
-                    </a>
-                {% endfor %}
-            </ul>
+
+            <div class="container">
+                <div class="row">
+                    {% for training in trainings %}
+                        <div class="col-lg-4 col-md-7 col-sm-8 text-center">
+                            <ul class="card clearfix pl-0 training-card">
+                                <li class="mr-0 mb-0 training-list">
+                                        <a href="{{ path('training_show', {'id': training.id}) }}" class="training-link">
+                                            <div>
+                                                <h5 class="product-card-title mt-3 pt-lg-5">{{ training.title }}</h5>
+                                            </div>
+                                        </a>
+                                </li>
+                            </ul>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </section>
 {% endblock %}
