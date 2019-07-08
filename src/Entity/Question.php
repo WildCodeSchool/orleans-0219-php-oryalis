@@ -11,8 +11,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * @ORM\Entity(repositoryClass="App\Repository\QuestionRepository")
  * @UniqueEntity(
  *     fields={"month", "year"},
- *     errorPath={"year"},
- *     message="Une actualité existe déjà pour cette date"
+ *     errorPath="year",
+ *     message="Une question existe déjà pour cette date"
  * )
  */
 class Question
@@ -111,7 +111,7 @@ class Question
     /**
      * @return Collection|Answer[]
      */
-    public function getAnswers(): Collection
+    public function getAnswers(): ?Collection
     {
         return $this->answers;
     }
