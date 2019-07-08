@@ -17,16 +17,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class AnswerController extends AbstractController
 {
     /**
-     * @Route("/", name="answer_index", methods={"GET"})
-     */
-    public function index(AnswerRepository $answerRepository): Response
-    {
-        return $this->render('admin/answer/index.html.twig', [
-            'answers' => $answerRepository->findAll(),
-        ]);
-    }
-
-    /**
      * @Route("/{question}/new", name="answer_new", methods={"GET","POST"})
      */
     public function new(Request $request, Question $question): Response
@@ -52,15 +42,6 @@ class AnswerController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="answer_show", methods={"GET"})
-     */
-    public function show(Answer $answer): Response
-    {
-        return $this->render('admin/answer/show.html.twig', [
-            'answer' => $answer,
-        ]);
-    }
 
     /**
      * @Route("/{id}/edit", name="answer_edit", methods={"GET","POST"})
