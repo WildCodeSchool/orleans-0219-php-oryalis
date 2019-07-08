@@ -43,6 +43,7 @@
   }
 }
 
+
 .icon:hover {
   opacity: 0.5;
 }
@@ -204,4 +205,11 @@
   .required {
     visibility: hidden;
   }
+}
+
+.custom-file-label::after {
+  content: 'Choisissez une photos...';
+  height: 0;
+  line-height: 0;
+  border: solid $dark 1px;
 }
