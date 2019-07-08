@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use Symfony\Component\Dotenv\Dotenv;
 use App\Entity\Admin;
 use App\Repository\AdminRepository;
 use Doctrine\ORM\EntityManager;
@@ -66,7 +67,7 @@ class AdminSecurityController extends AbstractController
             $em->flush();
             $message = (new \Swift_Message('Hello Email'))
                 ->setFrom('send@example.com')
-                ->setTo('recipient@example.com')
+                ->setTo('example@gmail.com')
                 ->setBody($this->renderView('mail/resetMail.html.twig', ['token' => $token]))
                 ->setContentType("text/html");
             ;
