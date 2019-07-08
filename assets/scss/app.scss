@@ -509,6 +509,15 @@ section:nth-child(even) {
     }
 }
 
+.training {
+    h3 {
+        font-size: 1.7em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+}
+
 .pic-container {
     overflow: hidden;
     height: 30vw;
@@ -746,6 +755,13 @@ iframe {
 
 /* QCM history */
 
+.bonne-réponse {
+    color: $primary-color;
+}
+
+.mauvaise-réponse {
+    color: $redCircle;
+}
 .qcm-history {
     h1 {
         margin-top: 3vw;
@@ -828,4 +844,34 @@ iframe {
     .bg-news {
         background-color: $newsBg;
     }
+}
+
+/**training cards**/
+
+.training-list {
+    list-style-type: none;
+}
+
+.training-card {
+    height: 14rem;
+    border-color: $navLinkColor;
+}
+
+.training-card:hover {
+    opacity: 0.8;
+}
+
+.training-link:hover {
+    text-decoration: none;
+}
+
+/**modal team**/
+
+.teamHeader {
+    background-color: $deg1ModalH;
+    background-image: linear-gradient(315deg, $deg1ModalH 0%, $deg1ModalH2 74%);
+}
+
+.teamTitle {
+    color : $light-font;
 }

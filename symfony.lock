@@ -153,6 +153,18 @@
     "justinrainbow/json-schema": {
         "version": "5.2.8"
     },
+    "knplabs/knp-snappy": {
+        "version": "v1.1.0"
+    },
+    "knplabs/knp-snappy-bundle": {
+        "version": "1.5",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.5",
+            "ref": "c81bdcf4a9d4e7b1959071457f9608631865d381"
+        }
+    },
     "monolog/monolog": {
         "version": "1.24.0"
     },
@@ -327,6 +339,9 @@
     },
     "symfony/dom-crawler": {
         "version": "v4.2.8"
+    },
+    "symfony/dotenv": {
+        "version": "v4.2.10"
     },
     "symfony/event-dispatcher": {
         "version": "v4.2.8"
