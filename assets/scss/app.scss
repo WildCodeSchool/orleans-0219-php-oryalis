@@ -850,6 +850,11 @@ iframe {
     border-color: $navLinkColor;
 }
 
-.training-link:hover {
-    color: $primary-color;
+.training-card:hover {
+    opacity: 0.8;
 }
+
+.training-link:hover {
+    text-decoration: none;
+}
+
