@@ -16,13 +16,40 @@
                                 {% for answer in answers %}
                                     <button type="button"
                                             class="btn btn-outline-primary col-9" data-toggle="modal"
-                                            data-target="#qcm">{{ answer.name }}</button>
-                                {% endfor %}
+                                            data-target="#qcm{{ answer.id }}">{{ answer.name }}</button>
+                                <div class="modal fade" id="qcm{{ answer.id }}" tabindex="-1" role="dialog"
+                                     aria-labelledby="qcm"
+                                     aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-header">
+                                                    {% if answer.goodAnswer == false %}
+                                                        <h3 class="card-title mauvaise-réponse">Mauvaise réponse !</h3>
+                                                    {% else %}
+                                                        <h3 class="card-title bonne-réponse">Bonne réponse !</h3>
+                                                    {% endif %}
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="modal-body">
+                                                <hr class="hr-modal">
+                                                <div class="special-row modal-text">
+                                                    <p class="text-left px-4">{{ question.explanation|nl2br }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                             </div>
+                                {% endfor %}
                         </div>
                     {% endif %}
                 </div>
             </div>
+            </div>
             <p><a href="{{ path('questions_history') }}" class="text-center qcm-histo">Faire d'autres QCM</a></p>
+
         </div>
 {% endblock %}

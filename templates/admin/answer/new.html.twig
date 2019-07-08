@@ -1,13 +1,13 @@
 {% extends 'layoutAdmin.html.twig' %}
 
-{% block title %}Ajouter une Question{% endblock %}
+{% block title %}Ajouter une Réponse{% endblock %}
 
 {% block body %}
-    <h1 class="training-title p-4 text-center">Ajouter une Question</h1>
+    <h1 class="training-title p-4 text-center">Ajouter une Réponse</h1>
 
 <div class="table-title container pt-lg-4 mb-lg-4">
     <div class="col text-center">
-        {{ include('admin/question/_form.html.twig') }}
+    {{ include('admin/answer/_form.html.twig') }}
     </div>
     <div class="text-right ">
         <a class="btn btn-primary" href="{{ path('question_index') }}"><i class="fas fa-arrow-left icon"></i> Retour à la liste</a>
