@@ -35,8 +35,8 @@
                      aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h3 class="card-title" id="exampleModalLabel"><span
+                            <div class="modal-header teamHeader">
+                                <h3 class="card-title teamTitle" id="exampleModalLabel"><span
                                             class="text-uppercase">{{ employee.lastname }}</span> {{ employee.firstname }}
                                 </h3>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -45,8 +45,8 @@
                             </div>
 
                             <div class="modal-body">
-                                <hr class="hr-modal">
-                                <div class="row pb-1">
+
+                                <div class="p-4 row">
                                     <div class="col-md-4 col-lg-4 col-sm-0">
                                         {% if employee.picture is null %}
                                             <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
