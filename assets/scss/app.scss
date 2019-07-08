@@ -207,7 +207,7 @@ address {
 
 /* Navbar */
 .navbar {
-    background-color: rgba($sectionColor, .9);
+    background-color: rgba($navLinkColor, .8);
     padding: 0;
 
     .logo-navbar {
@@ -232,7 +232,7 @@ address {
             font-weight: 100;
             color: $light-font;
             transition: 0.5s;
-            font-family: $navbarLink;
+            font-family: $mainFont;
             text-transform: uppercase;
 
             &:hover {
@@ -246,20 +246,21 @@ address {
     }
     .dropdown-menu {
         left: auto;
-        background-color: rgba($sectionColor,0.9);
+        background-color: rgba($navLinkColor, .8);
         border: none;
         margin-top: .9em;
         padding: 0;
         min-width: 13rem;
         a {
-            color: $navLinkColor;
-            font-family: $navbarLink;
+            color: white;;
+            font-family: $mainFont;
             text-transform: uppercase;
             font-size: 1.5em;
             padding: .8em;
         }
         a:hover {
             color: $primary-color;
+            background-color: $sectionColor;
         }
 
         .dropdown-item {
@@ -824,6 +825,7 @@ iframe {
         border-radius: 50%;
     }
 }
+
 .standards {
     margin-top: 2vw;
     margin-bottom: 2vw;
@@ -845,9 +847,4 @@ iframe {
     .bg-news {
         background-color: $newsBg;
     }
-}
-
-navbar-collapse {
-    margin-right: 0;
-    justify-content: center;
 }
