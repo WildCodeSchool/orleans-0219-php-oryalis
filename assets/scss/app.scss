@@ -845,3 +845,14 @@ iframe {
         background-color: $newsBg;
     }
 }
+
+/**modal team**/
+
+.teamHeader {
+    background-color: $deg1ModalH;
+    background-image: linear-gradient(315deg, $deg1ModalH 0%, $deg1ModalH2 74%);
+}
+
+.teamTitle {
+    color : $light-font;
+}
