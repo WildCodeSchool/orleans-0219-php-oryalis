@@ -755,6 +755,13 @@ iframe {
 
 /* QCM history */
 
+.bonne-réponse {
+    color: $primary-color;
+}
+
+.mauvaise-réponse {
+    color: $redCircle;
+}
 .qcm-history {
     h1 {
         margin-top: 3vw;
