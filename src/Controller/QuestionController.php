@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/question")
+ * @Route("admin/question")
  */
 class QuestionController extends AbstractController
 {
@@ -42,7 +42,7 @@ class QuestionController extends AbstractController
             return $this->redirectToRoute('question_index');
         }
 
-        return $this->render('question/new.html.twig', [
+        return $this->render('admin/question/new.html.twig', [
             'question' => $question,
             'form' => $form->createView(),
         ]);
@@ -53,7 +53,7 @@ class QuestionController extends AbstractController
      */
     public function show(Question $question): Response
     {
-        return $this->render('question/show.html.twig', [
+        return $this->render('admin/question/show.html.twig', [
             'question' => $question,
         ]);
     }
@@ -74,7 +74,7 @@ class QuestionController extends AbstractController
             ]);
         }
 
-        return $this->render('question/edit.html.twig', [
+        return $this->render('admin/question/edit.html.twig', [
             'question' => $question,
             'form' => $form->createView(),
         ]);

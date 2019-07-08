@@ -755,6 +755,13 @@ iframe {
 
 /* QCM history */
 
+.bonne-réponse {
+    color: $primary-color;
+}
+
+.mauvaise-réponse {
+    color: $redCircle;
+}
 .qcm-history {
     h1 {
         margin-top: 3vw;
@@ -858,3 +865,13 @@ iframe {
     text-decoration: none;
 }
 
+/**modal team**/
+
+.teamHeader {
+    background-color: $deg1ModalH;
+    background-image: linear-gradient(315deg, $deg1ModalH 0%, $deg1ModalH2 74%);
+}
+
+.teamTitle {
+    color : $light-font;
+}
