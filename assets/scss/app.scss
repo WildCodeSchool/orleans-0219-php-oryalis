@@ -846,6 +846,25 @@ iframe {
     }
 }
 
+/**training cards**/
+
+.training-list {
+    list-style-type: none;
+}
+
+.training-card {
+    height: 14rem;
+    border-color: $navLinkColor;
+}
+
+.training-card:hover {
+    opacity: 0.8;
+}
+
+.training-link:hover {
+    text-decoration: none;
+}
+
 /**modal team**/
 
 .teamHeader {
