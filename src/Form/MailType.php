@@ -12,7 +12,11 @@ class MailType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class, [
-                'label' => 'Email'
+                'attr' =>
+                    [
+                    'placeholder' => 'Email',
+                    ],
+                'label' => false,
             ]);
     }
 }
