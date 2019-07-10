@@ -1,48 +1,48 @@
 {{ form_start(form) }}
 <div class="row mt-lg-4">
     <div class="form-group col-6">
-            {{ form_label(form.title, 'Titre') }}
-            {{ form_widget(form.title, ({'attr': {'class': 'form-control'}})) }}
-            {{ form_errors(form.title) }}
-        </div>
-        <div class="form-group col-6">
+        {{ form_label(form.title, 'Titre') }}
+        {{ form_widget(form.title, ({'attr': {'class': 'form-control'}})) }}
+        {{ form_errors(form.title) }}
+    </div>
+    <div class="form-group col-6">
+        {{ form_label(form.period, 'Durée') }}
+        {{ form_widget(form.period, ({'attr': {'class': 'form-control'}})) }}
+        {{ form_errors(form.period) }}
+    </div>
+    <div class="form-group col-6">
         {{ form_label(form.goal, 'Objectifs de formation') }}
         {{ form_widget(form.goal, ({'attr': {'class': 'form-control'}})) }}
         {{ form_errors(form.goal) }}
-        </div>
-        <div class="form-group col-6">
-        {{ form_label(form.prerequisite, 'Pré requis') }}
+    </div>
+    <div class="form-group col-6">
+        {{ form_label(form.prerequisite, 'Pré-requis') }}
         {{ form_widget(form.prerequisite, ({'attr': {'class': 'form-control'}})) }}
         {{ form_errors(form.prerequisite) }}
-        </div>
-        <div class="form-group col-6">
-            {{ form_label(form.period, 'Durée') }}
-            {{ form_widget(form.period, ({'attr': {'class': 'form-control'}})) }}
-            {{ form_errors(form.period) }}
-        </div>
-        <div class="form-group col-6">
-            {{ form_label(form.public, 'Public concerné') }}
-            {{ form_widget(form.public, ({'attr': {'class': 'form-control'}})) }}
-            {{ form_errors(form.public) }}
-        </div>
-        <div class="form-group col-6">
-            {{ form_label(form.trainer, 'Formateur') }}
-            {{ form_widget(form.trainer, ({'attr': {'class': 'form-control'}})) }}
-            {{ form_errors(form.trainer) }}
-        </div>
+    </div>
+    <div class="form-group col-6">
+        {{ form_label(form.public, 'Public concerné') }}
+        {{ form_widget(form.public, ({'attr': {'class': 'form-control'}})) }}
+        {{ form_errors(form.public) }}
+    </div>
+    <div class="form-group col-6">
+        {{ form_label(form.trainer, 'Formateur') }}
+        {{ form_widget(form.trainer, ({'attr': {'class': 'form-control'}})) }}
+        {{ form_errors(form.trainer) }}
+    </div>
     <div class="form-group col-12">
         {{ form_label(form.pedagogy, 'Méthodes et moyens pédagogiques') }}
         {{ form_widget(form.pedagogy, ({'attr': {'class': 'form-control'}})) }}
         {{ form_errors(form.pedagogy) }}
     </div>
-        <div class="form-group col-12">
-            {{ form_label(form.program, 'Programme') }}
-            {{ form_widget(form.program, ({'attr': {'class': 'form-control'}})) }}
-            {{ form_errors(form.program) }}
-        </div>
-</div>
-    <div class="text-center justify-content-center">
-        <button class="btn btn-light btn-add my-4">{{ button_label|default('Ajouter') }}</button>
+    <div class="form-group col-12">
+        {{ form_label(form.program, 'Programme') }}
+        {{ form_widget(form.program, ({'attr': {'class': 'form-control'}})) }}
+        {{ form_errors(form.program) }}
     </div>
+</div>
+<div class="text-center justify-content-center">
+    <button class="btn btn-light btn-add my-4">{{ button_label|default('Ajouter') }}</button>
+</div>
 {{ form_end(form) }}
 
