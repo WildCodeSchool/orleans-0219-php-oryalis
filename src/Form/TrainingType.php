@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Training;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -13,13 +14,13 @@ class TrainingType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('goal')
-            ->add('prerequisite')
+            ->add('goal', TextType::class)
+            ->add('prerequisite', TextType::class)
             ->add('period')
-            ->add('public')
-            ->add('pedagogy')
-            ->add('trainer')
-            ->add('program')
+            ->add('public', TextType::class)
+            ->add('pedagogy', TextType::class)
+            ->add('trainer', TextType::class)
+            ->add('program', TextType::class)
         ;
     }
 
