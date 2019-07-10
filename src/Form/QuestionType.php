@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Question;
 use App\Entity\Answer;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,7 +16,9 @@ class QuestionType extends AbstractType
         $builder
             ->add('name')
             ->add('explanation')
-            ->add('month')
+            ->add('month', ChoiceType::class, [
+                'choices' => Question::MONTHS,
+            ])
             ->add('year')
         ;
     }

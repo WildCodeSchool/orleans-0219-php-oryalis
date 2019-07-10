@@ -20,12 +20,17 @@ class HomeController extends AbstractController
 
     public function index(AnswerRepository $answersRepository, QuestionRepository $questionsRepository):Response
     {
-        $rss = Feed::loadRss('http://qualite-securite-environnement.oryalis.com/feed/');
-        $rss = $rss->item;
+        try {
+            $rss = Feed::loadRss('http://qualite-securite-environnement.oryalis.com/feed/');
+            $item = $rss->item;
+        } catch (\Exception $feedException) {
+            $this->addFlash('danger', $feedException->getMessage());
+        }
+        $date = new \DateTime();
         return $this->render('home/index.html.twig', [
-            $question = $questionsRepository->findOneBy([], ['year' => 'DESC', 'month' => 'DESC']),
+            $question = $questionsRepository->findOneBy(['year'=> $date->format('Y'), 'month'=> $date->format('m')]),
             $answers = $answersRepository->findByQuestion($question),
-            'feeds' => $rss,
+            'feeds' => $item ?? null,
             'question' => $question,
             'answers' => $answers,
         ]);
