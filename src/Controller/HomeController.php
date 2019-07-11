@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\AnswerRepository;
+use App\Repository\NewsRepository;
 use App\Repository\QuestionRepository;
 use Feed;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -18,8 +19,12 @@ class HomeController extends AbstractController
      * @return Response
      */
 
-    public function index(AnswerRepository $answersRepository, QuestionRepository $questionsRepository):Response
-    {
+
+    public function index(
+        AnswerRepository $answersRepository,
+        QuestionRepository $questionsRepository,
+        NewsRepository $newsRepository
+    ): Response {
         try {
             $rss = Feed::loadRss('http://qualite-securite-environnement.oryalis.com/feed/');
             $item = $rss->item;
@@ -27,12 +32,15 @@ class HomeController extends AbstractController
             $this->addFlash('danger', $feedException->getMessage());
         }
         $date = new \DateTime();
+        $question = $questionsRepository->findOneBy(['year'=> $date->format('Y'),'month'=> $date->format('m')]);
+        $answers = $answersRepository->findByQuestion($question);
+        $news = $newsRepository->findOneBy([], ['date' => 'DESC']);
+
         return $this->render('home/index.html.twig', [
-            $question = $questionsRepository->findOneBy(['year'=> $date->format('Y'), 'month'=> $date->format('m')]),
-            $answers = $answersRepository->findByQuestion($question),
             'feeds' => $item ?? null,
             'question' => $question,
             'answers' => $answers,
+            'news' => $news,
         ]);
     }
 }
