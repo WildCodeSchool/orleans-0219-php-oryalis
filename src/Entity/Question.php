@@ -17,6 +17,21 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  */
 class Question
 {
+    const MONTHS = [
+        1=>'Janvier',
+        2=>'Février',
+        3=>'Mars',
+        4=>'Avril',
+        5=>'Mai',
+        6=>'Juin',
+        7=>'Juillet',
+        8=>'Août',
+        9=>'Septembre',
+        10=>'Octobre',
+        11>'Novembre',
+        12=>'Décembre'
+    ];
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -35,7 +50,7 @@ class Question
     private $explanation;
 
     /**
-     * @ORM\Column(type="string", length=20)
+     * @ORM\Column(type="integer")
      */
     private $month;
 

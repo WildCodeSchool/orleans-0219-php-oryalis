@@ -19,18 +19,25 @@ class HomeController extends AbstractController
      * @return Response
      */
 
+
     public function index(
         AnswerRepository $answersRepository,
         QuestionRepository $questionsRepository,
         NewsRepository $newsRepository
     ): Response {
-        $rss = Feed::loadRss('http://qualite-securite-environnement.oryalis.com/feed/');
-        $rss = $rss->item;
+        try {
+            $rss = Feed::loadRss('http://qualite-securite-environnement.oryalis.com/feed/');
+            $item = $rss->item;
+        } catch (\Exception $feedException) {
+            $this->addFlash('danger', $feedException->getMessage());
+        }
+        $date = new \DateTime();
+        $question = $questionsRepository->findOneBy(['year'=> $date->format('Y'),'month'=> $date->format('m')]);
+        $answers = $answersRepository->findByQuestion($question);
+        $news = $newsRepository->findOneBy([], ['date' => 'DESC']);
+
         return $this->render('home/index.html.twig', [
-            $question = $questionsRepository->findOneBy([], ['year' => 'DESC', 'month' => 'DESC']),
-            $answers = $answersRepository->findByQuestion($question),
-            $news = $newsRepository->findOneBy([], ['date' => 'DESC']),
-            'feeds' => $rss,
+            'feeds' => $item ?? null,
             'question' => $question,
             'answers' => $answers,
             'news' => $news,

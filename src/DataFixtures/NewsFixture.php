@@ -21,7 +21,7 @@ class NewsFixture extends Fixture
         for ($i=0; $i<=10; $i++) {
             $news = new News();
             $news->setName($faker->sentence);
-            $news->setContent($faker->sentence(25));
+            $news->setContent($faker->text(255));
             $news->setDate($faker->datetime());
             $manager->persist($news);
         }
