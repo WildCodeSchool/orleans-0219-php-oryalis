@@ -6,6 +6,8 @@
 parameters:
     app.path.employee_images: /uploads/images/employee
     locale: 'en'
+    adminMail: '%env(MAILER_URL)%'
+    mailerFrom: '%env(MAILER_FROM)%'
 
 
 services:

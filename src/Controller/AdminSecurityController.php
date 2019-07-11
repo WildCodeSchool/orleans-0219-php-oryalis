@@ -66,8 +66,8 @@ class AdminSecurityController extends AbstractController
             $admin->setResetToken($token);
             $em->flush();
             $message = (new \Swift_Message('Hello Email'))
-                ->setFrom('send@example.com')
-                ->setTo('example@gmail.com')
+                ->setFrom($this->getParameter('mailerFrom'))
+                ->setTo($email)
                 ->setBody($this->renderView('mail/resetMail.html.twig', ['token' => $token]))
                 ->setContentType("text/html");
             ;
@@ -98,7 +98,7 @@ class AdminSecurityController extends AbstractController
                 $admin->setPassword($passwordEncoder->encodePassword($admin, $form->getData()['password']));
                 $admin->setResetToken(null);
                 $em->flush();
-                $this->addFlash('success', 'Mot de passe modifié avec succes');
+                $this->addFlash('success', 'Mot de passe modifié avec succès');
             }
 
             return $this->redirectToRoute('app_login');
