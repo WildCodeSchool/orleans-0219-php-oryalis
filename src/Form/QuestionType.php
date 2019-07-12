@@ -17,7 +17,7 @@ class QuestionType extends AbstractType
             ->add('name')
             ->add('explanation')
             ->add('month', ChoiceType::class, [
-                'choices' => Question::MONTHS,
+                'choices' => array_flip(Question::MONTHS),
             ])
             ->add('year')
         ;
