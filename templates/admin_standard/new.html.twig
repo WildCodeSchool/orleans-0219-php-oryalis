@@ -1,0 +1,17 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}Ajouter une Norme{% endblock %}
+
+{% block body %}
+    <h1 class="training-title py-4 text-center">Ajouter une norme</h1>
+    <div class="form-title container pt-lg-4 mb-lg-4">
+        <div class="col">
+            {{ include('admin_standard/_form.html.twig') }}
+        </div>
+        <div class="text-right">
+            <a class="btn btn-primary" href="{{ path('standard_index') }}"><i class="fas fa-arrow-left"></i> Liste des membres</a>
+        </div>
+    </div>
+
+
+{% endblock %}

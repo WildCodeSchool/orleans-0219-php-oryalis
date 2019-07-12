@@ -1,0 +1,41 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block title %}QCM{% endblock %}
+
+{% block body %}
+    <h1 class="training-title p-4 text-center">QCM</h1>
+    <h2 class="training-sub-title text-center mb-4">Gérez vos questions</h2>
+    <div class="text-center">
+        <button type="submit" class="btn add mb-4"><a href="{{ path('question_new') }}" class="link-training"><i
+                        class="fas fa-plus"></i> Ajouter une
+                question</a></button>
+    </div>
+    <div class="row justify-content-center">
+
+        <table class="table col-8 table-striped">
+            <thead class="thead">
+                <tr>
+                    <th scope="col" class="table-title-index">Question</th>
+                    <th scope="col" class="table-title-index">Mois</th>
+                    <th scope="col" class="table-title-index">Année</th>
+                    <th scope="col" class="table-title-index">Editer</th>
+                    <th scope="col" class="table-title-index">Supprimer</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for question in questions %}
+                <tr>
+                    <td class="news-content">{{ question.name }}</td>
+                    <td class="news-content">{{ question.month }}</td>
+                    <td class="news-content">{{ question.year }}</td>
+                    <td class="text-center">
+                        <a href="{{ path('question_edit', {'id': question.id}) }}"><i
+                                    class="far faro fa-edit icon icon-show mt-3"></i></a>
+                    </td>
+                    <td class="far icon icon-show text-center">{{ include('admin/question/_delete_form.html.twig') }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

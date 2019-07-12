@@ -1,16 +1,19 @@
-{% extends 'base.html.twig' %}
+{% extends 'layoutAdmin.html.twig' %}
 
 {% block title %}Admin - Ajouter une actualité{% endblock %}
 
 {% block body %}
-    <section class="container">
-        <div class="pt-lg-4 mb-lg-4 form-news">
-            <h1 class="text-center">Ajouter une actualité</h1>
-            <p class="text-center">Ici, vous pouvez créer votre nouvelle actualité.</p>
-            <div class="col text-center">
-                {{ include('admin_news/_form.html.twig') }}
-            </div>
-            <a href="{{ path('news_index') }}"><i class="fas fa-arrow-left"></i>Retour à la liste</a>
+    <h1 class="training-title py-4 text-center">Ajouter une actualité</h1>
+
+    <div class="form-title container pt-lg-4 mb-lg-4">
+        <div class="col">
+            {{ include('admin_news/_form.html.twig') }}
         </div>
-    </section>
+        <div class="text-right">
+            <a class="btn btn-primary" href="{{ path('news_index') }}"><i class="fas fa-arrow-left"></i> Retour à la
+                liste</a>
+        </div>
+    </div>
+
+
 {% endblock %}

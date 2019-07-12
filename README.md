@@ -20,10 +20,18 @@
 1. Run `php bin/console server:run` to launch your local php web server
 2. Run `yarn run dev --watch` to launch your local server for assets
 
+##Testing
+
+1. Run ./bin/phpcs to launch PHP code sniffer
+2. Run ./bin/phpstan analyse src --level 5 to launch PHPStan
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+1. Edit your .env with your BDD's informations, MAILER_URL with your informations & password to send mail, MAILFROM informations to receive daily command mail and MAILTO to receive contact mail.
+2. Run php bin/console doctrine:database:create to create database.
+3. Run php bin/console doctrine:schema:update --force to create database's tables.
+4. Run php bin/console doctrine:migrations:migrate to make necessary insert.
+5. Run yarn encore production to build assets.
 
 ## Built With
 
@@ -69,4 +77,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Acknowledgments
+
+
 
