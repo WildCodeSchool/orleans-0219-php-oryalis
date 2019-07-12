@@ -16,31 +16,18 @@ use Faker;
 class QuestionFixtures extends Fixture
 {
 
-    const MONTHS = [
-        'Janvier',
-        'Février',
-        'Mars',
-        'Avril',
-        'Mai',
-        'Juin',
-        'Juillet',
-        'Août',
-        'Septembre',
-        'Octobre',
-        'Novembre',
-        'Décembre'
-        ];
+
 
     public function load(ObjectManager $manager)
     {
         $faker = Faker\Factory::create('fr_FR');
-        foreach (self::MONTHS as $key => $month) {
+        foreach (Question::MONTHS as $nbMonth => $month) {
             $question = new Question();
             $question->setName($faker->sentence(15));
             $question->setExplanation($faker->text(500));
-            $question->setMonth($month);
-            $question->setYear($faker->year);
-            $this->addReference('question' . $key, $question);
+            $question->setMonth($nbMonth);
+            $question->setYear($faker->year());
+            $this->addReference('question' . $nbMonth, $question);
             $manager->persist($question);
         }
         $manager->flush();

@@ -1,0 +1,16 @@
+{{ form_start(form) }}
+<div class="form-group">
+    {{ form_label(form.title, 'Nom') }}
+    {{ form_widget(form.title, ({'attr': {'class': 'form-control'}})) }}
+    {{ form_errors(form.title) }}
+</div>
+<div class="form-group">
+    {{ form_label(form.description, 'Description') }}
+    {{ form_widget(form.description, ({'attr': {'class': 'form-control'}})) }}
+    {{ form_errors(form.description) }}
+</div>
+
+<div class="text-center">
+    <button class="btn btn-light btn-add my-4">{{ button_label|default('Ajouter') }}</button>
+</div>
+{{ form_end(form) }}

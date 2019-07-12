@@ -43,6 +43,7 @@
   }
 }
 
+
 .icon:hover {
   opacity: 0.5;
 }
@@ -85,25 +86,32 @@
 
 .btn-primary {
   background-color: $admin-color;
+  border: solid 1px $banner-title;
+  &:hover {
+    background-color: $banner-title;
+    border: solid 1px $admin-color;
+    color: $admin-color;
+  }
 }
-
 
 .btn-delete {
   padding: 0;
 }
 
 .btn-add {
-  border: solid 1px $admin-color;
+  border: solid 1px $banner-title;
   font-size: 0.7em;
-  color: $admin-color;
+  color: $banner-title;
   transition: 0.5s;
   font-family: $mainFont;
   box-shadow: 3px 4px 2px $fontColor;
-
+  background-color: $admin-color;
   &:hover {
     text-decoration: none;
-    color: $banner-title;
-    background-color: $admin-color;
+    color: $admin-color;
+    background-color: $banner-title;
+    border: solid 1px $admin-color;
+    box-shadow: 3px 4px 2px $fontColor;
   }
 }
 
@@ -123,10 +131,6 @@
   margin-left: 20px;
 }
 
-.bg-navAdmin {
-  background-color: $navbarAdmBg;
-}
-
 .list-style {
   list-style-type: none;
 }
@@ -141,7 +145,7 @@
 .form-news {
   background-color: $light-font;
   margin-top: 1.5vw;
-  padding-bottom: 2vw;
+  padding-bottom: 7vw;
   h1 {
     margin-top: 2vw;
     margin-bottom: 2vw;
@@ -150,10 +154,26 @@
     margin-bottom: 2vw;
     font-size: $subtitleFontSize;
   }
-  .form-label {
-    font-size: 1.2em;
+  .row {
+    .form-label {
+      font-size: 1.2em;
+    }
+
+    .form-control {
+      border: $admin-color 1px solid;
+      margin-bottom: 2vw;
+    }
+
+    .form-error {
+      text-align: left;
+      color: darken($danger, 10%);
+
+      .required {
+        display: initial;
+      }
+    }
   }
-  .btn{
+  .btn {
     transition: 0.5s;
     font-size: 1.2em;
     margin-top: 1vw;
@@ -163,27 +183,33 @@
     padding: 10px 15px 10px 15px;
     color: $admin-color
   }
-  .btn:hover{
+  .btn:hover {
     color: $light-font;
     background-color: $admin-color;
-  }
-  .form-control {
-    border: $admin-color 1px solid;
-    margin-bottom: 2vw;
-  }
-  i {
-    margin-right: 5px;
   }
   a {
     transition: 0.2s;
     font-size: 1.2em;
+
+    &:hover {
+      color: $admin-color;
+      text-decoration: none;
+    }
+    i {
+      margin-right: 5px;
+    }
   }
-  a:hover{
-    color: $admin-color;
-    text-decoration: none;
+  #news_date {
+    display: none;
   }
-  .form-error {
-    text-align:left;
-    color: darken($danger, 10%);
+  .required {
+    visibility: hidden;
   }
+}
+
+.custom-file-label::after {
+  content: 'Choisissez une photos...';
+  height: 0;
+  line-height: 0;
+  border: solid $dark 1px;
 }

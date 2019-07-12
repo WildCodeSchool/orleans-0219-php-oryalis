@@ -1,13 +1,18 @@
-{% extends 'base.html.twig' %}
+{% extends 'layoutAdmin.html.twig' %}
 
-{% block title %}Edit News{% endblock %}
+{% block title %}Admin - Editer une actualité{% endblock %}
 
 {% block body %}
-    <h1>Edit News</h1>
+    <h1 class="training-title p-4 text-center">Modifier une actualité</h1>
 
-    {{ include('admin_news/_form.html.twig', {'button_label': 'Update'}) }}
+    <div class="table-title container pt-lg-4 mb-lg-4">
 
-    <a href="{{ path('news_index') }}">back to list</a>
+        <div class="col text-center">
+            {{ include('admin_news/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+        </div>
+        <div class="container pb-4 pr-5 text-right">
+            <a class="btn btn-primary" href="{{ path('news_index') }}"><i class="fas fa-arrow-left"></i> Liste des actualités</a>
+        </div>
+    </div>
 
-    {{ include('admin_news/_delete_form.html.twig') }}
 {% endblock %}

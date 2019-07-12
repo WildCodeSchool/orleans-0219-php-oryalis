@@ -20,55 +20,55 @@ class Training
 
     /**
      * @Assert\Length(max=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $title;
 
     /**
      * @Assert\Length(max=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $period;
 
     /**
      * @Assert\Length(max=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $public;
 
     /**
      * @Assert\Length(max=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $pedagogy;
 
     /**
      * @Assert\Length(max=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $trainer;
 
     /**
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="text")
      */
     private $program;
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="text")
      */
     private $goal;
 
     /**
      * @Assert\Length(max=255)
-     * @Assert\NotNull()
+     * @Assert\NotBlank()
      * @ORM\Column(type="string", length=255)
      */
     private $prerequisite;

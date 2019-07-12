@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AnswerRepository")
@@ -17,20 +18,24 @@ class Answer
     private $id;
 
     /**
+     * @Assert\NotBlank()
      * @ORM\Column(type="text")
      */
     private $name;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Type(type="boolean")
+     * @ORM\Column(type="boolean", nullable=true)
      */
     private $goodAnswer;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Question")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Question", inversedBy="answers")
      * @ORM\JoinColumn(nullable=false)
      */
     private $question;
+
+
 
     public function getId(): ?int
     {
@@ -49,12 +54,12 @@ class Answer
         return $this;
     }
 
-    public function getGoodAnswer(): ?int
+    public function getGoodAnswer(): ?bool
     {
         return $this->goodAnswer;
     }
 
-    public function setGoodAnswer(?int $goodAnswer): self
+    public function setGoodAnswer(?bool $goodAnswer): self
     {
         $this->goodAnswer = $goodAnswer;
 
