@@ -26,7 +26,7 @@
             {% for question in questions %}
                 <tr>
                     <td class="news-content">{{ question.name }}</td>
-                    <td class="news-content">{{ question.month }}</td>
+                    <td class="news-content">{{ constant('App\\Entity\\Question::MONTHS')[question.month] }}</td>
                     <td class="news-content">{{ question.year }}</td>
                     <td class="text-center">
                         <a href="{{ path('question_edit', {'id': question.id}) }}"><i
