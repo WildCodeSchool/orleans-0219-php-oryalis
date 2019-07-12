@@ -3,7 +3,7 @@
 
             <h2>Découvrez notre quiz du mois
                 {% if question is not null %}
-                    de <span>{{ question.month }} {{ question.year }}</span>
+                    de <span>{{ constant('App\\Entity\\Question::MONTHS')[question.month] }} {{ question.year }}</span>
                 {% endif %}
             </h2>
             <p>Chaque mois, découvrez une nouvelle question portant sur les normes QSE.</p>

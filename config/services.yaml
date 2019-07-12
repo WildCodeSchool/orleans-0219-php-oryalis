@@ -6,7 +6,8 @@
 parameters:
     app.path.employee_images: /uploads/images/employee
     locale: 'en'
-    mailAdmin : '%env(MAILER_URL)%'
+    adminMail: '%env(MAILER_URL)%'
+    mailerFrom: '%env(MAILER_FROM)%'
 
 services:
     # default configuration for services in *this* file
