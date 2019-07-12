@@ -1,7 +1,6 @@
 {% extends'base.html.twig' %}
 {% block body %}
 <h3>Bonjour, votre mail a bien été vérifier</h3>
-
 <p>Vous pouvez dés maintenant cliquer sur le lien ci-dessous pour réinitialiser votre mot de passe</p>
-<a href="http://127.0.0.1:8000/login/resetPassword/{{token}}">Réinitialiser le mot de passe</a>
+<a href="{{ absolute_url(path('app_reset_password', { 'token': token})) }}">Réinitialiser le mot de passe</a>
 {% endblock %}
