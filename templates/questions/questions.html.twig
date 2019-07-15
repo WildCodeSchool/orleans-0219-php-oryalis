@@ -7,7 +7,7 @@
         <p>Retrouvez ici tous les QCM déjà proposés.</p>
             {% for question in questions %}
             <div class="container">
-                <h2>Question du mois de <span>{{ question.month }} {{ question.year }}</span></h2>
+                <h2>Question du mois de <span>{{ constant('App\\Entity\\Question::MONTHS')[question.month] }} {{ question.year }}</span></h2>
                 <div class="row justify-content-center">
                     <div class="card bg-secondary mb-3">
                         <div class="card-header card-question">{{ question.name }}</div>
