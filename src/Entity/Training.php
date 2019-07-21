@@ -33,16 +33,14 @@ class Training
     private $period;
 
     /**
-     * @Assert\Length(max=255)
      * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $public;
 
     /**
-     * @Assert\Length(max=255)
      * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $pedagogy;
 
@@ -60,18 +58,21 @@ class Training
     private $program;
 
     /**
-     * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank()
      * @ORM\Column(type="text")
      */
     private $goal;
 
     /**
-     * @Assert\Length(max=255)
      * @Assert\NotBlank()
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="text")
      */
     private $prerequisite;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $methodEvaluation;
 
     public function getId(): ?int
     {
@@ -170,6 +171,18 @@ class Training
     public function setPrerequisite(string $prerequisite): self
     {
         $this->prerequisite = $prerequisite;
+
+        return $this;
+    }
+
+    public function getMethodEvaluation(): ?string
+    {
+        return $this->methodEvaluation;
+    }
+
+    public function setMethodEvaluation(?string $methodEvaluation): self
+    {
+        $this->methodEvaluation = $methodEvaluation;
 
         return $this;
     }
