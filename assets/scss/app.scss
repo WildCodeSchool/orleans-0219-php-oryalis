@@ -723,58 +723,6 @@ iframe {
         height: 175px;
         width: 320px;
     }
-
-    .level1 {
-        position: relative;
-        display: inline-block;
-        background: $dark;
-        border-radius: 100%;
-        height: 100px;
-        width: 100px;
-        background: radial-gradient(circle at 75px 75px, $gr1lvl1, $gr2lvl1);
-        top: 20%;
-    }
-
-    .lvl1 {
-        color: $lvl1-color;
-    }
-
-    .level2 {
-        position: relative;
-        display: inline-block;
-        background: $dark;
-        border-radius: 100%;
-        height: 125px;
-        width: 125px;
-        background: radial-gradient(circle at 100px 100px, $gr1lvl2, $gr2lvl2);
-        top: 13%;
-    }
-
-    .lvl2 {
-        color: $lvl2-color;
-    }
-
-    .level3 {
-        position: relative;
-        display: inline-block;
-        background: $dark;
-        border-radius: 100%;
-        height: 150px;
-        width: 150px;
-        background: radial-gradient(circle at 100px 100px, $primary-color, $gr2lvl3);
-        top: 5%;
-    }
-
-    .lvl3 {
-        color: $lvl3-color;
-    }
-
-    .txt-stick {
-        position: relative;
-        top: 35%;
-        font-weight: 600;
-        color: $light-font;
-    }
 }
 
 #mail {
