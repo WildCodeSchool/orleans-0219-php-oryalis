@@ -46,7 +46,7 @@
 }
 
 .card-title{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-transform: none;
     color: $dark;
 }
@@ -63,7 +63,7 @@
 
 .title-card {
     text-transform: none;
-    font-size: 1.1rem;
+    font-size: 16pt;
     color: $dark;
 }
 
@@ -149,6 +149,7 @@ body {
 
 h1,h2,h3,h4 {
     font-family: $mainFont;
+    font-size: $titleFontSize;
 }
 h2, h3 {
     font-size: $titleFontSize;
@@ -283,7 +284,7 @@ address {
         @include textStyle;
         text-align: center;
         padding-bottom: 2vw;
-        font-size: 1.1em;
+        font-size: 16pt;
     }
 
     .card {
@@ -362,7 +363,7 @@ section {
 
     p {
         line-height: 1.7em;
-        font-size: 1.7em;
+        font-size: 16pt;
         color: darken($fontColor, 30%);
     }
 
@@ -379,8 +380,7 @@ section:nth-child(even) {
 .whoweare {
     p::first-letter {
         color: $primary-color;
-        font-size: 2.5em;
-        vertical-align: middle;
+        font-size: 1.5em;
     }
 }
 
@@ -425,7 +425,6 @@ section:nth-child(even) {
     h5::first-letter {
         font-size: 2em;
         color: $primary-color;
-        vertical-align: middle;
     }
 
     .btn {
@@ -442,6 +441,10 @@ section:nth-child(even) {
 
     .info {
         padding-top: 3em;
+        .internal-actu::first-letter {
+            font-size: 32pt;
+            color: $primary-color;
+        }
     }
 }
 
@@ -462,7 +465,7 @@ section:nth-child(even) {
 .training-name {
     padding: 20px 10px 40px 10px;
     text-align: center;
-    font-size: 2.5em;
+    font-size:3em;
     margin-bottom: 2vw;
     margin-top: 1vw;
     border-bottom: solid 1px $primary-color;
@@ -527,10 +530,10 @@ section:nth-child(even) {
 
 .training {
     h3 {
-        font-size: 1.7em;
+        font-size: 2em;
     }
     p {
-        font-size: 1.2em;
+        font-size: 16pt;
     }
 }
 
@@ -584,7 +587,7 @@ section:nth-child(even) {
         .card-body {
             padding: 2em;
             color: darken($primary-color, 30%);
-            font-size: 1.5em;
+            font-size: 16pt;
         }
         .form-control {
             margin-bottom: 2em;
@@ -618,14 +621,14 @@ iframe {
 
 .advice {
     h2 {
-        font-size: 1.6em;
+        font-size: 2em;
     }
     h2::first-letter {
         font-size: 1.5em;
         color: $primary-color;
     }
     p {
-        font-size: 1.2em;
+        font-size: 16pt;
     }
     hr {
         background-color: $admin-color;
@@ -644,11 +647,15 @@ iframe {
 
 .audit {
     p {
-        font-size: 1.2em;
+        font-size: 16pt;
     }
 
     h2 {
-        font-size: 1.7em;
+        font-size: 2em;
+    }
+    h2::first-letter {
+        color: $primary-color;
+        font-size: 1.5em;
     }
 
     .img-audit {
@@ -711,11 +718,15 @@ iframe {
     }
 
     p {
-        font-size: 1.2em;
+        font-size: 16pt;
     }
 
     h2 {
-        font-size: 1.7em;
+        font-size: 2em;
+    }
+    h2::first-letter {
+        color: $primary-color;
+        font-size: 1.5em;
     }
 
     .div-watch {
@@ -811,8 +822,11 @@ iframe {
     margin-top: 2vw;
     margin-bottom: 2vw;
     h2 {
-        color: $secondary-color;
-        font-size: 1.7em;
+        font-size: 2em;
+    }
+    h2::first-letter {
+        color: $primary-color;
+        font-size: 1.5em;
     }
     p {
         font-size: 1.2em;
@@ -827,6 +841,10 @@ iframe {
 .news {
     .bg-news {
         background-color: $newsBg;
+        h2::first-letter {
+            color: $primary-color;
+            font-size: 1.5em;
+        }
     }
 }
 
@@ -859,3 +877,4 @@ iframe {
 .teamTitle {
     color : $light-font;
 }
+
