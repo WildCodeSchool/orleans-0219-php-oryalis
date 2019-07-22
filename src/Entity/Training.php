@@ -70,6 +70,7 @@ class Training
     private $prerequisite;
 
     /**
+     * @Assert\NotBlank()
      * @ORM\Column(type="text", nullable=true)
      */
     private $methodEvaluation;
