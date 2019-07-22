@@ -24,14 +24,14 @@ class ContactController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $mail = $contact->getEmail();
-            $mailAdmin = $this->getParameter('mailAdmin');
+            $mailAdmin = $this->getParameter('mailerFrom');
             $message = (new \Swift_Message())
                 ->setFrom($mail)
                 ->setTo($mailAdmin)
                 ->setBody(
                     $this->renderView(
                         'mail/mail.html.twig',
-                        ['contact' => $contact, 'mail' => $mail, 'mailAdmin' => $mailAdmin]
+                        ['contact' => $contact, 'mail' => $mail, 'mailerFrom' => $mailAdmin]
                     ),
                     'text/html'
                 );
