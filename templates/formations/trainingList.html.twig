@@ -15,15 +15,15 @@
                 <div class="row">
                     {% for training in trainings %}
                         <div class="col-lg-4 col-md-7 col-sm-8 text-center">
-                            <ul class="card clearfix pl-0 training-card">
-                                <li class="mr-0 mb-0 training-list">
-                                        <a href="{{ path('training_show', {'id': training.id}) }}" class="training-link">
-                                            <div>
-                                                <p class="mt-3 pt-lg-5">{{ training.title }}</p>
-                                            </div>
-                                        </a>
-                                </li>
-                            </ul>
+                            <a href="{{ path('training_show', {'id': training.id}) }}" class="training-link">
+                                <ul class="card clearfix pl-0 training-card">
+                                    <li class="mr-0 mb-0 training-list">
+                                        <div>
+                                            <p class="mt-3 pt-lg-5">{{ training.title }}</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </a>
                         </div>
                     {% endfor %}
                 </div>

@@ -46,9 +46,9 @@
 }
 
 .card-title {
-  font-size: 1.6rem;
-  text-transform: none;
-  color: $dark;
+    font-size: 1.5rem;
+    text-transform: none;
+    color: $dark;
 }
 
 .img-team {
@@ -62,9 +62,9 @@
 }
 
 .title-card {
-  text-transform: none;
-  font-size: 1.1rem;
-  color: $dark;
+    text-transform: none;
+    font-size: 16pt;
+    color: $dark;
 }
 
 .hr-modal {
@@ -150,8 +150,9 @@ body {
   background-color: $bg-color;
 }
 
-h1, h2, h3, h4 {
-  font-family: $mainFont;
+h1,h2,h3,h4 {
+    font-family: $mainFont;
+    font-size: $titleFontSize;
 }
 
 h2, h3 {
@@ -288,12 +289,12 @@ address {
     }
   }
 
-  p {
-    @include textStyle;
-    text-align: center;
-    padding-bottom: 2vw;
-    font-size: 1.1em;
-  }
+    p {
+        @include textStyle;
+        text-align: center;
+        padding-bottom: 2vw;
+        font-size: 16pt;
+    }
 
   .card {
     max-width: 40rem;
@@ -370,13 +371,11 @@ section {
   h2 {
     font-size: 3em;
   }
-
-  p {
-    line-height: 1.7em;
-    font-size: 1.7em;
-    color: darken($fontColor, 30%);
-  }
-
+    p {
+        line-height: 1.7em;
+        font-size: 16pt;
+        color: darken($fontColor, 30%);
+    }
   .bold {
     font-weight: bold;
   }
@@ -388,11 +387,10 @@ section:nth-child(even) {
 
 
 .whoweare {
-  p::first-letter {
-    color: $primary-color;
-    font-size: 2.5em;
-    vertical-align: middle;
-  }
+    p::first-letter {
+        color: $primary-color;
+        font-size: 1.5em;
+    }
 }
 
 @media screen and (max-width: 410px) {
@@ -423,37 +421,34 @@ section:nth-child(even) {
     object-fit: cover;
     min-height: 100%;
   }
-
   p {
     word-break: break-word;
   }
-
   h5 {
     font-size: 2em;
     font-family: $mainFont;
   }
-
-  h5::first-letter {
-    font-size: 2em;
-    color: $primary-color;
-    vertical-align: middle;
-  }
-
+    h5::first-letter {
+        font-size: 2em;
+        color: $primary-color;
+    }
   .btn {
     border: 2px solid $primary-color;
     padding: 0.5em;
     border-radius: 5px;
   }
-
   .btn:hover {
     background-color: $buttonHoverColor;
     color: #000000;
     border: 2px solid $secondary-color;
   }
-
-  .info {
-    padding-top: 3em;
-  }
+    .info {
+        padding-top: 3em;
+        .internal-actu::first-letter {
+            font-size: 32pt;
+            color: $primary-color;
+        }
+    }
 }
 
 .btn-blog {
@@ -473,12 +468,12 @@ section:nth-child(even) {
 /* PAGE FORMATION */
 
 .training-name {
-  padding: 20px 10px 40px 10px;
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 2vw;
-  margin-top: 1vw;
-  border-bottom: solid 1px $primary-color;
+    padding: 20px 10px 40px 10px;
+    text-align: center;
+    font-size:3em;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+    border-bottom: solid 1px $primary-color;
 }
 
 .infos-trainings {
@@ -539,13 +534,12 @@ section:nth-child(even) {
 }
 
 .training {
-  h3 {
-    font-size: 1.7em;
-  }
-
-  p {
-    font-size: 1.2em;
-  }
+    h3 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 16pt;
+    }
 }
 
 .pic-container {
@@ -586,25 +580,26 @@ section:nth-child(even) {
 }
 
 .form {
-  padding: 0;
-  padding-top: 8em;
-  background-color: white;
-
-  h1 {
-    padding-bottom: 2em;
-  }
-
-  .card {
-    margin-bottom: 6em;
-    border: none;
-  }
-
-  .card-body {
-    padding: 2em;
-    color: darken($primary-color, 30%);
-    font-size: 1.5em;
-  }
-
+    padding: 0;
+    padding-top: 8em;
+    background-color: white;
+    h1 {
+        padding-bottom: 2em;
+    }
+    .card {
+        margin-bottom: 6em;
+        border: none;
+        }
+        .card-body {
+            padding: 2em;
+            color: darken($primary-color, 30%);
+            font-size: 16pt;
+        }
+        .form-control {
+            margin-bottom: 2em;
+            background-color: $form-color;
+            border-bottom: 1px solid darken($primary-color, 30%);
+        }
   .form-control {
     margin-bottom: 2em;
     background-color: $form-color;
@@ -627,44 +622,42 @@ iframe {
 }
 
 .advice {
-  h2 {
-    font-size: 1.6em;
-  }
-
-  h2::first-letter {
-    font-size: 1.5em;
-    color: $primary-color;
-  }
-
-  p {
-    font-size: 1.2em;
-  }
-
-  hr {
-    background-color: $admin-color;
-  }
-
-  .img-advice {
-    object-fit: cover;
-    max-width: 500px;
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-  }
-
-  .div-img {
-    margin: auto;
-  }
+    h2 {
+        font-size: 2em;
+    }
+    h2::first-letter {
+        font-size: 1.5em;
+        color: $primary-color;
+    }
+    p {
+        font-size: 16pt;
+    }
+    hr {
+        background-color: $admin-color;
+    }
+    .img-advice {
+        object-fit: cover;
+        max-width: 500px;
+        vertical-align: middle;
+        display:inline-block;
+        position: relative;
+    }
+    .div-img {
+        margin: auto;
+    }
 }
-
 .audit {
-  p {
-    font-size: 1.2em;
-  }
+    p {
+        font-size: 16pt;
+    }
 
-  h2 {
-    font-size: 1.7em;
-  }
+    h2 {
+        font-size: 2em;
+    }
+    h2::first-letter {
+        color: $primary-color;
+        font-size: 1.5em;
+    }
 
   .img-audit {
     object-fit: cover;
@@ -729,15 +722,16 @@ iframe {
     padding-top: 3em;
     padding-bottom: 3em;
   }
-
-  p {
-    font-size: 1.2em;
-  }
-
-  h2 {
-    font-size: 1.7em;
-  }
-
+    p {
+        font-size: 16pt;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h2::first-letter {
+        color: $primary-color;
+        font-size: 1.5em;
+    }
   .div-watch {
     position: relative;
     height: 175px;
@@ -840,17 +834,18 @@ iframe {
 }
 
 .standards {
-  margin-top: 2vw;
-  margin-bottom: 2vw;
-
-  h2 {
-    color: $secondary-color;
-    font-size: 1.7em;
-  }
-
-  p {
-    font-size: 1.2em;
-  }
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    h2 {
+        font-size: 2em;
+    }
+    h2::first-letter {
+        color: $primary-color;
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1.2em;
+    }
 }
 
 .picto-title {
@@ -859,9 +854,13 @@ iframe {
 }
 
 .news {
-  .bg-news {
-    background-color: $newsBg;
-  }
+    .bg-news {
+        background-color: $newsBg;
+        h2::first-letter {
+            color: $primary-color;
+            font-size: 1.5em;
+        }
+    }
 }
 
 /**training cards**/
@@ -893,3 +892,4 @@ iframe {
 .teamTitle {
   color: $light-font;
 }
+
