@@ -22,6 +22,7 @@ class TrainingFixtures extends Fixture
             $training->setPedagogy($faker->sentence);
             $training->setTrainer($faker->name);
             $training->setProgram($faker->paragraph);
+            $training->setMethodEvaluation($faker->sentence);
 
             $manager->persist($training);
         }
