@@ -2,8 +2,12 @@
 {% block title %}Formulaire de contact{% endblock %}
 
 {% block body %}
+    <div class="row justify-content-center pic-container">
+        <img src="{{ asset('build/images/contact.jpg') }}" class="training-pic" alt="photo de conseil">
+        <h1 class="trainings-title">Contactez-nous</h1>
+    </div>
     <div class="container-fluid contact p-0 m-0">
-        <section class="form row justify-content-center">
+        <section class="form row justify-content-center mb-0 pb-5">
             <div class="col-12">
                     <h1 class="text-center">Formulaire de contact</h1>
             </div>
@@ -14,6 +18,7 @@
                         {{ message }}
                     </div>
                 {% endfor %}
+
                 <div class="card">
                     <div class="card-body">
                         {{ form_start(form) }}
