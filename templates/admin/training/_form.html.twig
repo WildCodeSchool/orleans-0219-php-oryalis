@@ -40,6 +40,11 @@
         {{ form_widget(form.program, ({'attr': {'class': 'form-control'}})) }}
         {{ form_errors(form.program) }}
     </div>
+    <div class="form-group col-12">
+        {{ form_label(form.program, "Methodes d'évaluation") }}
+        {{ form_widget(form.methodEvaluation, ({'attr': {'class': 'form-control'}})) }}
+        {{ form_errors(form.methodEvaluation) }}
+    </div>
 </div>
 <div class="text-center justify-content-center">
     <button class="btn btn-light btn-add my-4">{{ button_label|default('Ajouter') }}</button>

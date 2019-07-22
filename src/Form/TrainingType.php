@@ -21,6 +21,7 @@ class TrainingType extends AbstractType
             ->add('pedagogy', TextareaType::class)
             ->add('trainer', TextareaType::class)
             ->add('program', TextareaType::class)
+            ->add('methodEvaluation', TextareaType::class)
         ;
     }
 

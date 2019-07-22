@@ -4,7 +4,7 @@
 
 {% block body %}
     <div class="row justify-content-center pic-container">
-        <img src="{{ asset('build/images/training.jpg') }}" class="training-pic" alt="photo de formation">
+        <img src="{{ asset('build/images/formationJumb.jpeg') }}" class="training-pic" alt="photo de formation">
         <h1 class="trainings-title">Formations</h1>
     </div>
     <section class="container training">
@@ -21,8 +21,9 @@
                 <p>{{ training.prerequisite|nl2br }}</p>
                 <h3><i class="fas fa-cogs picto-trainings"></i>Méthodes et Moyens pédagogiques</h3>
                 <p>{{ training.pedagogy|nl2br }}</p>
+                <h3><i class="fas fa-cogs picto-trainings"></i>Méthode d'évaluation de l'efficacité du dispositif</h3>
+                <p>{{ training.methodEvaluation|nl2br }}</p>
                 <img src="{{ asset('build/images/datadocke.png') }}" alt="datadocké">
-
             </div>
             <div class="col col-md-6 col-lg-6 col-sm-12">
                 <h3><i class="fas fa-book picto-trainings"></i>Programme</h3>
