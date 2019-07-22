@@ -9,7 +9,8 @@
     <div class="container-fluid contact p-0 m-0">
         <section class="form row justify-content-center mb-0 pb-5">
             <div class="col-12">
-                    <h1 class="text-center">Formulaire de contact</h1></div>
+                <h1 class="text-center">Formulaire de contact</h1>
+            </div>
             <div class="col-6">
                 {# read and display just one flash message type #}
                 {% for message in app.flashes('success') %}
@@ -48,10 +49,13 @@
                             </div>
                             <div class="col-12">
                                 {{ form_row(form.message, {'label': 'Message'}) }}
-                                <button class="btn">{{ button_label|default('Envoyer') }}</button>
+
+                                <div class="text-center">
+                                    <button class="btn btn-blog">{{ button_label|default('Envoyer') }}</button>
+                                </div>
                             </div>
                         </div>
-                        {{ form_end(form)}}
+                        {{ form_end(form) }}
                     </div>
                 </div>
             </div>
