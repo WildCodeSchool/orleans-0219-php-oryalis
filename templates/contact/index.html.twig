@@ -9,7 +9,7 @@
     <div class="container-fluid contact p-0 m-0">
         <section class="form row justify-content-center mb-0 pb-5">
             <div class="col-12">
-                    <h1 class="text-center">Formulaire de contact</h1>
+                <h1 class="text-center">Formulaire de contact</h1>
             </div>
             <div class="col-6">
                 {# read and display just one flash message type #}
@@ -49,17 +49,19 @@
                             </div>
                             <div class="col-12">
                                 {{ form_row(form.message, {'label': 'Message'}) }}
-                                <button class="btn">{{ button_label|default('Envoyer') }}</button>
-
+                                <div class="text-center">
+                                    <button class="btn btn-blog">{{ button_label|default('Envoyer') }}</button>
+                                </div>
                             </div>
                         </div>
-                        {{ form_end(form)}}
+                        {{ form_end(form) }}
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <iframe  width="100%" height="600px" frameborder="0" allowfullscreen src="https://umap.openstreetmap.fr/fr/map/carte-sans-nom_339105?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=null&onLoadPanel=undefined&captionBar=false"></iframe>
+    <iframe width="100%" height="600px" frameborder="0" allowfullscreen
+            src="https://umap.openstreetmap.fr/fr/map/carte-sans-nom_339105?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=null&onLoadPanel=undefined&captionBar=false"></iframe>
 
 {% endblock %}
 
