@@ -6,7 +6,7 @@
     <div class="text-center py-5">
         <a href="{{ path('employee_new') }}" class="btn add"><i class="fas fa-plus"></i> Ajouter un membre</a>
     </div>
-    <div class="row">
+    <div class="row m-0">
         {% for employee in employees %}
             <div class="col-md-6 col-lg-4 text-center">
                 {% if employee.picture is null %}
