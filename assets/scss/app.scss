@@ -544,13 +544,17 @@ section:nth-child(even) {
 
 .pic-container {
   overflow: hidden;
-  height: 30vw;
-
+  height: 60vh;
+  max-height: 600px;
 
   .training-pic {
     object-fit: cover;
     width: 100%;
     filter: brightness(50%);
+    img {
+      object-fit: cover;
+      max-width: 100%;
+    }
   }
 
   .trainings-title {
@@ -637,7 +641,7 @@ iframe {
     }
     .img-advice {
         object-fit: cover;
-        max-width: 500px;
+        max-width: 100%;
         vertical-align: middle;
         display:inline-block;
         position: relative;

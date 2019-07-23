@@ -13,10 +13,10 @@
         {{ encore_entry_link_tags('app') }}
     {% endblock %}
 </head>
+<body>
 <header>
     {% block header %}{% endblock %}
 </header>
-<body>
 {% for message in app.flashes('success') %}
     <div class="alert alert-success m-0">
         {{ message }}
