@@ -3,18 +3,16 @@
 {% block title %}Oryalis - Formations{% endblock %}
 
 {% block body %}
-    <div class="row justify-content-center pic-container">
+    <div class="row justify-content-center pic-container m-0">
         <img src="{{ asset('build/images/formationJumb.jpeg') }}" class="training-pic" alt="photo de formation">
         <h1 class="trainings-title">Formations</h1>
     </div>
     <section class="trainings">
         <p class="text-center">Découvrez les formations dispensées par Oryalis.</p>
-        <div class="row justify-content-center">
-
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center">
                     {% for training in trainings %}
-                        <div class="col-lg-4 col-md-7 col-sm-8 text-center">
+                        <div class="col-lg-4 col-md-6 col-12 text-center">
                             <a href="{{ path('training_show', {'id': training.id}) }}" class="training-link">
                                 <ul class="card clearfix pl-0 training-card">
                                     <li class="mr-0 mb-0 training-list">
@@ -28,6 +26,5 @@
                     {% endfor %}
                 </div>
             </div>
-        </div>
     </section>
 {% endblock %}
