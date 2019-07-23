@@ -4,7 +4,7 @@
 
 {% block body %}
 
-        <div class="row justify-content-center pic-container">
+        <div class="row justify-content-center pic-container m-0">
             <img src="{{ asset('build/images/normes.jpg') }}" class="training-pic" alt="photo des normes">
             <h1 class="trainings-title">Les Normes</h1>
         </div>
@@ -16,9 +16,9 @@
                 <img src="{{ asset('build/images/environmentT.png') }}" alt="pictogramme environnement" class="col-6 col-lg-2">
             </div>
             <div class="row justify-content-around">
-                <p class="col-2 text-center picto-title">Qualité</p>
-                <p class="col-2 text-center picto-title">Sécurité</p>
-                <p class="col-2 text-center picto-title">Environnement</p>
+                <p class="col-12 col-md-2 text-center picto-title">Qualité</p>
+                <p class="col-12 col-md-2 text-center picto-title">Sécurité</p>
+                <p class="col-12 col-md-2 text-center picto-title">Environnement</p>
             </div>
             {% for standard in standards %}
                 <div class="standards">

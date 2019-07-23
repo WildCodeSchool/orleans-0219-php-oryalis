@@ -3,14 +3,14 @@
 {% block title %}Oryalis - L'Équipe{% endblock %}
 
 {% block body %}
-    <div class="row justify-content-center pic-container">
+    <div class="row justify-content-center pic-container m-0">
         <img src="{{ asset('build/images/equipe_jumb.jpeg') }}" class="training-pic" alt="photo d'une équipe">
         <h1 class="trainings-title">Notre Équipe</h1>
     </div>
     <div class="container pt-2 mt-5">
     <div class="row">
         {% for employee in employees %}
-            <div class="col-md-6 col-lg-4 col-sm-12 text-center card-team pb-4" data-toggle="modal"
+            <div class="col-md-6 col-lg-4 col-12 text-center card-team pb-4" data-toggle="modal"
                  data-target="#exampleModal{{ employee.id }}">
                 {% if employee.picture is null %}
                     <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
@@ -47,7 +47,7 @@
                             <div class="modal-body">
 
                                 <div class="p-4 row">
-                                    <div class="col-md-4 col-lg-4 col-sm-0">
+                                    <div class="col-md-4 col-lg-4 col-12">
                                         {% if employee.picture is null %}
                                             <img src="{{ asset('build/images/placeholder150.png') }}" class="img-team"
                                                  alt="employee">
