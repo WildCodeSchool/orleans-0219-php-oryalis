@@ -5,7 +5,7 @@
     "copy-webpack-plugin": "^5.0.3",
     "core-js": "^3.0.0",
     "css-loader": "^2.1.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "popper.js": "^1.15.0",
     "url-loader": "^2.0.0",
     "webpack-notifier": "^1.6.0"
